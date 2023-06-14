@@ -59,7 +59,7 @@
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686045454666-62aec7cc-698f-42a7-a7cc-744113179cce.png#averageHue=%23161616&clientId=udba77927-dfa2-4&from=paste&height=761&id=u2f4b5d9d&originHeight=1047&originWidth=1918&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=195756&status=done&style=none&taskId=ub8ab3ce9-8710-469b-8c1f-2e0fba40097&title=&width=1394.909090909091">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686047435784-4a465258-4838-499e-8446-7a784717b442.png#averageHue=%23171717&clientId=udba77927-dfa2-4&from=paste&height=87&id=u4b25e89f&originHeight=120&originWidth=746&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=17484&status=done&style=none&taskId=u4e290f43-db80-4cb5-970a-0e45ef9fd29&title=&width=542.5454545454545">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686047483776-ce0d6c1e-1a4e-4262-9307-50383b59f3b5.png#averageHue=%231a1a1a&clientId=udba77927-dfa2-4&from=paste&height=146&id=u909230c7&originHeight=201&originWidth=728&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=31585&status=done&style=none&taskId=u0f8167f7-35e6-4740-bed6-bb3579e2c2b&title=&width=529.4545454545455">
-<meta property="og:updated_time" content="2023-06-14T06:09:03.021Z">
+<meta property="og:updated_time" content="2023-06-14T06:12:14.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1685978612866-dc3658a3-5086-4f41-9e10-1fcb8e9868ae.png#averageHue=%230f0f0f&clientId=u218fbe62-9f53-4&from=paste&height=785&id=u86e96e8c&originHeight=1080&originWidth=1920&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=126645&status=done&style=none&taskId=ufba241e9-7fea-40dd-ad5e-fec9b949929&title=&width=1396.3636363636363">
     
@@ -187,7 +187,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nmap"><span class="post-toc-number">1.</span> <span class="post-toc-text">Nmap</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#主域名"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">主域名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#kiosk-jupiter-htb"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">kiosk.jupiter.htb</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#postgreSql"><span class="post-toc-number">2.</span> <span class="post-toc-text">postgreSql</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看数据库"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">查看数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Readcredentials"><span class="post-toc-number">2.0.2.</span> <span class="post-toc-text">Readcredentials</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RCE"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">RCE</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#尝试反弹shell"><span class="post-toc-number">2.1.0.1.</span> <span class="post-toc-text">尝试反弹shell</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#信息收集"><span class="post-toc-number">3.</span> <span class="post-toc-text">信息收集</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#linpeas"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">linpeas</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pspy"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">pspy</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#juno运行的进程"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">juno运行的进程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ssh-公钥写入"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">ssh 公钥写入</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#frp代理流量"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">frp代理流量</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#提权"><span class="post-toc-number">4.</span> <span class="post-toc-text">提权</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">5.</span> <span class="post-toc-text">总结</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nmap"><span class="post-toc-number">1.</span> <span class="post-toc-text">Nmap</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#主域名"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">主域名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#kiosk-jupiter-htb"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">kiosk.jupiter.htb</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#postgreSql"><span class="post-toc-number">2.</span> <span class="post-toc-text">postgreSql</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看数据库"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">查看数据库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Readcredentials"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Readcredentials</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RCE"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">RCE</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#尝试反弹shell"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">尝试反弹shell</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#信息收集"><span class="post-toc-number">3.</span> <span class="post-toc-text">信息收集</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#linpeas"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">linpeas</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pspy"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">pspy</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#juno运行的进程"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">juno运行的进程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ssh-公钥写入"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">ssh 公钥写入</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#frp代理流量"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">frp代理流量</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#提权"><span class="post-toc-number">4.</span> <span class="post-toc-text">提权</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">5.</span> <span class="post-toc-text">总结</span></a></li></ol>
         </nav>
     </aside>
 
@@ -278,6 +278,12 @@ Nmap done: 1 IP address (1 host up) scanned in 65.74 seconds
                 <div class="image-caption">image.png</div>
             </figure>
 
+
+
+
+
+
+
 <p>根域名没啥功能点，暂时看上去，vhost 碰撞看看</p>
 <pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools]
 └─# gobuster vhost -u http://jupiter.htb --append-domain -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -t 100
@@ -333,7 +339,7 @@ Progress: 114441 / 114442 (100.00%)=============================================
                 <div class="image-caption">image.png</div>
             </figure>这里能看到数据库的类型是PostgreSql 上hacktrick看看相关注入手法
 <p>Refer:<a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-postgresql" target="_blank" rel="noopener">https://book.hacktricks.xyz/network-services-pentesting/pentesting-postgresql</a></p>
-<h1 id="postgreSql"><a href="#postgreSql" class="headerlink" title="postgreSql"></a>postgreSql</h1><h3 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h3><p><strong>SELECT datname FROM pg_database;</strong></p>
+<h1 id="postgreSql"><a href="#postgreSql" class="headerlink" title="postgreSql"></a>postgreSql</h1><h2 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h2><p><strong>SELECT datname FROM pg_database;</strong></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -358,7 +364,7 @@ Progress: 114441 / 114442 (100.00%)=============================================
 <td>template0</td>
 </tr>
 </tbody></table>
-<h3 id="Readcredentials"><a href="#Readcredentials" class="headerlink" title="Readcredentials"></a>Readcredentials</h3><p><strong>SELECT usename, passwd from pg_shadow;</strong></p>
+<h2 id="Readcredentials"><a href="#Readcredentials" class="headerlink" title="Readcredentials"></a>Readcredentials</h2><p>SELECT usename, passwd from pg_shadow;</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -404,7 +410,7 @@ Progress: 114441 / 114442 (100.00%)=============================================
                 </div>
                 <div class="image-caption">image.png</div>
             </figure>
-<h4 id="尝试反弹shell"><a href="#尝试反弹shell" class="headerlink" title="尝试反弹shell"></a>尝试反弹shell</h4><figure class="image-bubble">
+<h2 id="尝试反弹shell"><a href="#尝试反弹shell" class="headerlink" title="尝试反弹shell"></a>尝试反弹shell</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686021811229-6a46be5d-9fb6-4608-88ea-a5cb8f1addd9.png#averageHue=%232c2c2b&clientId=u5d62c5cd-dafd-4&from=paste&height=598&id=u7277c6fd&originHeight=822&originWidth=1524&originalType=binary&ratio=1.375&rotation=0&showTitle=false&size=81538&status=done&style=none&taskId=u1ff1e092-049c-4f9c-8b14-81d6b08fd85&title=&width=1108.3636363636363" alt="image.png" title="">
@@ -658,7 +664,7 @@ User jovian may run the following commands on jupiter:
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2023-06-14T06:09:03.021Z" itemprop="dateUpdated">2023-06-14 14:09:03</time>
+    Last updated: <time datetime="2023-06-14T06:12:14.518Z" itemprop="dateUpdated">2023-06-14 14:12:14</time>
 </span><br>
 
 
